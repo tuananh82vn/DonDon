@@ -6,14 +6,14 @@ namespace DonDon
 {
 	public static class Settings
 	{
-		private const string SmallestWidthKey = "int_key";
-		private static readonly int SmallestWidthDefault = 0;
+		private const string RestaurantIdKey = "int_key";
+		private static readonly int RestaurantIdKeyDefault = 0;
 
 		private const string UserIdKey = "int_key";
 		private static readonly int UserIdDefault = 0;
 
 		private const string InstanceURLKey = "InstanceURLKey";
-		private static readonly string InstanceURL_Default = "";
+		private static readonly string InstanceURL_Default = "http://172.28.1.53:49713";
 
 		private const string TokenKey = "TokenKey";
 		private static readonly string TokenKey_Default = string.Empty;
@@ -27,14 +27,6 @@ namespace DonDon
 		private const string RememberMeKey = "RememberMeKey";
 		private static readonly bool RememberMeKey_Default = false;
 
-		private const string OrientationKey = "OrientationKey";
-		private static readonly string OrientationKey_Default = string.Empty;
-
-		private const string VersionKey = "VersionKey";
-		private static readonly string VersionKey_Default = string.Empty;
-
-		private const string WhatsNewKey = "WhatsNewKey";
-		private static readonly bool WhatsNewKey_Default = false;
 
 		private static ISettings AppSettings
 		{
@@ -50,10 +42,10 @@ namespace DonDon
 			set { AppSettings.AddOrUpdateValue(InstanceURLKey, value); }
 		}
 
-		public static int SmallestWidth
+		public static int RestaurantId
 		{
-			get { return AppSettings.GetValueOrDefault(SmallestWidthKey, SmallestWidthDefault); }
-			set { AppSettings.AddOrUpdateValue(SmallestWidthKey, value); }
+			get { return AppSettings.GetValueOrDefault(RestaurantIdKey, RestaurantIdKeyDefault); }
+			set { AppSettings.AddOrUpdateValue(RestaurantIdKey, value); }
 		}
 
 		public static int UserId
@@ -86,24 +78,6 @@ namespace DonDon
 			set { AppSettings.AddOrUpdateValue(RememberMeKey, value); }
 		}
 
-		public static string Orientation
-		{
-			get { return AppSettings.GetValueOrDefault(OrientationKey, OrientationKey_Default); }
-			set { AppSettings.AddOrUpdateValue(OrientationKey, value); }
-		}
-
-
-		public static string Version
-		{
-			get { return AppSettings.GetValueOrDefault(VersionKey, VersionKey_Default); }
-			set { AppSettings.AddOrUpdateValue(VersionKey, value); }
-		}
-
-		public static bool WhatsNew	
-		{
-			get { return AppSettings.GetValueOrDefault(WhatsNewKey, WhatsNewKey_Default); }
-			set { AppSettings.AddOrUpdateValue(WhatsNewKey, value); }
-		}
 
 
 	}
