@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.listview.ListViewSlideFragment">
+    <TextView
+        android:layout_margin="12dp"
+        android:text="Features:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/orientationBtn"
+                android:text="orientation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/transitionBtn"
+                android:text="transition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ToggleButton
+                android:id="@+id/spacingBtn"
+                android:textOn="Remove spacing"
+                android:textOff="Add spacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ToggleButton
+                android:id="@+id/showPrevBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="Hide previous"
+                android:textOff="Show previous" />
+            <ToggleButton
+                android:id="@+id/showNextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="Hide next"
+                android:textOff="Show next" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:layout_margin="12dp"
+        android:text="Navigation:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/previousBtn"
+            android:text="previous"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/nextBtn"
+            android:text="next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <com.telerik.widget.list.RadListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

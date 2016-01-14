@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D644C5FD-4257-41A0-922A-AF0D126FF0E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DonDon</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>Samples</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Telerik.Xamarin.Android.Chart">
+      <HintPath>Telerik Binaries Dll\Telerik.Xamarin.Android.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Common">
+      <HintPath>Telerik Binaries Dll\Telerik.Xamarin.Android.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Data">
+      <HintPath>Telerik Binaries Dll\Telerik.Xamarin.Android.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Feedback">
+      <HintPath>Telerik Binaries Dll\Telerik.Xamarin.Android.Feedback.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Input">
+      <HintPath>Telerik Binaries Dll\Telerik.Xamarin.Android.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.List">
+      <HintPath>Telerik Binaries Dll\Telerik.Xamarin.Android.List.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Primitives">
+      <HintPath>Telerik Binaries Dll\Telerik.Xamarin.Android.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v8.RenderScript">
+      <HintPath>packages\Xamarin.Android.Support.v8.RenderScript.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v8.RenderScript.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>packages\Xamarin.Android.Support.v7.RecyclerView.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>packages\Xam.Plugins.Settings.2.1.0\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>packages\Xam.Plugins.Settings.2.1.0\lib\MonoAndroid10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.FloatingActionButton">
+      <HintPath>packages\Refractored.FloatingActionButton.1.4.0\lib\MonoAndroid10\Refractored.FloatingActionButton.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Json" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Fragments\Chart\Series\AreaSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\CandleStickSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\DoughnutSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\HorizontalBarSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\IndicatorSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\LineSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\OhlcSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\PieSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\ScatterBubbleSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\ScatterPointSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\SplineAreaSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\SplineSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\StackAreaSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\StackBarSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\StackSplineAreaSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Series\VerticalBarSeriesFragment.cs" />
+    <Compile Include="Fragments\Chart\Features\ChartLegendFragment.cs" />
+    <Compile Include="Fragments\Chart\Features\GridFeatureFragment.cs" />
+    <Compile Include="Fragments\Chart\Features\PalettesFragment.cs" />
+    <Compile Include="Fragments\Chart\Behaviors\PanAndZoomFragment.cs" />
+    <Compile Include="Fragments\Chart\Behaviors\SelectionBehaviorFragment.cs" />
+    <Compile Include="Fragments\Chart\Behaviors\TooltipBehaviorFragment.cs" />
+    <Compile Include="Fragments\Chart\Behaviors\TrackballBehaviorFragment.cs" />
+    <Compile Include="Fragments\Chart\Annotations\GridLineAnnotationFragment.cs" />
+    <Compile Include="Fragments\Chart\Annotations\PlotBandAnnotationFragment.cs" />
+    <Compile Include="Adapters\ControlsAdapter.cs" />
+    <Compile Include="Adapters\ExamplesProvider.cs" />
+    <Compile Include="Fragments\ExampleFragment.cs" />
+    <Compile Include="Adapters\ChartExamples.cs" />
+    <Compile Include="Fragments\Chart\Axes\DateTimeContinuousAxisFragment.cs" />
+    <Compile Include="Fragments\Chart\Axes\MultipleAxesFragment.cs" />
+    <Compile Include="Adapters\ExamplesAdapter.cs" />
+    <Compile Include="Adapters\CalendarExamples.cs" />
+    <Compile Include="Fragments\Calendar\InitCodeFragment.cs" />
+    <Compile Include="Fragments\Calendar\InitXmlFragment.cs" />
+    <Compile Include="Fragments\Calendar\Selection\SelectionSetRangeFragment.cs" />
+    <Compile Include="Fragments\Calendar\Selection\SelectionSetDatesFragment.cs" />
+    <Compile Include="Fragments\Calendar\Selection\SelectionChangedListenerFragment.cs" />
+    <Compile Include="Fragments\Calendar\Selection\SelectionChangedEventFragment.cs" />
+    <Compile Include="Fragments\Calendar\Selection\SelectionDisabledDatesFragment.cs" />
+    <Compile Include="Fragments\Calendar\DisplayDate\DisplayDateSetFragment.cs" />
+    <Compile Include="Fragments\Calendar\DisplayDate\DisplayDateChangeListener.cs" />
+    <Compile Include="Fragments\Calendar\DisplayDate\DisplayDateMinMaxValuesFragment.cs" />
+    <Compile Include="Fragments\Calendar\DisplayDate\DisplayDateChangeEventFragment.cs" />
+    <Compile Include="Fragments\Calendar\Selection\SelectionModesFragment.cs" />
+    <Compile Include="Fragments\Calendar\DisplayMode\DisplayModeFragment.cs" />
+    <Compile Include="Fragments\Calendar\DisplayMode\DisplayModeChangeListenerFragment.cs" />
+    <Compile Include="Fragments\Calendar\Scrolling\ScrollingModesFragment.cs" />
+    <Compile Include="Fragments\Calendar\Scrolling\ScrollingFrictionFragment.cs" />
+    <Compile Include="Fragments\Calendar\Scrolling\ScrollingFlingSpeedFragment.cs" />
+    <Compile Include="Fragments\Calendar\Scrolling\ScrollingProgrammaticallyFragment.cs" />
+    <Compile Include="Fragments\Calendar\Scrolling\ScrollingDirectionFragment.cs" />
+    <Compile Include="Fragments\Calendar\Scrolling\ScrollingSnapFragment.cs" />
+    <Compile Include="Fragments\Calendar\Events\EventAllDayFragment.cs" />
+    <Compile Include="Fragments\Calendar\Events\EventFragment.cs" />
+    <Compile Include="Fragments\Calendar\Events\EventRenderModeFragment.cs" />
+    <Compile Include="Adapters\ListViewExamples.cs" />
+    <Compile Include="Fragments\ListView\ListViewGettingStartedFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewDataAutomaticLoadOnDemandFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewManualLoadOnDemandFragment.cs" />
+    <Compile Include="Fragments\ListView\MyListViewAdapter.cs" />
+    <Compile Include="Fragments\ListView\ListViewDataOperationsFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewItemAnimationFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewLayoutsFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewReorderFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewSwipeToExecuteFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewSwipeToRefreshFragment.cs" />
+    <Compile Include="Fragments\Calendar\Events\ReadEventsFragment.cs" />
+    <Compile Include="Fragments\Calendar\Events\ReadEventsRangeFragment.cs" />
+    <Compile Include="Fragments\Calendar\Events\ReadEventsOptionsFragment.cs" />
+    <Compile Include="Fragments\Calendar\Selection\SelectionDecoratorsFragment.cs" />
+    <Compile Include="Fragments\SideDrawer\DrawerInitialSetupFragment.cs" />
+    <Compile Include="Adapters\SideDrawerExamples.cs" />
+    <Compile Include="Fragments\Calendar\Events\EventsPopupDisplayModeFragment.cs" />
+    <Compile Include="Fragments\Calendar\Events\EventsInlineDisplayModeFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewDeckOfCardsFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewWrapFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewSlideFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewStickyHeadersFragment.cs" />
+    <Compile Include="Fragments\ListView\ListViewSelectionFragment.cs" />
+    <Compile Include="Fragments\Dataform\DataFormGettingStartedFragment.cs" />
+    <Compile Include="Fragments\Dataform\Person.cs" />
+    <Compile Include="Fragments\Dataform\EmployeeType.cs" />
+    <Compile Include="Adapters\DataFormExamples.cs" />
+    <Compile Include="Fragments\Dataform\DataFormFeaturesFragment.cs" />
+    <Compile Include="Fragments\Dataform\DataFormEditorsFragment.cs" />
+    <Compile Include="Fragments\Dataform\DataFormValidationFragment.cs" />
+    <Compile Include="Fragments\Dataform\DataFormGroupLayoutFragment.cs" />
+    <Compile Include="Fragments\Dataform\DataFormPlaceholderLayoutFragment.cs" />
+    <Compile Include="Fragments\Dataform\DataFormValidationBehaviorFragment.cs" />
+    <Compile Include="Fragments\Dataform\DataFormValidationModeFragment.cs" />
+    <Compile Include="Activity\ControlActivity.cs" />
+    <Compile Include="Activity\ExampleActivity.cs" />
+    <Compile Include="Activity\MainActivity.cs" />
+    <Compile Include="Helper\Settings.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Helper\LoginService.cs" />
+    <Compile Include="Models\ViewModel\LoginObject.cs" />
+    <Compile Include="Helper\ConnectWebAPI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\layout\fragment_chart_example.axml" />
+    <AndroidResource Include="Resources\layout\activity_control.axml" />
+    <AndroidResource Include="Resources\layout\activity_example.axml" />
+    <AndroidResource Include="Resources\layout\fragment_calendar_example.axml" />
+    <AndroidResource Include="Resources\layout\list_item_control.axml" />
+    <AndroidResource Include="Resources\layout\list_item_child.axml" />
+    <AndroidResource Include="Resources\layout\list_item_group.axml" />
+    <AndroidResource Include="Resources\layout\fragment_chart_legend_example.axml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\menu\calendar_display_modes.xml" />
+    <AndroidResource Include="Resources\layout\example_list_view_data_operations_item_layout.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_footer_layout.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_group_header.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_header_layout.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_item_animations_layout.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_item_layout.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_item_layouts.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_item_reorder_layout.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_item_swipe_layout.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_swipe_content.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_data_operations.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_example.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_item_animations.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_layouts.axml" />
+    <AndroidResource Include="Resources\layout\fragment_calendar_init_xml.axml" />
+    <AndroidResource Include="Resources\layout\fragment_side_drawer_features.axml" />
+    <AndroidResource Include="Resources\layout\side_drawer_features_drawer_content.axml" />
+    <AndroidResource Include="Resources\layout\side_drawer_features_main_content.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_deck.axml" />
+    <AndroidResource Include="Resources\layout\example_list_view_deck_item_layout.xml" />
+    <AndroidResource Include="Resources\layout\fragment_dataform_custom_editor.axml" />
+    <AndroidResource Include="Resources\layout\dataform_custom_editor.axml" />
+    <AndroidResource Include="Resources\layout\dataform_custom_editor_list_item.axml" />
+    <AndroidResource Include="Resources\layout\fragment_dataform_getting_started.axml" />
+    <AndroidResource Include="Resources\layout\fragment_dataform_validation.axml" />
+    <AndroidResource Include="Resources\layout\fragment_dataform_features.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_wrap.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_slide.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_sticky_headers.axml" />
+    <AndroidResource Include="Resources\layout\fragment_list_view_selection_example.axml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\layout\fragment_dataform_editors.axml" />
+    <AndroidResource Include="Resources\layout\dataform_custom_group.xml" />
+    <AndroidResource Include="Resources\layout\dataform_group_placeholder_layout.xml" />
+    <AndroidResource Include="Resources\layout\fragment_dataform_grouping.xml" />
+    <AndroidResource Include="Resources\layout\dataform_placeholder_layout.xml" />
+    <AndroidResource Include="Resources\layout\fragment_dataform_validation_mode.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+    <Folder Include="Fragments\" />
+    <Folder Include="Fragments\Chart\" />
+    <Folder Include="Fragments\Calendar\" />
+    <Folder Include="Fragments\Chart\Series\" />
+    <Folder Include="Fragments\Chart\Features\" />
+    <Folder Include="Fragments\Chart\Behaviors\" />
+    <Folder Include="Fragments\Chart\Annotations\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="Fragments\Chart\Axes\" />
+    <Folder Include="Fragments\Calendar\Selection\" />
+    <Folder Include="Fragments\Calendar\DisplayDate\" />
+    <Folder Include="Fragments\Calendar\DisplayMode\" />
+    <Folder Include="Fragments\Calendar\Scrolling\" />
+    <Folder Include="Fragments\Calendar\Events\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Fragments\ListView\" />
+    <Folder Include="Fragments\SideDrawer\" />
+    <Folder Include="Fragments\Dataform\" />
+    <Folder Include="Activity\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\ViewModel\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
