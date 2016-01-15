@@ -20,7 +20,8 @@ namespace DonDon
 				Item = new
 				{
 					UserName = username,
-					Password = password
+					Password = password,
+					RestaurantId = Settings.RestaurantId
 				}
 			};
 

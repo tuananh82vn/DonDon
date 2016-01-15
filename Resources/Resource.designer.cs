@@ -1152,29 +1152,32 @@ namespace DonDon
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0c0051
-			public const int abc_background_cache_hint_selector_material_dark = 2131492945;
+			// aapt resource value: 0x7f0c0405
+			public const int Custom_Gray = 2131493893;
 			
-			// aapt resource value: 0x7f0c0052
-			public const int abc_background_cache_hint_selector_material_light = 2131492946;
+			// aapt resource value: 0x7f0c0406
+			public const int abc_background_cache_hint_selector_material_dark = 2131493894;
+			
+			// aapt resource value: 0x7f0c0407
+			public const int abc_background_cache_hint_selector_material_light = 2131493895;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int abc_input_method_navigation_guard = 2131492864;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int abc_primary_text_disable_only_material_dark = 2131492947;
+			// aapt resource value: 0x7f0c0408
+			public const int abc_primary_text_disable_only_material_dark = 2131493896;
 			
-			// aapt resource value: 0x7f0c0054
-			public const int abc_primary_text_disable_only_material_light = 2131492948;
+			// aapt resource value: 0x7f0c0409
+			public const int abc_primary_text_disable_only_material_light = 2131493897;
 			
-			// aapt resource value: 0x7f0c0055
-			public const int abc_primary_text_material_dark = 2131492949;
+			// aapt resource value: 0x7f0c040a
+			public const int abc_primary_text_material_dark = 2131493898;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int abc_primary_text_material_light = 2131492950;
+			// aapt resource value: 0x7f0c040b
+			public const int abc_primary_text_material_light = 2131493899;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int abc_search_url_text = 2131492951;
+			// aapt resource value: 0x7f0c040c
+			public const int abc_search_url_text = 2131493900;
 			
 			// aapt resource value: 0x7f0c0001
 			public const int abc_search_url_text_normal = 2131492865;
@@ -1185,17 +1188,119 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0003
 			public const int abc_search_url_text_selected = 2131492867;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int abc_secondary_text_material_dark = 2131492952;
+			// aapt resource value: 0x7f0c040d
+			public const int abc_secondary_text_material_dark = 2131493901;
 			
-			// aapt resource value: 0x7f0c0059
-			public const int abc_secondary_text_material_light = 2131492953;
+			// aapt resource value: 0x7f0c040e
+			public const int abc_secondary_text_material_light = 2131493902;
+			
+			// aapt resource value: 0x7f0c0054
+			public const int accent = 2131492948;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int accent_material_dark = 2131492868;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int accent_material_light = 2131492869;
+			
+			// aapt resource value: 0x7f0c0055
+			public const int accent_pressed = 2131492949;
+			
+			// aapt resource value: 0x7f0c0056
+			public const int air_force_blue = 2131492950;
+			
+			// aapt resource value: 0x7f0c0057
+			public const int algae_green = 2131492951;
+			
+			// aapt resource value: 0x7f0c0058
+			public const int alice_blue = 2131492952;
+			
+			// aapt resource value: 0x7f0c0059
+			public const int alien_green = 2131492953;
+			
+			// aapt resource value: 0x7f0c005a
+			public const int almond = 2131492954;
+			
+			// aapt resource value: 0x7f0c005b
+			public const int amber = 2131492955;
+			
+			// aapt resource value: 0x7f0c005c
+			public const int american_rose = 2131492956;
+			
+			// aapt resource value: 0x7f0c005d
+			public const int amethyst = 2131492957;
+			
+			// aapt resource value: 0x7f0c005e
+			public const int android_green = 2131492958;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int anti_flash_white = 2131492959;
+			
+			// aapt resource value: 0x7f0c0060
+			public const int antique_brass = 2131492960;
+			
+			// aapt resource value: 0x7f0c0061
+			public const int antique_fuchsia = 2131492961;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int antique_white = 2131492962;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int apple_green = 2131492963;
+			
+			// aapt resource value: 0x7f0c0064
+			public const int apricot = 2131492964;
+			
+			// aapt resource value: 0x7f0c0065
+			public const int aqua = 2131492965;
+			
+			// aapt resource value: 0x7f0c0066
+			public const int aqua_marine = 2131492966;
+			
+			// aapt resource value: 0x7f0c0067
+			public const int army_brown = 2131492967;
+			
+			// aapt resource value: 0x7f0c0068
+			public const int army_green = 2131492968;
+			
+			// aapt resource value: 0x7f0c0069
+			public const int ash_grey = 2131492969;
+			
+			// aapt resource value: 0x7f0c006a
+			public const int asparagus = 2131492970;
+			
+			// aapt resource value: 0x7f0c006b
+			public const int atomic_tangerine = 2131492971;
+			
+			// aapt resource value: 0x7f0c006c
+			public const int aureolin = 2131492972;
+			
+			// aapt resource value: 0x7f0c006d
+			public const int aurometalsaurus = 2131492973;
+			
+			// aapt resource value: 0x7f0c006e
+			public const int avocado_green = 2131492974;
+			
+			// aapt resource value: 0x7f0c006f
+			public const int awesome = 2131492975;
+			
+			// aapt resource value: 0x7f0c0070
+			public const int aztech_purple = 2131492976;
+			
+			// aapt resource value: 0x7f0c0071
+			public const int azure = 2131492977;
+			
+			// aapt resource value: 0x7f0c0072
+			public const int azure_mist_web = 2131492978;
+			
+			// aapt resource value: 0x7f0c0073
+			public const int baby_blue = 2131492979;
+			
+			// aapt resource value: 0x7f0c0074
+			public const int baby_blue_eyes = 2131492980;
+			
+			// aapt resource value: 0x7f0c0075
+			public const int baby_pink = 2131492981;
 			
 			// aapt resource value: 0x7f0c0006
 			public const int background_floating_material_dark = 2131492870;
@@ -1209,8 +1314,182 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0009
 			public const int background_material_light = 2131492873;
 			
+			// aapt resource value: 0x7f0c0076
+			public const int ball_blue = 2131492982;
+			
+			// aapt resource value: 0x7f0c0077
+			public const int banana_mania = 2131492983;
+			
+			// aapt resource value: 0x7f0c0078
+			public const int banana_yellow = 2131492984;
+			
+			// aapt resource value: 0x7f0c0079
+			public const int bashful_pink = 2131492985;
+			
+			// aapt resource value: 0x7f0c007a
+			public const int basket_ball_orange = 2131492986;
+			
+			// aapt resource value: 0x7f0c007b
+			public const int battleship_grey = 2131492987;
+			
+			// aapt resource value: 0x7f0c007c
+			public const int bazaar = 2131492988;
+			
+			// aapt resource value: 0x7f0c007d
+			public const int bean_red = 2131492989;
+			
+			// aapt resource value: 0x7f0c007e
+			public const int beaver = 2131492990;
+			
+			// aapt resource value: 0x7f0c007f
+			public const int bee_yellow = 2131492991;
+			
+			// aapt resource value: 0x7f0c0080
+			public const int beer = 2131492992;
+			
+			// aapt resource value: 0x7f0c0081
+			public const int beetle_green = 2131492993;
+			
+			// aapt resource value: 0x7f0c0082
+			public const int beige = 2131492994;
+			
+			// aapt resource value: 0x7f0c0083
+			public const int bisque = 2131492995;
+			
+			// aapt resource value: 0x7f0c0084
+			public const int bistre = 2131492996;
+			
+			// aapt resource value: 0x7f0c0085
+			public const int bittersweet = 2131492997;
+			
 			// aapt resource value: 0x7f0c004e
 			public const int black = 2131492942;
+			
+			// aapt resource value: 0x7f0c0086
+			public const int black_cat = 2131492998;
+			
+			// aapt resource value: 0x7f0c0087
+			public const int black_cow = 2131492999;
+			
+			// aapt resource value: 0x7f0c0088
+			public const int black_eel = 2131493000;
+			
+			// aapt resource value: 0x7f0c0089
+			public const int blanched_almond = 2131493001;
+			
+			// aapt resource value: 0x7f0c008a
+			public const int blanchedalmond = 2131493002;
+			
+			// aapt resource value: 0x7f0c008b
+			public const int bleu_de_france = 2131493003;
+			
+			// aapt resource value: 0x7f0c008c
+			public const int blizzard_blue = 2131493004;
+			
+			// aapt resource value: 0x7f0c008d
+			public const int blond = 2131493005;
+			
+			// aapt resource value: 0x7f0c008e
+			public const int blood_red = 2131493006;
+			
+			// aapt resource value: 0x7f0c008f
+			public const int blossom_pink = 2131493007;
+			
+			// aapt resource value: 0x7f0c0090
+			public const int blue = 2131493008;
+			
+			// aapt resource value: 0x7f0c0091
+			public const int blue_angel = 2131493009;
+			
+			// aapt resource value: 0x7f0c0092
+			public const int blue_bell = 2131493010;
+			
+			// aapt resource value: 0x7f0c0093
+			public const int blue_diamond = 2131493011;
+			
+			// aapt resource value: 0x7f0c0094
+			public const int blue_dress = 2131493012;
+			
+			// aapt resource value: 0x7f0c0095
+			public const int blue_eyes = 2131493013;
+			
+			// aapt resource value: 0x7f0c0096
+			public const int blue_gray = 2131493014;
+			
+			// aapt resource value: 0x7f0c0097
+			public const int blue_green = 2131493015;
+			
+			// aapt resource value: 0x7f0c0098
+			public const int blue_hosta = 2131493016;
+			
+			// aapt resource value: 0x7f0c0099
+			public const int blue_ivy = 2131493017;
+			
+			// aapt resource value: 0x7f0c009a
+			public const int blue_jay = 2131493018;
+			
+			// aapt resource value: 0x7f0c009b
+			public const int blue_koi = 2131493019;
+			
+			// aapt resource value: 0x7f0c009c
+			public const int blue_lagoon = 2131493020;
+			
+			// aapt resource value: 0x7f0c009d
+			public const int blue_lotus = 2131493021;
+			
+			// aapt resource value: 0x7f0c009e
+			public const int blue_orchid = 2131493022;
+			
+			// aapt resource value: 0x7f0c009f
+			public const int blue_purple = 2131493023;
+			
+			// aapt resource value: 0x7f0c00a0
+			public const int blue_ribbon = 2131493024;
+			
+			// aapt resource value: 0x7f0c00a1
+			public const int blue_whale = 2131493025;
+			
+			// aapt resource value: 0x7f0c00a2
+			public const int blue_zircon = 2131493026;
+			
+			// aapt resource value: 0x7f0c00a3
+			public const int blueberry_blue = 2131493027;
+			
+			// aapt resource value: 0x7f0c00a4
+			public const int blush = 2131493028;
+			
+			// aapt resource value: 0x7f0c00a5
+			public const int blush_pink = 2131493029;
+			
+			// aapt resource value: 0x7f0c00a6
+			public const int blush_red = 2131493030;
+			
+			// aapt resource value: 0x7f0c00a7
+			public const int bole = 2131493031;
+			
+			// aapt resource value: 0x7f0c00a8
+			public const int bondi_blue = 2131493032;
+			
+			// aapt resource value: 0x7f0c00a9
+			public const int bone = 2131493033;
+			
+			// aapt resource value: 0x7f0c00aa
+			public const int bottle_green = 2131493034;
+			
+			// aapt resource value: 0x7f0c00ab
+			public const int boysenberry = 2131493035;
+			
+			// aapt resource value: 0x7f0c00ac
+			public const int brandeis_blue = 2131493036;
+			
+			// aapt resource value: 0x7f0c00ad
+			public const int brass = 2131493037;
+			
+			// aapt resource value: 0x7f0c00ae
+			public const int brick_red = 2131493038;
+			
+			// aapt resource value: 0x7f0c00af
+			public const int bright_cerulean = 2131493039;
 			
 			// aapt resource value: 0x7f0c000a
 			public const int bright_foreground_disabled_material_dark = 2131492874;
@@ -1230,17 +1509,569 @@ namespace DonDon
 			// aapt resource value: 0x7f0c000f
 			public const int bright_foreground_material_light = 2131492879;
 			
+			// aapt resource value: 0x7f0c00b0
+			public const int bright_gold = 2131493040;
+			
+			// aapt resource value: 0x7f0c00b1
+			public const int bright_green = 2131493041;
+			
+			// aapt resource value: 0x7f0c00b2
+			public const int bright_lavender = 2131493042;
+			
+			// aapt resource value: 0x7f0c00b3
+			public const int bright_maroon = 2131493043;
+			
+			// aapt resource value: 0x7f0c00b4
+			public const int bright_neon_pink = 2131493044;
+			
+			// aapt resource value: 0x7f0c00b5
+			public const int bright_pink = 2131493045;
+			
+			// aapt resource value: 0x7f0c00b6
+			public const int bright_turquoise = 2131493046;
+			
+			// aapt resource value: 0x7f0c00b7
+			public const int bright_ube = 2131493047;
+			
+			// aapt resource value: 0x7f0c00b8
+			public const int brilliant_lavender = 2131493048;
+			
+			// aapt resource value: 0x7f0c00b9
+			public const int brilliant_rose = 2131493049;
+			
+			// aapt resource value: 0x7f0c00ba
+			public const int brink_pink = 2131493050;
+			
+			// aapt resource value: 0x7f0c00bb
+			public const int british_racing_green = 2131493051;
+			
+			// aapt resource value: 0x7f0c00bc
+			public const int bronze = 2131493052;
+			
+			// aapt resource value: 0x7f0c00bd
+			public const int brown_bear = 2131493053;
+			
+			// aapt resource value: 0x7f0c00be
+			public const int brown_sugar = 2131493054;
+			
+			// aapt resource value: 0x7f0c00bf
+			public const int bubble_gum = 2131493055;
+			
+			// aapt resource value: 0x7f0c00c0
+			public const int bubbles = 2131493056;
+			
+			// aapt resource value: 0x7f0c00c1
+			public const int buff = 2131493057;
+			
+			// aapt resource value: 0x7f0c00c2
+			public const int bulgarian_rose = 2131493058;
+			
+			// aapt resource value: 0x7f0c00c3
+			public const int burgundy = 2131493059;
+			
+			// aapt resource value: 0x7f0c00c4
+			public const int burlywood = 2131493060;
+			
+			// aapt resource value: 0x7f0c00c5
+			public const int burnt_orange = 2131493061;
+			
+			// aapt resource value: 0x7f0c00c6
+			public const int burnt_pink = 2131493062;
+			
+			// aapt resource value: 0x7f0c00c7
+			public const int burnt_sienna = 2131493063;
+			
+			// aapt resource value: 0x7f0c00c8
+			public const int burnt_umber = 2131493064;
+			
+			// aapt resource value: 0x7f0c00c9
+			public const int butterfly_blue = 2131493065;
+			
 			// aapt resource value: 0x7f0c0010
 			public const int button_material_dark = 2131492880;
 			
 			// aapt resource value: 0x7f0c0011
 			public const int button_material_light = 2131492881;
 			
+			// aapt resource value: 0x7f0c00ca
+			public const int byzantine = 2131493066;
+			
+			// aapt resource value: 0x7f0c00cb
+			public const int byzantium = 2131493067;
+			
+			// aapt resource value: 0x7f0c00cc
+			public const int cadet = 2131493068;
+			
+			// aapt resource value: 0x7f0c00cd
+			public const int cadet_blue = 2131493069;
+			
+			// aapt resource value: 0x7f0c00ce
+			public const int cadet_grey = 2131493070;
+			
+			// aapt resource value: 0x7f0c00cf
+			public const int cadillac_pink = 2131493071;
+			
+			// aapt resource value: 0x7f0c00d0
+			public const int cadmium_green = 2131493072;
+			
+			// aapt resource value: 0x7f0c00d1
+			public const int cadmium_orange = 2131493073;
+			
+			// aapt resource value: 0x7f0c00d2
+			public const int cadmium_red = 2131493074;
+			
+			// aapt resource value: 0x7f0c00d3
+			public const int cadmium_yellow = 2131493075;
+			
+			// aapt resource value: 0x7f0c00d4
+			public const int cafe_noir = 2131493076;
+			
+			// aapt resource value: 0x7f0c00d5
+			public const int cal_poly_pomona_green = 2131493077;
+			
+			// aapt resource value: 0x7f0c00d6
+			public const int cambridge_blue = 2131493078;
+			
+			// aapt resource value: 0x7f0c00d7
+			public const int camel_brown = 2131493079;
+			
+			// aapt resource value: 0x7f0c00d8
+			public const int camouflage_green = 2131493080;
+			
+			// aapt resource value: 0x7f0c00d9
+			public const int canary = 2131493081;
+			
+			// aapt resource value: 0x7f0c00da
+			public const int canary_yellow = 2131493082;
+			
+			// aapt resource value: 0x7f0c00db
+			public const int candy_apple_red = 2131493083;
+			
+			// aapt resource value: 0x7f0c00dc
+			public const int candy_pink = 2131493084;
+			
+			// aapt resource value: 0x7f0c00dd
+			public const int cantaloupe = 2131493085;
+			
+			// aapt resource value: 0x7f0c00de
+			public const int capri = 2131493086;
+			
+			// aapt resource value: 0x7f0c00df
+			public const int caput_mortuum = 2131493087;
+			
+			// aapt resource value: 0x7f0c00e0
+			public const int caramel = 2131493088;
+			
+			// aapt resource value: 0x7f0c00e1
+			public const int carbon_gray = 2131493089;
+			
+			// aapt resource value: 0x7f0c00e2
+			public const int cardinal = 2131493090;
+			
+			// aapt resource value: 0x7f0c00e3
+			public const int caribbean_green = 2131493091;
+			
+			// aapt resource value: 0x7f0c00e4
+			public const int carmine = 2131493092;
+			
+			// aapt resource value: 0x7f0c00e5
+			public const int carmine_pink = 2131493093;
+			
+			// aapt resource value: 0x7f0c00e6
+			public const int carmine_red = 2131493094;
+			
+			// aapt resource value: 0x7f0c00e7
+			public const int carnation_pink_one = 2131493095;
+			
+			// aapt resource value: 0x7f0c00e8
+			public const int carnation_pink_three = 2131493096;
+			
+			// aapt resource value: 0x7f0c00e9
+			public const int carnation_pink_two = 2131493097;
+			
+			// aapt resource value: 0x7f0c00ea
+			public const int carolina_blue = 2131493098;
+			
+			// aapt resource value: 0x7f0c00eb
+			public const int carrot_orange = 2131493099;
+			
+			// aapt resource value: 0x7f0c00ec
+			public const int celadon = 2131493100;
+			
+			// aapt resource value: 0x7f0c00ed
+			public const int celeste = 2131493101;
+			
+			// aapt resource value: 0x7f0c00ee
+			public const int celestial_blue = 2131493102;
+			
+			// aapt resource value: 0x7f0c00ef
+			public const int cerise_pink = 2131493103;
+			
+			// aapt resource value: 0x7f0c00f0
+			public const int cerulean = 2131493104;
+			
+			// aapt resource value: 0x7f0c00f1
+			public const int cerulean_blue = 2131493105;
+			
+			// aapt resource value: 0x7f0c00f2
+			public const int cg_blue = 2131493106;
+			
+			// aapt resource value: 0x7f0c00f3
+			public const int cg_red = 2131493107;
+			
+			// aapt resource value: 0x7f0c00f4
+			public const int chamoisee = 2131493108;
+			
+			// aapt resource value: 0x7f0c00f5
+			public const int champagne = 2131493109;
+			
+			// aapt resource value: 0x7f0c00f6
+			public const int charcoal = 2131493110;
+			
+			// aapt resource value: 0x7f0c00f7
+			public const int chartreuse = 2131493111;
+			
+			// aapt resource value: 0x7f0c00f8
+			public const int cherry = 2131493112;
+			
+			// aapt resource value: 0x7f0c00f9
+			public const int cherry_blossom_pink = 2131493113;
+			
+			// aapt resource value: 0x7f0c00fa
+			public const int cherry_red = 2131493114;
+			
+			// aapt resource value: 0x7f0c00fb
+			public const int chestnut = 2131493115;
+			
+			// aapt resource value: 0x7f0c00fc
+			public const int chestnut_red = 2131493116;
+			
+			// aapt resource value: 0x7f0c00fd
+			public const int chilli_pepper = 2131493117;
+			
+			// aapt resource value: 0x7f0c00fe
+			public const int chocolate = 2131493118;
+			
+			// aapt resource value: 0x7f0c00ff
+			public const int chrome_yellow = 2131493119;
+			
+			// aapt resource value: 0x7f0c0100
+			public const int cinereous = 2131493120;
+			
+			// aapt resource value: 0x7f0c0101
+			public const int cinnabar = 2131493121;
+			
+			// aapt resource value: 0x7f0c0102
+			public const int citrine = 2131493122;
+			
+			// aapt resource value: 0x7f0c0103
+			public const int classic_rose = 2131493123;
+			
+			// aapt resource value: 0x7f0c0104
+			public const int cloudy_gray = 2131493124;
+			
+			// aapt resource value: 0x7f0c0105
+			public const int clover_green = 2131493125;
+			
+			// aapt resource value: 0x7f0c0106
+			public const int cobalt = 2131493126;
+			
+			// aapt resource value: 0x7f0c0107
+			public const int cobalt_blue = 2131493127;
+			
+			// aapt resource value: 0x7f0c0108
+			public const int coffee = 2131493128;
+			
+			// aapt resource value: 0x7f0c0109
+			public const int columbia_blue = 2131493129;
+			
+			// aapt resource value: 0x7f0c010a
+			public const int construction_cone_orange = 2131493130;
+			
+			// aapt resource value: 0x7f0c010b
+			public const int cookie_brown = 2131493131;
+			
+			// aapt resource value: 0x7f0c010c
+			public const int cool_black = 2131493132;
+			
+			// aapt resource value: 0x7f0c010d
+			public const int cool_grey = 2131493133;
+			
+			// aapt resource value: 0x7f0c010e
+			public const int copper = 2131493134;
+			
+			// aapt resource value: 0x7f0c010f
+			public const int copper_rose = 2131493135;
+			
+			// aapt resource value: 0x7f0c0110
+			public const int coquelicot = 2131493136;
+			
+			// aapt resource value: 0x7f0c0111
+			public const int coral = 2131493137;
+			
+			// aapt resource value: 0x7f0c0112
+			public const int coral_blue = 2131493138;
+			
+			// aapt resource value: 0x7f0c0113
+			public const int coral_pink = 2131493139;
+			
+			// aapt resource value: 0x7f0c0114
+			public const int coral_red = 2131493140;
+			
+			// aapt resource value: 0x7f0c0115
+			public const int cordovan = 2131493141;
+			
+			// aapt resource value: 0x7f0c0116
+			public const int corn = 2131493142;
+			
+			// aapt resource value: 0x7f0c0117
+			public const int corn_yellow = 2131493143;
+			
+			// aapt resource value: 0x7f0c0118
+			public const int cornell_red = 2131493144;
+			
+			// aapt resource value: 0x7f0c0119
+			public const int cornflower = 2131493145;
+			
+			// aapt resource value: 0x7f0c011a
+			public const int cornflower_blue = 2131493146;
+			
+			// aapt resource value: 0x7f0c011b
+			public const int cornsilk = 2131493147;
+			
+			// aapt resource value: 0x7f0c011c
+			public const int cosmic_latte = 2131493148;
+			
+			// aapt resource value: 0x7f0c011d
+			public const int cotton_candy = 2131493149;
+			
+			// aapt resource value: 0x7f0c011e
+			public const int cranberry = 2131493150;
+			
+			// aapt resource value: 0x7f0c011f
+			public const int cream = 2131493151;
+			
+			// aapt resource value: 0x7f0c0120
+			public const int cream_dark = 2131493152;
+			
+			// aapt resource value: 0x7f0c0121
+			public const int crimson = 2131493153;
+			
+			// aapt resource value: 0x7f0c0122
+			public const int crimson_glory = 2131493154;
+			
+			// aapt resource value: 0x7f0c0123
+			public const int crimson_red = 2131493155;
+			
+			// aapt resource value: 0x7f0c0124
+			public const int crocus_purple = 2131493156;
+			
+			// aapt resource value: 0x7f0c0125
+			public const int crystal_blue = 2131493157;
+			
+			// aapt resource value: 0x7f0c0126
+			public const int cyan = 2131493158;
+			
+			// aapt resource value: 0x7f0c0127
+			public const int cyan_opaque = 2131493159;
+			
+			// aapt resource value: 0x7f0c0128
+			public const int daffodil = 2131493160;
+			
+			// aapt resource value: 0x7f0c0129
+			public const int dandelion = 2131493161;
+			
+			// aapt resource value: 0x7f0c012a
+			public const int dark_blue = 2131493162;
+			
+			// aapt resource value: 0x7f0c012b
+			public const int dark_brown = 2131493163;
+			
+			// aapt resource value: 0x7f0c012c
+			public const int dark_byzantium = 2131493164;
+			
+			// aapt resource value: 0x7f0c012d
+			public const int dark_candy_apple_red = 2131493165;
+			
+			// aapt resource value: 0x7f0c012e
+			public const int dark_cerulean = 2131493166;
+			
+			// aapt resource value: 0x7f0c012f
+			public const int dark_chestnut = 2131493167;
+			
+			// aapt resource value: 0x7f0c0130
+			public const int dark_coral = 2131493168;
+			
+			// aapt resource value: 0x7f0c0131
+			public const int dark_cyan = 2131493169;
+			
+			// aapt resource value: 0x7f0c0132
+			public const int dark_electric_blue = 2131493170;
+			
+			// aapt resource value: 0x7f0c0133
+			public const int dark_forrest_green = 2131493171;
+			
+			// aapt resource value: 0x7f0c0134
+			public const int dark_goldenrod = 2131493172;
+			
+			// aapt resource value: 0x7f0c0135
+			public const int dark_gray = 2131493173;
+			
+			// aapt resource value: 0x7f0c0136
+			public const int dark_green = 2131493174;
+			
 			// aapt resource value: 0x7f0c0045
 			public const int dark_grey_text_color = 2131492933;
 			
+			// aapt resource value: 0x7f0c0137
+			public const int dark_jungle_green = 2131493175;
+			
+			// aapt resource value: 0x7f0c0138
+			public const int dark_khaki = 2131493176;
+			
+			// aapt resource value: 0x7f0c0139
+			public const int dark_lavender = 2131493177;
+			
+			// aapt resource value: 0x7f0c013a
+			public const int dark_magenta = 2131493178;
+			
+			// aapt resource value: 0x7f0c013b
+			public const int dark_midnight_blue = 2131493179;
+			
+			// aapt resource value: 0x7f0c013c
+			public const int dark_olive_green = 2131493180;
+			
+			// aapt resource value: 0x7f0c013d
+			public const int dark_orange = 2131493181;
+			
+			// aapt resource value: 0x7f0c013e
+			public const int dark_orchid = 2131493182;
+			
+			// aapt resource value: 0x7f0c013f
+			public const int dark_pastel_blue = 2131493183;
+			
+			// aapt resource value: 0x7f0c0140
+			public const int dark_pastel_green = 2131493184;
+			
+			// aapt resource value: 0x7f0c0141
+			public const int dark_pastel_purple = 2131493185;
+			
+			// aapt resource value: 0x7f0c0142
+			public const int dark_pastel_red = 2131493186;
+			
+			// aapt resource value: 0x7f0c0143
+			public const int dark_pink = 2131493187;
+			
+			// aapt resource value: 0x7f0c0144
+			public const int dark_powder_blue = 2131493188;
+			
+			// aapt resource value: 0x7f0c0145
+			public const int dark_raspberry = 2131493189;
+			
+			// aapt resource value: 0x7f0c0146
+			public const int dark_red = 2131493190;
+			
+			// aapt resource value: 0x7f0c0147
+			public const int dark_salmon = 2131493191;
+			
+			// aapt resource value: 0x7f0c0148
+			public const int dark_scarlet = 2131493192;
+			
+			// aapt resource value: 0x7f0c0149
+			public const int dark_sea_green = 2131493193;
+			
+			// aapt resource value: 0x7f0c014a
+			public const int dark_sienna = 2131493194;
+			
+			// aapt resource value: 0x7f0c014b
+			public const int dark_slate_blue = 2131493195;
+			
+			// aapt resource value: 0x7f0c014c
+			public const int dark_slate_gray = 2131493196;
+			
+			// aapt resource value: 0x7f0c014d
+			public const int dark_spring_green = 2131493197;
+			
+			// aapt resource value: 0x7f0c014e
+			public const int dark_tan = 2131493198;
+			
+			// aapt resource value: 0x7f0c014f
+			public const int dark_tangerine = 2131493199;
+			
+			// aapt resource value: 0x7f0c0150
+			public const int dark_terra_cotta = 2131493200;
+			
+			// aapt resource value: 0x7f0c0151
+			public const int dark_turquoise = 2131493201;
+			
+			// aapt resource value: 0x7f0c0152
+			public const int dark_violet = 2131493202;
+			
+			// aapt resource value: 0x7f0c0153
+			public const int dartmouth_green = 2131493203;
+			
 			// aapt resource value: 0x7f0c0043
 			public const int data_form_list_selected = 2131492931;
+			
+			// aapt resource value: 0x7f0c0154
+			public const int davy_grey = 2131493204;
+			
+			// aapt resource value: 0x7f0c0155
+			public const int debian_red = 2131493205;
+			
+			// aapt resource value: 0x7f0c0156
+			public const int deep_carmine = 2131493206;
+			
+			// aapt resource value: 0x7f0c0157
+			public const int deep_carmine_pink = 2131493207;
+			
+			// aapt resource value: 0x7f0c0158
+			public const int deep_carrot_orange = 2131493208;
+			
+			// aapt resource value: 0x7f0c0159
+			public const int deep_cerise = 2131493209;
+			
+			// aapt resource value: 0x7f0c015a
+			public const int deep_champagne = 2131493210;
+			
+			// aapt resource value: 0x7f0c015b
+			public const int deep_chestnut = 2131493211;
+			
+			// aapt resource value: 0x7f0c015c
+			public const int deep_coffee = 2131493212;
+			
+			// aapt resource value: 0x7f0c015d
+			public const int deep_fuchsia = 2131493213;
+			
+			// aapt resource value: 0x7f0c015e
+			public const int deep_jungle_green = 2131493214;
+			
+			// aapt resource value: 0x7f0c015f
+			public const int deep_lilac = 2131493215;
+			
+			// aapt resource value: 0x7f0c0160
+			public const int deep_magenta = 2131493216;
+			
+			// aapt resource value: 0x7f0c0161
+			public const int deep_peach = 2131493217;
+			
+			// aapt resource value: 0x7f0c0162
+			public const int deep_pink = 2131493218;
+			
+			// aapt resource value: 0x7f0c0163
+			public const int deep_saffron = 2131493219;
+			
+			// aapt resource value: 0x7f0c0164
+			public const int deep_sky_blue = 2131493220;
+			
+			// aapt resource value: 0x7f0c0165
+			public const int denim = 2131493221;
+			
+			// aapt resource value: 0x7f0c0166
+			public const int denim_blue = 2131493222;
+			
+			// aapt resource value: 0x7f0c0167
+			public const int desert_sand = 2131493223;
 			
 			// aapt resource value: 0x7f0c0012
 			public const int dim_foreground_disabled_material_dark = 2131492882;
@@ -1254,8 +2085,143 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0015
 			public const int dim_foreground_material_light = 2131492885;
 			
+			// aapt resource value: 0x7f0c0168
+			public const int dim_gray = 2131493224;
+			
+			// aapt resource value: 0x7f0c0169
+			public const int dimorphotheca_magenta = 2131493225;
+			
+			// aapt resource value: 0x7f0c016a
+			public const int dodger_blue = 2131493226;
+			
+			// aapt resource value: 0x7f0c016b
+			public const int dogwood_rose = 2131493227;
+			
+			// aapt resource value: 0x7f0c016c
+			public const int dollar_bill_green = 2131493228;
+			
+			// aapt resource value: 0x7f0c016d
+			public const int dragon_green = 2131493229;
+			
+			// aapt resource value: 0x7f0c016e
+			public const int duke_blue = 2131493230;
+			
+			// aapt resource value: 0x7f0c016f
+			public const int dull_purple = 2131493231;
+			
+			// aapt resource value: 0x7f0c0170
+			public const int earth_blue = 2131493232;
+			
+			// aapt resource value: 0x7f0c0171
+			public const int earth_yellow = 2131493233;
+			
+			// aapt resource value: 0x7f0c0172
+			public const int eggplant = 2131493234;
+			
+			// aapt resource value: 0x7f0c0173
+			public const int eggshell = 2131493235;
+			
+			// aapt resource value: 0x7f0c0174
+			public const int egyptian_blue = 2131493236;
+			
+			// aapt resource value: 0x7f0c0175
+			public const int electric_blue = 2131493237;
+			
+			// aapt resource value: 0x7f0c0176
+			public const int electric_crimson = 2131493238;
+			
+			// aapt resource value: 0x7f0c0177
+			public const int electric_green = 2131493239;
+			
+			// aapt resource value: 0x7f0c0178
+			public const int electric_indigo = 2131493240;
+			
+			// aapt resource value: 0x7f0c0179
+			public const int electric_lavender = 2131493241;
+			
+			// aapt resource value: 0x7f0c017a
+			public const int electric_purple = 2131493242;
+			
+			// aapt resource value: 0x7f0c017b
+			public const int electric_ultramarine = 2131493243;
+			
+			// aapt resource value: 0x7f0c017c
+			public const int electric_violet = 2131493244;
+			
+			// aapt resource value: 0x7f0c017d
+			public const int emerald = 2131493245;
+			
+			// aapt resource value: 0x7f0c017e
+			public const int emerald_green = 2131493246;
+			
+			// aapt resource value: 0x7f0c017f
+			public const int eton_blue = 2131493247;
+			
 			// aapt resource value: 0x7f0c0050
 			public const int fab_material_blue_500 = 2131492944;
+			
+			// aapt resource value: 0x7f0c0180
+			public const int fall_leaf_brown = 2131493248;
+			
+			// aapt resource value: 0x7f0c0181
+			public const int falu_red = 2131493249;
+			
+			// aapt resource value: 0x7f0c0182
+			public const int famous = 2131493250;
+			
+			// aapt resource value: 0x7f0c0183
+			public const int fandango = 2131493251;
+			
+			// aapt resource value: 0x7f0c0184
+			public const int fashion_fuchsia = 2131493252;
+			
+			// aapt resource value: 0x7f0c0185
+			public const int fawn = 2131493253;
+			
+			// aapt resource value: 0x7f0c0186
+			public const int feldgrau = 2131493254;
+			
+			// aapt resource value: 0x7f0c0187
+			public const int fern = 2131493255;
+			
+			// aapt resource value: 0x7f0c0188
+			public const int fern_green = 2131493256;
+			
+			// aapt resource value: 0x7f0c0189
+			public const int ferrari_red = 2131493257;
+			
+			// aapt resource value: 0x7f0c018a
+			public const int field_drab = 2131493258;
+			
+			// aapt resource value: 0x7f0c018b
+			public const int fire_engine_red = 2131493259;
+			
+			// aapt resource value: 0x7f0c018c
+			public const int firebrick = 2131493260;
+			
+			// aapt resource value: 0x7f0c018d
+			public const int flame = 2131493261;
+			
+			// aapt resource value: 0x7f0c018e
+			public const int flamingo_pink = 2131493262;
+			
+			// aapt resource value: 0x7f0c018f
+			public const int flavescent = 2131493263;
+			
+			// aapt resource value: 0x7f0c0190
+			public const int flax = 2131493264;
+			
+			// aapt resource value: 0x7f0c0191
+			public const int floral_white = 2131493265;
+			
+			// aapt resource value: 0x7f0c0192
+			public const int fluorescent_pink = 2131493266;
+			
+			// aapt resource value: 0x7f0c0193
+			public const int fluorescent_yellow = 2131493267;
+			
+			// aapt resource value: 0x7f0c0194
+			public const int folly = 2131493268;
 			
 			// aapt resource value: 0x7f0c0016
 			public const int foreground_material_dark = 2131492886;
@@ -1263,11 +2229,179 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0017
 			public const int foreground_material_light = 2131492887;
 			
+			// aapt resource value: 0x7f0c0195
+			public const int forest_green = 2131493269;
+			
+			// aapt resource value: 0x7f0c0196
+			public const int french_beige = 2131493270;
+			
+			// aapt resource value: 0x7f0c0197
+			public const int french_blue = 2131493271;
+			
+			// aapt resource value: 0x7f0c0198
+			public const int french_lilac = 2131493272;
+			
+			// aapt resource value: 0x7f0c0199
+			public const int french_rose = 2131493273;
+			
+			// aapt resource value: 0x7f0c019a
+			public const int frog_green = 2131493274;
+			
+			// aapt resource value: 0x7f0c019b
+			public const int fuchsia = 2131493275;
+			
+			// aapt resource value: 0x7f0c019c
+			public const int fuchsia_pink = 2131493276;
+			
+			// aapt resource value: 0x7f0c019d
+			public const int fulvous = 2131493277;
+			
+			// aapt resource value: 0x7f0c019e
+			public const int fuzzy_wuzzy = 2131493278;
+			
+			// aapt resource value: 0x7f0c019f
+			public const int gainsboro = 2131493279;
+			
+			// aapt resource value: 0x7f0c01a0
+			public const int gamboge = 2131493280;
+			
+			// aapt resource value: 0x7f0c01a1
+			public const int ghost_white = 2131493281;
+			
+			// aapt resource value: 0x7f0c01a2
+			public const int ginger = 2131493282;
+			
+			// aapt resource value: 0x7f0c01a3
+			public const int ginger_brown = 2131493283;
+			
+			// aapt resource value: 0x7f0c01a4
+			public const int glaucous = 2131493284;
+			
+			// aapt resource value: 0x7f0c01a5
+			public const int glitter = 2131493285;
+			
+			// aapt resource value: 0x7f0c01a6
+			public const int gold = 2131493286;
+			
+			// aapt resource value: 0x7f0c01a7
+			public const int golden = 2131493287;
+			
+			// aapt resource value: 0x7f0c01a8
+			public const int golden_brown = 2131493288;
+			
+			// aapt resource value: 0x7f0c01a9
+			public const int golden_poppy = 2131493289;
+			
+			// aapt resource value: 0x7f0c01aa
+			public const int golden_yellow = 2131493290;
+			
+			// aapt resource value: 0x7f0c01ab
+			public const int goldenrod = 2131493291;
+			
+			// aapt resource value: 0x7f0c01ac
+			public const int granite = 2131493292;
+			
+			// aapt resource value: 0x7f0c01ad
+			public const int granny_smith_apple = 2131493293;
+			
+			// aapt resource value: 0x7f0c01ae
+			public const int grape = 2131493294;
+			
+			// aapt resource value: 0x7f0c01af
+			public const int grapefruit = 2131493295;
+			
+			// aapt resource value: 0x7f0c01b0
+			public const int gray_asparagus = 2131493296;
+			
+			// aapt resource value: 0x7f0c01b1
+			public const int gray_cloud = 2131493297;
+			
+			// aapt resource value: 0x7f0c01b2
+			public const int gray_dolphin = 2131493298;
+			
+			// aapt resource value: 0x7f0c01b3
+			public const int gray_goose = 2131493299;
+			
+			// aapt resource value: 0x7f0c01b4
+			public const int gray_wolf = 2131493300;
+			
+			// aapt resource value: 0x7f0c01b5
+			public const int grayish_turquoise = 2131493301;
+			
+			// aapt resource value: 0x7f0c01b6
+			public const int green_apple = 2131493302;
+			
+			// aapt resource value: 0x7f0c01b7
+			public const int green_blue = 2131493303;
+			
+			// aapt resource value: 0x7f0c01b8
+			public const int green_onion = 2131493304;
+			
+			// aapt resource value: 0x7f0c01b9
+			public const int green_peas = 2131493305;
+			
+			// aapt resource value: 0x7f0c01ba
+			public const int green_snake = 2131493306;
+			
+			// aapt resource value: 0x7f0c01bb
+			public const int green_thumb = 2131493307;
+			
+			// aapt resource value: 0x7f0c01bc
+			public const int green_yellow = 2131493308;
+			
+			// aapt resource value: 0x7f0c01bd
+			public const int greenish_blue = 2131493309;
+			
+			// aapt resource value: 0x7f0c01be
+			public const int grey = 2131493310;
+			
 			// aapt resource value: 0x7f0c0044
 			public const int grey_text_color = 2131492932;
 			
 			// aapt resource value: 0x7f0c0040
 			public const int groupHeaderTextColor = 2131492928;
+			
+			// aapt resource value: 0x7f0c01bf
+			public const int grullo = 2131493311;
+			
+			// aapt resource value: 0x7f0c01c0
+			public const int gunmetal = 2131493312;
+			
+			// aapt resource value: 0x7f0c01c1
+			public const int guppie_green = 2131493313;
+			
+			// aapt resource value: 0x7f0c01c2
+			public const int halaya_ube = 2131493314;
+			
+			// aapt resource value: 0x7f0c01c3
+			public const int halloween_orange = 2131493315;
+			
+			// aapt resource value: 0x7f0c01c4
+			public const int han_blue = 2131493316;
+			
+			// aapt resource value: 0x7f0c01c5
+			public const int han_purple = 2131493317;
+			
+			// aapt resource value: 0x7f0c01c6
+			public const int hansa_yellow = 2131493318;
+			
+			// aapt resource value: 0x7f0c01c7
+			public const int harlequin = 2131493319;
+			
+			// aapt resource value: 0x7f0c01c8
+			public const int harvard_crimson = 2131493320;
+			
+			// aapt resource value: 0x7f0c01c9
+			public const int harvest_gold = 2131493321;
+			
+			// aapt resource value: 0x7f0c01ca
+			public const int hazel_green = 2131493322;
+			
+			// aapt resource value: 0x7f0c01cb
+			public const int heliotrope = 2131493323;
+			
+			// aapt resource value: 0x7f0c01cc
+			public const int heliotrope_purple = 2131493324;
 			
 			// aapt resource value: 0x7f0c0018
 			public const int highlighted_text_material_dark = 2131492888;
@@ -1281,17 +2415,344 @@ namespace DonDon
 			// aapt resource value: 0x7f0c001b
 			public const int hint_foreground_material_light = 2131492891;
 			
+			// aapt resource value: 0x7f0c01cd
+			public const int hollywood_cerise = 2131493325;
+			
+			// aapt resource value: 0x7f0c01ce
+			public const int honeydew = 2131493326;
+			
+			// aapt resource value: 0x7f0c01cf
+			public const int hooker_green = 2131493327;
+			
+			// aapt resource value: 0x7f0c01d0
+			public const int hot_magenta = 2131493328;
+			
+			// aapt resource value: 0x7f0c01d1
+			public const int hot_pink = 2131493329;
+			
+			// aapt resource value: 0x7f0c01d2
+			public const int hummingbird_green = 2131493330;
+			
+			// aapt resource value: 0x7f0c01d3
+			public const int hunter_green = 2131493331;
+			
+			// aapt resource value: 0x7f0c01d4
+			public const int iceberg = 2131493332;
+			
+			// aapt resource value: 0x7f0c01d5
+			public const int icterine = 2131493333;
+			
+			// aapt resource value: 0x7f0c01d6
+			public const int iguana_green = 2131493334;
+			
+			// aapt resource value: 0x7f0c01d7
+			public const int inchworm = 2131493335;
+			
+			// aapt resource value: 0x7f0c01d8
+			public const int india_green = 2131493336;
+			
+			// aapt resource value: 0x7f0c01d9
+			public const int indian_yellow = 2131493337;
+			
+			// aapt resource value: 0x7f0c01da
+			public const int indigo = 2131493338;
+			
+			// aapt resource value: 0x7f0c01db
+			public const int international_klein_blue = 2131493339;
+			
+			// aapt resource value: 0x7f0c01dc
+			public const int international_orange = 2131493340;
+			
+			// aapt resource value: 0x7f0c01dd
+			public const int iris = 2131493341;
+			
+			// aapt resource value: 0x7f0c01de
+			public const int isabelline = 2131493342;
+			
+			// aapt resource value: 0x7f0c01df
+			public const int islamic_green = 2131493343;
+			
+			// aapt resource value: 0x7f0c01e0
+			public const int ivory = 2131493344;
+			
+			// aapt resource value: 0x7f0c01e1
+			public const int jade = 2131493345;
+			
+			// aapt resource value: 0x7f0c01e2
+			public const int jasmine = 2131493346;
+			
+			// aapt resource value: 0x7f0c01e3
+			public const int jasmine_purple = 2131493347;
+			
+			// aapt resource value: 0x7f0c01e4
+			public const int jasper = 2131493348;
+			
+			// aapt resource value: 0x7f0c01e5
+			public const int jazzberry_jam = 2131493349;
+			
+			// aapt resource value: 0x7f0c01e6
+			public const int jeans_blue = 2131493350;
+			
+			// aapt resource value: 0x7f0c01e7
+			public const int jellyfish = 2131493351;
+			
+			// aapt resource value: 0x7f0c01e8
+			public const int jet_gray = 2131493352;
+			
+			// aapt resource value: 0x7f0c01e9
+			public const int jonquil = 2131493353;
+			
+			// aapt resource value: 0x7f0c01ea
+			public const int june_bud = 2131493354;
+			
+			// aapt resource value: 0x7f0c01eb
+			public const int jungle_green = 2131493355;
+			
+			// aapt resource value: 0x7f0c01ec
+			public const int kelly_green = 2131493356;
+			
+			// aapt resource value: 0x7f0c01ed
+			public const int khaki = 2131493357;
+			
+			// aapt resource value: 0x7f0c01ee
+			public const int khaki_rose = 2131493358;
+			
+			// aapt resource value: 0x7f0c01ef
+			public const int ku_crimson = 2131493359;
+			
+			// aapt resource value: 0x7f0c01f0
+			public const int la_salle_green = 2131493360;
+			
+			// aapt resource value: 0x7f0c01f1
+			public const int languid_lavender = 2131493361;
+			
+			// aapt resource value: 0x7f0c01f2
+			public const int lapis_blue = 2131493362;
+			
+			// aapt resource value: 0x7f0c01f3
+			public const int lapis_lazuli = 2131493363;
+			
+			// aapt resource value: 0x7f0c01f4
+			public const int laser_lemon = 2131493364;
+			
+			// aapt resource value: 0x7f0c01f5
+			public const int laurel_green = 2131493365;
+			
+			// aapt resource value: 0x7f0c01f6
+			public const int lava = 2131493366;
+			
+			// aapt resource value: 0x7f0c01f7
+			public const int lava_red = 2131493367;
+			
+			// aapt resource value: 0x7f0c01f8
+			public const int lavender = 2131493368;
+			
+			// aapt resource value: 0x7f0c01f9
+			public const int lavender_blue = 2131493369;
+			
+			// aapt resource value: 0x7f0c01fa
+			public const int lavender_blush = 2131493370;
+			
+			// aapt resource value: 0x7f0c01fb
+			public const int lavender_gray = 2131493371;
+			
+			// aapt resource value: 0x7f0c01fc
+			public const int lavender_indigo = 2131493372;
+			
+			// aapt resource value: 0x7f0c01fd
+			public const int lavender_magenta = 2131493373;
+			
+			// aapt resource value: 0x7f0c01fe
+			public const int lavender_pink = 2131493374;
+			
+			// aapt resource value: 0x7f0c01ff
+			public const int lavender_pinocchio = 2131493375;
+			
+			// aapt resource value: 0x7f0c0200
+			public const int lavender_purple = 2131493376;
+			
+			// aapt resource value: 0x7f0c0201
+			public const int lavender_rose = 2131493377;
+			
+			// aapt resource value: 0x7f0c0202
+			public const int lawn_green = 2131493378;
+			
+			// aapt resource value: 0x7f0c0203
+			public const int lemon = 2131493379;
+			
+			// aapt resource value: 0x7f0c0204
+			public const int lemon_chiffon = 2131493380;
+			
+			// aapt resource value: 0x7f0c0205
+			public const int lemon_lime = 2131493381;
+			
+			// aapt resource value: 0x7f0c0206
+			public const int lemon_yellow = 2131493382;
+			
+			// aapt resource value: 0x7f0c0207
+			public const int light_apricot = 2131493383;
+			
+			// aapt resource value: 0x7f0c0208
+			public const int light_aquamarine = 2131493384;
+			
 			// aapt resource value: 0x7f0c0046
 			public const int light_blue = 2131492934;
 			
+			// aapt resource value: 0x7f0c0209
+			public const int light_brown = 2131493385;
+			
+			// aapt resource value: 0x7f0c020a
+			public const int light_carmine_pink = 2131493386;
+			
+			// aapt resource value: 0x7f0c020b
+			public const int light_coral = 2131493387;
+			
+			// aapt resource value: 0x7f0c020c
+			public const int light_cornflower_blue = 2131493388;
+			
+			// aapt resource value: 0x7f0c020d
+			public const int light_crimson = 2131493389;
+			
+			// aapt resource value: 0x7f0c020e
+			public const int light_cyan = 2131493390;
+			
+			// aapt resource value: 0x7f0c020f
+			public const int light_fuchsia_pink = 2131493391;
+			
+			// aapt resource value: 0x7f0c0210
+			public const int light_goldenrod_yellow = 2131493392;
+			
+			// aapt resource value: 0x7f0c0211
+			public const int light_gray = 2131493393;
+			
+			// aapt resource value: 0x7f0c0212
+			public const int light_green = 2131493394;
+			
 			// aapt resource value: 0x7f0c0047
 			public const int light_grey = 2131492935;
+			
+			// aapt resource value: 0x7f0c0213
+			public const int light_jade = 2131493395;
+			
+			// aapt resource value: 0x7f0c0214
+			public const int light_khaki = 2131493396;
+			
+			// aapt resource value: 0x7f0c0215
+			public const int light_pastel_purple = 2131493397;
+			
+			// aapt resource value: 0x7f0c0216
+			public const int light_pink = 2131493398;
+			
+			// aapt resource value: 0x7f0c0217
+			public const int light_salmon = 2131493399;
+			
+			// aapt resource value: 0x7f0c0218
+			public const int light_salmon_pink = 2131493400;
+			
+			// aapt resource value: 0x7f0c0219
+			public const int light_sea_green = 2131493401;
+			
+			// aapt resource value: 0x7f0c021a
+			public const int light_sky_blue = 2131493402;
+			
+			// aapt resource value: 0x7f0c021b
+			public const int light_slate = 2131493403;
+			
+			// aapt resource value: 0x7f0c021c
+			public const int light_slate_blue = 2131493404;
+			
+			// aapt resource value: 0x7f0c021d
+			public const int light_slate_gray = 2131493405;
+			
+			// aapt resource value: 0x7f0c021e
+			public const int light_steel_blue = 2131493406;
+			
+			// aapt resource value: 0x7f0c021f
+			public const int light_taupe = 2131493407;
+			
+			// aapt resource value: 0x7f0c0220
+			public const int light_thulian_pink = 2131493408;
+			
+			// aapt resource value: 0x7f0c0221
+			public const int light_yellow = 2131493409;
+			
+			// aapt resource value: 0x7f0c0222
+			public const int lilac = 2131493410;
+			
+			// aapt resource value: 0x7f0c0223
+			public const int lime_green = 2131493411;
+			
+			// aapt resource value: 0x7f0c0224
+			public const int lincoln_green = 2131493412;
+			
+			// aapt resource value: 0x7f0c0225
+			public const int linen = 2131493413;
+			
+			// aapt resource value: 0x7f0c0226
+			public const int lipstick_pink = 2131493414;
 			
 			// aapt resource value: 0x7f0c003f
 			public const int listAccentColor = 2131492927;
 			
 			// aapt resource value: 0x7f0c003e
 			public const int listItemTextColor = 2131492926;
+			
+			// aapt resource value: 0x7f0c0227
+			public const int liver = 2131493415;
+			
+			// aapt resource value: 0x7f0c0228
+			public const int love_red = 2131493416;
+			
+			// aapt resource value: 0x7f0c0229
+			public const int lovely_purple = 2131493417;
+			
+			// aapt resource value: 0x7f0c022a
+			public const int lust = 2131493418;
+			
+			// aapt resource value: 0x7f0c022b
+			public const int macaroni_and_cheese = 2131493419;
+			
+			// aapt resource value: 0x7f0c022c
+			public const int magenta = 2131493420;
+			
+			// aapt resource value: 0x7f0c022d
+			public const int magic_mint = 2131493421;
+			
+			// aapt resource value: 0x7f0c022e
+			public const int magnolia = 2131493422;
+			
+			// aapt resource value: 0x7f0c022f
+			public const int mahogany = 2131493423;
+			
+			// aapt resource value: 0x7f0c0230
+			public const int maize = 2131493424;
+			
+			// aapt resource value: 0x7f0c0231
+			public const int majorelle_blue = 2131493425;
+			
+			// aapt resource value: 0x7f0c0232
+			public const int malachite = 2131493426;
+			
+			// aapt resource value: 0x7f0c0233
+			public const int manatee = 2131493427;
+			
+			// aapt resource value: 0x7f0c0234
+			public const int mango_orange = 2131493428;
+			
+			// aapt resource value: 0x7f0c0235
+			public const int mango_tango = 2131493429;
+			
+			// aapt resource value: 0x7f0c0236
+			public const int mantis = 2131493430;
+			
+			// aapt resource value: 0x7f0c0237
+			public const int marble_blue = 2131493431;
+			
+			// aapt resource value: 0x7f0c0238
+			public const int maroon = 2131493432;
+			
+			// aapt resource value: 0x7f0c0239
+			public const int mascaw_blue_green = 2131493433;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int material_blue_grey_800 = 2131492892;
@@ -1329,8 +2790,503 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0027
 			public const int material_grey_900 = 2131492903;
 			
+			// aapt resource value: 0x7f0c023a
+			public const int mauve = 2131493434;
+			
+			// aapt resource value: 0x7f0c023b
+			public const int mauvelous = 2131493435;
+			
+			// aapt resource value: 0x7f0c023c
+			public const int maya_blue = 2131493436;
+			
+			// aapt resource value: 0x7f0c023d
+			public const int meat_brown = 2131493437;
+			
+			// aapt resource value: 0x7f0c023e
+			public const int medium_aquamarine = 2131493438;
+			
+			// aapt resource value: 0x7f0c023f
+			public const int medium_blue = 2131493439;
+			
+			// aapt resource value: 0x7f0c0240
+			public const int medium_candy_apple_red = 2131493440;
+			
+			// aapt resource value: 0x7f0c0241
+			public const int medium_champagne = 2131493441;
+			
+			// aapt resource value: 0x7f0c0242
+			public const int medium_electric_blue = 2131493442;
+			
+			// aapt resource value: 0x7f0c0243
+			public const int medium_forest_green = 2131493443;
+			
+			// aapt resource value: 0x7f0c0244
+			public const int medium_jungle_green = 2131493444;
+			
+			// aapt resource value: 0x7f0c0245
+			public const int medium_lavender_magenta = 2131493445;
+			
+			// aapt resource value: 0x7f0c0246
+			public const int medium_orchid = 2131493446;
+			
+			// aapt resource value: 0x7f0c0247
+			public const int medium_persian_blue = 2131493447;
+			
+			// aapt resource value: 0x7f0c0248
+			public const int medium_purple = 2131493448;
+			
+			// aapt resource value: 0x7f0c0249
+			public const int medium_red_violet = 2131493449;
+			
+			// aapt resource value: 0x7f0c024a
+			public const int medium_sea_green = 2131493450;
+			
+			// aapt resource value: 0x7f0c024b
+			public const int medium_slate_blue = 2131493451;
+			
+			// aapt resource value: 0x7f0c024c
+			public const int medium_spring_bud = 2131493452;
+			
+			// aapt resource value: 0x7f0c024d
+			public const int medium_spring_green = 2131493453;
+			
+			// aapt resource value: 0x7f0c024e
+			public const int medium_taupe = 2131493454;
+			
+			// aapt resource value: 0x7f0c024f
+			public const int medium_teal_blue = 2131493455;
+			
+			// aapt resource value: 0x7f0c0250
+			public const int medium_turquoise = 2131493456;
+			
+			// aapt resource value: 0x7f0c0251
+			public const int medium_violet_red = 2131493457;
+			
+			// aapt resource value: 0x7f0c0252
+			public const int melon = 2131493458;
+			
+			// aapt resource value: 0x7f0c0253
+			public const int metallic_silver = 2131493459;
+			
+			// aapt resource value: 0x7f0c0254
+			public const int midnight = 2131493460;
+			
+			// aapt resource value: 0x7f0c0255
+			public const int midnight_blue = 2131493461;
+			
+			// aapt resource value: 0x7f0c0256
+			public const int midnight_green = 2131493462;
+			
+			// aapt resource value: 0x7f0c0257
+			public const int mikado_yellow = 2131493463;
+			
+			// aapt resource value: 0x7f0c0258
+			public const int milk_white = 2131493464;
+			
+			// aapt resource value: 0x7f0c0259
+			public const int mint = 2131493465;
+			
+			// aapt resource value: 0x7f0c025a
+			public const int mint_cream = 2131493466;
+			
+			// aapt resource value: 0x7f0c025b
+			public const int mint_green = 2131493467;
+			
+			// aapt resource value: 0x7f0c025c
+			public const int mist_blue = 2131493468;
+			
+			// aapt resource value: 0x7f0c025d
+			public const int misty_rose = 2131493469;
+			
+			// aapt resource value: 0x7f0c025e
+			public const int moccasin = 2131493470;
+			
+			// aapt resource value: 0x7f0c025f
+			public const int mocha = 2131493471;
+			
+			// aapt resource value: 0x7f0c0260
+			public const int moonstone_blue = 2131493472;
+			
+			// aapt resource value: 0x7f0c0261
+			public const int mordant_red_19 = 2131493473;
+			
+			// aapt resource value: 0x7f0c0262
+			public const int moss_green = 2131493474;
+			
+			// aapt resource value: 0x7f0c0263
+			public const int mountain_meadow = 2131493475;
+			
+			// aapt resource value: 0x7f0c0264
+			public const int mountbatten_pink = 2131493476;
+			
+			// aapt resource value: 0x7f0c0265
+			public const int msu_green = 2131493477;
+			
+			// aapt resource value: 0x7f0c0266
+			public const int mulberry = 2131493478;
+			
+			// aapt resource value: 0x7f0c0267
+			public const int mustard = 2131493479;
+			
+			// aapt resource value: 0x7f0c0268
+			public const int myrtle = 2131493480;
+			
+			// aapt resource value: 0x7f0c0269
+			public const int nadeshiko_pink = 2131493481;
+			
+			// aapt resource value: 0x7f0c026a
+			public const int napier_green = 2131493482;
+			
+			// aapt resource value: 0x7f0c026b
+			public const int naples_yellow = 2131493483;
+			
+			// aapt resource value: 0x7f0c026c
+			public const int navajo_white = 2131493484;
+			
+			// aapt resource value: 0x7f0c026d
+			public const int navy_blue = 2131493485;
+			
+			// aapt resource value: 0x7f0c026e
+			public const int nebula_green = 2131493486;
+			
+			// aapt resource value: 0x7f0c026f
+			public const int neon_carrot = 2131493487;
+			
+			// aapt resource value: 0x7f0c0270
+			public const int neon_fuchsia = 2131493488;
+			
+			// aapt resource value: 0x7f0c0271
+			public const int neon_green = 2131493489;
+			
+			// aapt resource value: 0x7f0c0272
+			public const int neon_pink = 2131493490;
+			
+			// aapt resource value: 0x7f0c0273
+			public const int non_photo_blue = 2131493491;
+			
+			// aapt resource value: 0x7f0c0274
+			public const int north_texas_green = 2131493492;
+			
+			// aapt resource value: 0x7f0c0275
+			public const int northern_lights_blue = 2131493493;
+			
+			// aapt resource value: 0x7f0c0276
+			public const int oak_brown = 2131493494;
+			
+			// aapt resource value: 0x7f0c0277
+			public const int ocean_blue = 2131493495;
+			
+			// aapt resource value: 0x7f0c0278
+			public const int ocean_boat_blue = 2131493496;
+			
+			// aapt resource value: 0x7f0c0279
+			public const int ochre = 2131493497;
+			
+			// aapt resource value: 0x7f0c027a
+			public const int office_green = 2131493498;
+			
+			// aapt resource value: 0x7f0c027b
+			public const int oil = 2131493499;
+			
+			// aapt resource value: 0x7f0c027c
+			public const int old_gold = 2131493500;
+			
+			// aapt resource value: 0x7f0c027d
+			public const int old_lace = 2131493501;
+			
+			// aapt resource value: 0x7f0c027e
+			public const int old_lavender = 2131493502;
+			
+			// aapt resource value: 0x7f0c027f
+			public const int old_mauve = 2131493503;
+			
+			// aapt resource value: 0x7f0c0280
+			public const int old_rose = 2131493504;
+			
+			// aapt resource value: 0x7f0c0281
+			public const int olive = 2131493505;
+			
+			// aapt resource value: 0x7f0c0282
+			public const int olive_drab = 2131493506;
+			
+			// aapt resource value: 0x7f0c0283
+			public const int olive_green = 2131493507;
+			
+			// aapt resource value: 0x7f0c0284
+			public const int olivine = 2131493508;
+			
+			// aapt resource value: 0x7f0c0285
+			public const int onyx = 2131493509;
+			
+			// aapt resource value: 0x7f0c0286
+			public const int opera_mauve = 2131493510;
+			
+			// aapt resource value: 0x7f0c0287
+			public const int orange = 2131493511;
+			
+			// aapt resource value: 0x7f0c0288
+			public const int orange_peel = 2131493512;
+			
+			// aapt resource value: 0x7f0c0289
+			public const int orange_red = 2131493513;
+			
+			// aapt resource value: 0x7f0c028a
+			public const int orange_salmon = 2131493514;
+			
+			// aapt resource value: 0x7f0c028b
+			public const int orange_yellow = 2131493515;
+			
+			// aapt resource value: 0x7f0c028c
+			public const int orchid = 2131493516;
+			
+			// aapt resource value: 0x7f0c028d
+			public const int outer_space = 2131493517;
+			
+			// aapt resource value: 0x7f0c028e
+			public const int outrageous_orange = 2131493518;
+			
+			// aapt resource value: 0x7f0c028f
+			public const int oxford_blue = 2131493519;
+			
+			// aapt resource value: 0x7f0c0290
+			public const int pacific_blue = 2131493520;
+			
+			// aapt resource value: 0x7f0c0291
+			public const int pakistan_green = 2131493521;
+			
+			// aapt resource value: 0x7f0c0292
+			public const int palatinate_blue = 2131493522;
+			
+			// aapt resource value: 0x7f0c0293
+			public const int palatinate_purple = 2131493523;
+			
+			// aapt resource value: 0x7f0c0294
+			public const int pale_aqua = 2131493524;
+			
+			// aapt resource value: 0x7f0c0295
+			public const int pale_blue = 2131493525;
+			
+			// aapt resource value: 0x7f0c0296
+			public const int pale_blue_lily = 2131493526;
+			
+			// aapt resource value: 0x7f0c0297
+			public const int pale_brown = 2131493527;
+			
+			// aapt resource value: 0x7f0c0298
+			public const int pale_carmine = 2131493528;
+			
+			// aapt resource value: 0x7f0c0299
+			public const int pale_cerulean = 2131493529;
+			
+			// aapt resource value: 0x7f0c029a
+			public const int pale_chestnut = 2131493530;
+			
+			// aapt resource value: 0x7f0c029b
+			public const int pale_copper = 2131493531;
+			
+			// aapt resource value: 0x7f0c029c
+			public const int pale_cornflower_blue = 2131493532;
+			
+			// aapt resource value: 0x7f0c029d
+			public const int pale_gold = 2131493533;
+			
+			// aapt resource value: 0x7f0c029e
+			public const int pale_goldenrod = 2131493534;
+			
+			// aapt resource value: 0x7f0c029f
+			public const int pale_green = 2131493535;
+			
+			// aapt resource value: 0x7f0c02a0
+			public const int pale_lavender = 2131493536;
+			
+			// aapt resource value: 0x7f0c02a1
+			public const int pale_magenta = 2131493537;
+			
+			// aapt resource value: 0x7f0c02a2
+			public const int pale_pink = 2131493538;
+			
+			// aapt resource value: 0x7f0c02a3
+			public const int pale_red_violet = 2131493539;
+			
+			// aapt resource value: 0x7f0c02a4
+			public const int pale_robin_egg_blue = 2131493540;
+			
+			// aapt resource value: 0x7f0c02a5
+			public const int pale_silver = 2131493541;
+			
+			// aapt resource value: 0x7f0c02a6
+			public const int pale_spring_bud = 2131493542;
+			
+			// aapt resource value: 0x7f0c02a7
+			public const int pale_taupe = 2131493543;
+			
+			// aapt resource value: 0x7f0c02a8
+			public const int pansy_purple = 2131493544;
+			
+			// aapt resource value: 0x7f0c02a9
+			public const int papaya_orange = 2131493545;
+			
+			// aapt resource value: 0x7f0c02aa
+			public const int papaya_whip = 2131493546;
+			
+			// aapt resource value: 0x7f0c02ab
+			public const int parchment = 2131493547;
+			
+			// aapt resource value: 0x7f0c02ac
+			public const int paris_green = 2131493548;
+			
+			// aapt resource value: 0x7f0c02ad
+			public const int pastel_blue = 2131493549;
+			
+			// aapt resource value: 0x7f0c02ae
+			public const int pastel_brown = 2131493550;
+			
+			// aapt resource value: 0x7f0c02af
+			public const int pastel_gray = 2131493551;
+			
+			// aapt resource value: 0x7f0c02b0
+			public const int pastel_green = 2131493552;
+			
+			// aapt resource value: 0x7f0c02b1
+			public const int pastel_magenta = 2131493553;
+			
+			// aapt resource value: 0x7f0c02b2
+			public const int pastel_orange = 2131493554;
+			
+			// aapt resource value: 0x7f0c02b3
+			public const int pastel_pink = 2131493555;
+			
+			// aapt resource value: 0x7f0c02b4
+			public const int pastel_purple = 2131493556;
+			
+			// aapt resource value: 0x7f0c02b5
+			public const int pastel_red = 2131493557;
+			
+			// aapt resource value: 0x7f0c02b6
+			public const int pastel_violet = 2131493558;
+			
+			// aapt resource value: 0x7f0c02b7
+			public const int pastel_yellow = 2131493559;
+			
+			// aapt resource value: 0x7f0c02b8
+			public const int payne_grey = 2131493560;
+			
+			// aapt resource value: 0x7f0c02b9
+			public const int peach = 2131493561;
+			
+			// aapt resource value: 0x7f0c02ba
+			public const int peach_puff = 2131493562;
+			
+			// aapt resource value: 0x7f0c02bb
+			public const int peach_yellow = 2131493563;
+			
+			// aapt resource value: 0x7f0c02bc
+			public const int pearl = 2131493564;
+			
+			// aapt resource value: 0x7f0c02bd
+			public const int pearl_aqua = 2131493565;
+			
+			// aapt resource value: 0x7f0c02be
+			public const int peridot = 2131493566;
+			
+			// aapt resource value: 0x7f0c02bf
+			public const int persian_blue = 2131493567;
+			
+			// aapt resource value: 0x7f0c02c0
+			public const int persian_indigo = 2131493568;
+			
+			// aapt resource value: 0x7f0c02c1
+			public const int persian_orange = 2131493569;
+			
+			// aapt resource value: 0x7f0c02c2
+			public const int persian_pink = 2131493570;
+			
+			// aapt resource value: 0x7f0c02c3
+			public const int persian_plum = 2131493571;
+			
+			// aapt resource value: 0x7f0c02c4
+			public const int persian_red = 2131493572;
+			
+			// aapt resource value: 0x7f0c02c5
+			public const int persian_rose = 2131493573;
+			
+			// aapt resource value: 0x7f0c02c6
+			public const int phthalo_blue = 2131493574;
+			
+			// aapt resource value: 0x7f0c02c7
+			public const int phthalo_green = 2131493575;
+			
+			// aapt resource value: 0x7f0c02c8
+			public const int pig_pink = 2131493576;
+			
+			// aapt resource value: 0x7f0c02c9
+			public const int piggy_pink = 2131493577;
+			
+			// aapt resource value: 0x7f0c02ca
+			public const int pine_green = 2131493578;
+			
+			// aapt resource value: 0x7f0c02cb
+			public const int pink = 2131493579;
+			
+			// aapt resource value: 0x7f0c02cc
+			public const int pink_bow = 2131493580;
+			
+			// aapt resource value: 0x7f0c02cd
+			public const int pink_bubblegum = 2131493581;
+			
+			// aapt resource value: 0x7f0c02ce
+			public const int pink_cupcake = 2131493582;
+			
+			// aapt resource value: 0x7f0c02cf
+			public const int pink_daisy = 2131493583;
+			
+			// aapt resource value: 0x7f0c02d0
+			public const int pink_flamingo = 2131493584;
+			
+			// aapt resource value: 0x7f0c02d1
+			public const int pink_lemonade = 2131493585;
+			
+			// aapt resource value: 0x7f0c02d2
+			public const int pink_pearl = 2131493586;
+			
+			// aapt resource value: 0x7f0c02d3
+			public const int pink_rose = 2131493587;
+			
+			// aapt resource value: 0x7f0c02d4
+			public const int pink_sherbet = 2131493588;
+			
+			// aapt resource value: 0x7f0c02d5
+			public const int pistachio = 2131493589;
+			
+			// aapt resource value: 0x7f0c02d6
+			public const int pistachio_green = 2131493590;
+			
+			// aapt resource value: 0x7f0c02d7
+			public const int platinum = 2131493591;
+			
+			// aapt resource value: 0x7f0c02d8
+			public const int plum = 2131493592;
+			
+			// aapt resource value: 0x7f0c02d9
+			public const int plum_pie = 2131493593;
+			
+			// aapt resource value: 0x7f0c02da
+			public const int plum_purple = 2131493594;
+			
+			// aapt resource value: 0x7f0c02db
+			public const int plum_velvet = 2131493595;
+			
+			// aapt resource value: 0x7f0c02dc
+			public const int portland_orange = 2131493596;
+			
+			// aapt resource value: 0x7f0c02dd
+			public const int powder_blue = 2131493597;
+			
 			// aapt resource value: 0x7f0c003d
 			public const int pressedColor = 2131492925;
+			
+			// aapt resource value: 0x7f0c0051
+			public const int primary = 2131492945;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int primary_dark_material_dark = 2131492904;
@@ -1344,6 +3300,9 @@ namespace DonDon
 			// aapt resource value: 0x7f0c002b
 			public const int primary_material_light = 2131492907;
 			
+			// aapt resource value: 0x7f0c0052
+			public const int primary_pressed = 2131492946;
+			
 			// aapt resource value: 0x7f0c002c
 			public const int primary_text_default_material_dark = 2131492908;
 			
@@ -1356,17 +3315,308 @@ namespace DonDon
 			// aapt resource value: 0x7f0c002f
 			public const int primary_text_disabled_material_light = 2131492911;
 			
+			// aapt resource value: 0x7f0c02de
+			public const int princeton_orange = 2131493598;
+			
 			// aapt resource value: 0x7f0c004b
 			public const int progress_bar_background = 2131492939;
 			
+			// aapt resource value: 0x7f0c02df
+			public const int prussian_blue = 2131493599;
+			
+			// aapt resource value: 0x7f0c02e0
+			public const int psychedelic_purple = 2131493600;
+			
+			// aapt resource value: 0x7f0c02e1
+			public const int puce = 2131493601;
+			
+			// aapt resource value: 0x7f0c02e2
+			public const int pumpkin = 2131493602;
+			
+			// aapt resource value: 0x7f0c02e3
+			public const int pumpkin_orange = 2131493603;
+			
+			// aapt resource value: 0x7f0c02e4
+			public const int purple = 2131493604;
+			
+			// aapt resource value: 0x7f0c02e5
+			public const int purple_amethyst = 2131493605;
+			
+			// aapt resource value: 0x7f0c02e6
+			public const int purple_daffodil = 2131493606;
+			
+			// aapt resource value: 0x7f0c02e7
+			public const int purple_dragon = 2131493607;
+			
+			// aapt resource value: 0x7f0c02e8
+			public const int purple_flower = 2131493608;
+			
+			// aapt resource value: 0x7f0c02e9
+			public const int purple_haze = 2131493609;
+			
+			// aapt resource value: 0x7f0c02ea
+			public const int purple_heart = 2131493610;
+			
+			// aapt resource value: 0x7f0c02eb
+			public const int purple_iris = 2131493611;
+			
+			// aapt resource value: 0x7f0c02ec
+			public const int purple_jam = 2131493612;
+			
+			// aapt resource value: 0x7f0c02ed
+			public const int purple_mimosa = 2131493613;
+			
+			// aapt resource value: 0x7f0c02ee
+			public const int purple_monster = 2131493614;
+			
+			// aapt resource value: 0x7f0c02ef
+			public const int purple_mountain_majesty = 2131493615;
+			
+			// aapt resource value: 0x7f0c02f0
+			public const int purple_pizzazz = 2131493616;
+			
+			// aapt resource value: 0x7f0c02f1
+			public const int purple_sage_bush = 2131493617;
+			
+			// aapt resource value: 0x7f0c02f2
+			public const int purple_taupe = 2131493618;
+			
+			// aapt resource value: 0x7f0c02f3
+			public const int radical_red = 2131493619;
+			
+			// aapt resource value: 0x7f0c02f4
+			public const int raspberry = 2131493620;
+			
+			// aapt resource value: 0x7f0c02f5
+			public const int raspberry_glace = 2131493621;
+			
+			// aapt resource value: 0x7f0c02f6
+			public const int raspberry_pink = 2131493622;
+			
+			// aapt resource value: 0x7f0c02f7
+			public const int raspberry_rose = 2131493623;
+			
+			// aapt resource value: 0x7f0c02f8
+			public const int raw_sienna = 2131493624;
+			
+			// aapt resource value: 0x7f0c02f9
+			public const int razzle_dazzle_rose = 2131493625;
+			
+			// aapt resource value: 0x7f0c02fa
+			public const int razzmatazz = 2131493626;
+			
 			// aapt resource value: 0x7f0c004f
 			public const int red = 2131492943;
+			
+			// aapt resource value: 0x7f0c02fb
+			public const int red_brown = 2131493627;
+			
+			// aapt resource value: 0x7f0c02fc
+			public const int red_dirt = 2131493628;
+			
+			// aapt resource value: 0x7f0c02fd
+			public const int red_fox = 2131493629;
+			
+			// aapt resource value: 0x7f0c02fe
+			public const int red_orange = 2131493630;
+			
+			// aapt resource value: 0x7f0c02ff
+			public const int red_violet = 2131493631;
+			
+			// aapt resource value: 0x7f0c0300
+			public const int red_wine = 2131493632;
+			
+			// aapt resource value: 0x7f0c0301
+			public const int rich_black = 2131493633;
+			
+			// aapt resource value: 0x7f0c0302
+			public const int rich_carmine = 2131493634;
+			
+			// aapt resource value: 0x7f0c0303
+			public const int rich_electric_blue = 2131493635;
+			
+			// aapt resource value: 0x7f0c0304
+			public const int rich_lilac = 2131493636;
+			
+			// aapt resource value: 0x7f0c0305
+			public const int rich_maroon = 2131493637;
+			
+			// aapt resource value: 0x7f0c0306
+			public const int rifle_green = 2131493638;
+			
+			// aapt resource value: 0x7f0c0053
+			public const int ripple = 2131492947;
 			
 			// aapt resource value: 0x7f0c0030
 			public const int ripple_material_dark = 2131492912;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int ripple_material_light = 2131492913;
+			
+			// aapt resource value: 0x7f0c0307
+			public const int robin_egg_blue = 2131493639;
+			
+			// aapt resource value: 0x7f0c0308
+			public const int rogue_pink = 2131493640;
+			
+			// aapt resource value: 0x7f0c0309
+			public const int rose = 2131493641;
+			
+			// aapt resource value: 0x7f0c030a
+			public const int rose_bonbon = 2131493642;
+			
+			// aapt resource value: 0x7f0c030b
+			public const int rose_ebony = 2131493643;
+			
+			// aapt resource value: 0x7f0c030c
+			public const int rose_gold = 2131493644;
+			
+			// aapt resource value: 0x7f0c030d
+			public const int rose_madder = 2131493645;
+			
+			// aapt resource value: 0x7f0c030e
+			public const int rose_pink = 2131493646;
+			
+			// aapt resource value: 0x7f0c030f
+			public const int rose_quartz = 2131493647;
+			
+			// aapt resource value: 0x7f0c0310
+			public const int rose_taupe = 2131493648;
+			
+			// aapt resource value: 0x7f0c0311
+			public const int rose_vale = 2131493649;
+			
+			// aapt resource value: 0x7f0c0312
+			public const int rosewood = 2131493650;
+			
+			// aapt resource value: 0x7f0c0313
+			public const int rosso_corsa = 2131493651;
+			
+			// aapt resource value: 0x7f0c0314
+			public const int rosy_brown = 2131493652;
+			
+			// aapt resource value: 0x7f0c0315
+			public const int rosy_finch = 2131493653;
+			
+			// aapt resource value: 0x7f0c0316
+			public const int royal_azure = 2131493654;
+			
+			// aapt resource value: 0x7f0c0317
+			public const int royal_blue = 2131493655;
+			
+			// aapt resource value: 0x7f0c0318
+			public const int royal_fuchsia = 2131493656;
+			
+			// aapt resource value: 0x7f0c0319
+			public const int royal_purple = 2131493657;
+			
+			// aapt resource value: 0x7f0c031a
+			public const int rubber_ducky_yellow = 2131493658;
+			
+			// aapt resource value: 0x7f0c031b
+			public const int ruby = 2131493659;
+			
+			// aapt resource value: 0x7f0c031c
+			public const int ruby_red = 2131493660;
+			
+			// aapt resource value: 0x7f0c031d
+			public const int ruddy = 2131493661;
+			
+			// aapt resource value: 0x7f0c031e
+			public const int ruddy_brown = 2131493662;
+			
+			// aapt resource value: 0x7f0c031f
+			public const int ruddy_pink = 2131493663;
+			
+			// aapt resource value: 0x7f0c0320
+			public const int rufous = 2131493664;
+			
+			// aapt resource value: 0x7f0c0321
+			public const int russet = 2131493665;
+			
+			// aapt resource value: 0x7f0c0322
+			public const int rust = 2131493666;
+			
+			// aapt resource value: 0x7f0c0323
+			public const int sacramento_state_green = 2131493667;
+			
+			// aapt resource value: 0x7f0c0324
+			public const int saddle_brown = 2131493668;
+			
+			// aapt resource value: 0x7f0c0325
+			public const int safety_orange = 2131493669;
+			
+			// aapt resource value: 0x7f0c0326
+			public const int saffron = 2131493670;
+			
+			// aapt resource value: 0x7f0c0327
+			public const int saint_patrick_blue = 2131493671;
+			
+			// aapt resource value: 0x7f0c0328
+			public const int salad_green = 2131493672;
+			
+			// aapt resource value: 0x7f0c0329
+			public const int salmon = 2131493673;
+			
+			// aapt resource value: 0x7f0c032a
+			public const int salmon_pink = 2131493674;
+			
+			// aapt resource value: 0x7f0c032b
+			public const int sand = 2131493675;
+			
+			// aapt resource value: 0x7f0c032c
+			public const int sandstone = 2131493676;
+			
+			// aapt resource value: 0x7f0c032d
+			public const int sandstorm = 2131493677;
+			
+			// aapt resource value: 0x7f0c032e
+			public const int sandy_brown = 2131493678;
+			
+			// aapt resource value: 0x7f0c032f
+			public const int sandy_taupe = 2131493679;
+			
+			// aapt resource value: 0x7f0c0330
+			public const int sangria = 2131493680;
+			
+			// aapt resource value: 0x7f0c0331
+			public const int sap_green = 2131493681;
+			
+			// aapt resource value: 0x7f0c0332
+			public const int sapphire = 2131493682;
+			
+			// aapt resource value: 0x7f0c0333
+			public const int sapphire_blue = 2131493683;
+			
+			// aapt resource value: 0x7f0c0334
+			public const int satin_sheen_gold = 2131493684;
+			
+			// aapt resource value: 0x7f0c0335
+			public const int scarlet = 2131493685;
+			
+			// aapt resource value: 0x7f0c0336
+			public const int school_bus_yellow = 2131493686;
+			
+			// aapt resource value: 0x7f0c0337
+			public const int screamin_green = 2131493687;
+			
+			// aapt resource value: 0x7f0c0338
+			public const int sea_blue = 2131493688;
+			
+			// aapt resource value: 0x7f0c0339
+			public const int sea_green = 2131493689;
+			
+			// aapt resource value: 0x7f0c033a
+			public const int sea_turtle_green = 2131493690;
+			
+			// aapt resource value: 0x7f0c033b
+			public const int seal_brown = 2131493691;
+			
+			// aapt resource value: 0x7f0c033c
+			public const int seashell = 2131493692;
+			
+			// aapt resource value: 0x7f0c033d
+			public const int seaweed_green = 2131493693;
 			
 			// aapt resource value: 0x7f0c0032
 			public const int secondary_text_default_material_dark = 2131492914;
@@ -1380,8 +3630,17 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0035
 			public const int secondary_text_disabled_material_light = 2131492917;
 			
+			// aapt resource value: 0x7f0c033e
+			public const int sedona = 2131493694;
+			
 			// aapt resource value: 0x7f0c003c
 			public const int selectionColor = 2131492924;
+			
+			// aapt resource value: 0x7f0c033f
+			public const int selective_yellow = 2131493695;
+			
+			// aapt resource value: 0x7f0c0340
+			public const int sepia = 2131493696;
 			
 			// aapt resource value: 0x7f0c0041
 			public const int shadeColor = 2131492929;
@@ -1389,11 +3648,104 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0042
 			public const int shadeColorCenter = 2131492930;
 			
+			// aapt resource value: 0x7f0c0341
+			public const int shadow = 2131493697;
+			
+			// aapt resource value: 0x7f0c0342
+			public const int shamrock = 2131493698;
+			
+			// aapt resource value: 0x7f0c0343
+			public const int shamrock_green = 2131493699;
+			
+			// aapt resource value: 0x7f0c0344
+			public const int shocking_orange = 2131493700;
+			
+			// aapt resource value: 0x7f0c0345
+			public const int shocking_pink = 2131493701;
+			
+			// aapt resource value: 0x7f0c0346
+			public const int sienna = 2131493702;
+			
+			// aapt resource value: 0x7f0c0347
+			public const int silk_blue = 2131493703;
+			
+			// aapt resource value: 0x7f0c0348
+			public const int silver = 2131493704;
+			
+			// aapt resource value: 0x7f0c0349
+			public const int sinopia = 2131493705;
+			
+			// aapt resource value: 0x7f0c034a
+			public const int skobeloff = 2131493706;
+			
+			// aapt resource value: 0x7f0c034b
+			public const int sky_blue = 2131493707;
+			
+			// aapt resource value: 0x7f0c034c
+			public const int sky_magenta = 2131493708;
+			
+			// aapt resource value: 0x7f0c034d
+			public const int slate_blue = 2131493709;
+			
+			// aapt resource value: 0x7f0c034e
+			public const int slate_gray = 2131493710;
+			
+			// aapt resource value: 0x7f0c034f
+			public const int slime_green = 2131493711;
+			
+			// aapt resource value: 0x7f0c0350
+			public const int smokey_gray = 2131493712;
+			
+			// aapt resource value: 0x7f0c0351
+			public const int smokey_topaz = 2131493713;
+			
+			// aapt resource value: 0x7f0c0352
+			public const int smoky_black = 2131493714;
+			
+			// aapt resource value: 0x7f0c0353
+			public const int snow = 2131493715;
+			
+			// aapt resource value: 0x7f0c0354
+			public const int spiro_disco_ball = 2131493716;
+			
+			// aapt resource value: 0x7f0c0355
+			public const int spring_bud = 2131493717;
+			
+			// aapt resource value: 0x7f0c0356
+			public const int spring_green = 2131493718;
+			
 			// aapt resource value: 0x7f0c0049
 			public const int status_open_color = 2131492937;
 			
 			// aapt resource value: 0x7f0c004a
 			public const int status_resolved_color = 2131492938;
+			
+			// aapt resource value: 0x7f0c0357
+			public const int steel_blue = 2131493719;
+			
+			// aapt resource value: 0x7f0c0358
+			public const int stil_de_grain_yellow = 2131493720;
+			
+			// aapt resource value: 0x7f0c0359
+			public const int stoplight_go_green = 2131493721;
+			
+			// aapt resource value: 0x7f0c035a
+			public const int straw = 2131493722;
+			
+			// aapt resource value: 0x7f0c035b
+			public const int sun_yellow = 2131493723;
+			
+			// aapt resource value: 0x7f0c035c
+			public const int sunglow = 2131493724;
+			
+			// aapt resource value: 0x7f0c035d
+			public const int sunrise_orange = 2131493725;
+			
+			// aapt resource value: 0x7f0c035e
+			public const int sunset = 2131493726;
+			
+			// aapt resource value: 0x7f0c035f
+			public const int sunset_orange = 2131493727;
 			
 			// aapt resource value: 0x7f0c0036
 			public const int switch_thumb_disabled_material_dark = 2131492918;
@@ -1401,11 +3753,11 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0037
 			public const int switch_thumb_disabled_material_light = 2131492919;
 			
-			// aapt resource value: 0x7f0c005a
-			public const int switch_thumb_material_dark = 2131492954;
+			// aapt resource value: 0x7f0c040f
+			public const int switch_thumb_material_dark = 2131493903;
 			
-			// aapt resource value: 0x7f0c005b
-			public const int switch_thumb_material_light = 2131492955;
+			// aapt resource value: 0x7f0c0410
+			public const int switch_thumb_material_light = 2131493904;
 			
 			// aapt resource value: 0x7f0c0038
 			public const int switch_thumb_normal_material_dark = 2131492920;
@@ -1413,11 +3765,413 @@ namespace DonDon
 			// aapt resource value: 0x7f0c0039
 			public const int switch_thumb_normal_material_light = 2131492921;
 			
+			// aapt resource value: 0x7f0c0360
+			public const int tan = 2131493728;
+			
+			// aapt resource value: 0x7f0c0361
+			public const int tan_brown = 2131493729;
+			
+			// aapt resource value: 0x7f0c0362
+			public const int tangelo = 2131493730;
+			
+			// aapt resource value: 0x7f0c0363
+			public const int tangerine = 2131493731;
+			
+			// aapt resource value: 0x7f0c0364
+			public const int tangerine_yellow = 2131493732;
+			
+			// aapt resource value: 0x7f0c0365
+			public const int taupe = 2131493733;
+			
+			// aapt resource value: 0x7f0c0366
+			public const int taupe_gray = 2131493734;
+			
+			// aapt resource value: 0x7f0c0367
+			public const int tawny = 2131493735;
+			
+			// aapt resource value: 0x7f0c0368
+			public const int tea_green = 2131493736;
+			
+			// aapt resource value: 0x7f0c0369
+			public const int tea_rose = 2131493737;
+			
+			// aapt resource value: 0x7f0c036a
+			public const int teal = 2131493738;
+			
+			// aapt resource value: 0x7f0c036b
+			public const int teal_blue = 2131493739;
+			
+			// aapt resource value: 0x7f0c036c
+			public const int teal_green = 2131493740;
+			
+			// aapt resource value: 0x7f0c036d
+			public const int terra_cotta = 2131493741;
+			
 			// aapt resource value: 0x7f0c0048
 			public const int text_editor_background = 2131492936;
 			
+			// aapt resource value: 0x7f0c036e
+			public const int thistle = 2131493742;
+			
+			// aapt resource value: 0x7f0c036f
+			public const int thulian_pink = 2131493743;
+			
+			// aapt resource value: 0x7f0c0370
+			public const int tickle_me_pink = 2131493744;
+			
+			// aapt resource value: 0x7f0c0371
+			public const int tiffany_blue = 2131493745;
+			
+			// aapt resource value: 0x7f0c0372
+			public const int tiger_eye = 2131493746;
+			
+			// aapt resource value: 0x7f0c0373
+			public const int tiger_orange = 2131493747;
+			
+			// aapt resource value: 0x7f0c0374
+			public const int timberwolf = 2131493748;
+			
+			// aapt resource value: 0x7f0c0375
+			public const int titanium_yellow = 2131493749;
+			
+			// aapt resource value: 0x7f0c0376
+			public const int tomato = 2131493750;
+			
+			// aapt resource value: 0x7f0c0377
+			public const int toolbox = 2131493751;
+			
+			// aapt resource value: 0x7f0c0378
+			public const int topaz = 2131493752;
+			
+			// aapt resource value: 0x7f0c0379
+			public const int tractor_red = 2131493753;
+			
 			// aapt resource value: 0x7f0c003a
 			public const int transparent = 2131492922;
+			
+			// aapt resource value: 0x7f0c03c1
+			public const int transparent_black_hex_1 = 2131493825;
+			
+			// aapt resource value: 0x7f0c03ca
+			public const int transparent_black_hex_10 = 2131493834;
+			
+			// aapt resource value: 0x7f0c03cb
+			public const int transparent_black_hex_11 = 2131493835;
+			
+			// aapt resource value: 0x7f0c03cc
+			public const int transparent_black_hex_12 = 2131493836;
+			
+			// aapt resource value: 0x7f0c03cd
+			public const int transparent_black_hex_13 = 2131493837;
+			
+			// aapt resource value: 0x7f0c03ce
+			public const int transparent_black_hex_14 = 2131493838;
+			
+			// aapt resource value: 0x7f0c03cf
+			public const int transparent_black_hex_15 = 2131493839;
+			
+			// aapt resource value: 0x7f0c03c2
+			public const int transparent_black_hex_2 = 2131493826;
+			
+			// aapt resource value: 0x7f0c03c3
+			public const int transparent_black_hex_3 = 2131493827;
+			
+			// aapt resource value: 0x7f0c03c4
+			public const int transparent_black_hex_4 = 2131493828;
+			
+			// aapt resource value: 0x7f0c03c5
+			public const int transparent_black_hex_5 = 2131493829;
+			
+			// aapt resource value: 0x7f0c03c6
+			public const int transparent_black_hex_6 = 2131493830;
+			
+			// aapt resource value: 0x7f0c03c7
+			public const int transparent_black_hex_7 = 2131493831;
+			
+			// aapt resource value: 0x7f0c03c8
+			public const int transparent_black_hex_8 = 2131493832;
+			
+			// aapt resource value: 0x7f0c03c9
+			public const int transparent_black_hex_9 = 2131493833;
+			
+			// aapt resource value: 0x7f0c03d1
+			public const int transparent_black_percent_10 = 2131493841;
+			
+			// aapt resource value: 0x7f0c03d2
+			public const int transparent_black_percent_15 = 2131493842;
+			
+			// aapt resource value: 0x7f0c03d3
+			public const int transparent_black_percent_20 = 2131493843;
+			
+			// aapt resource value: 0x7f0c03d4
+			public const int transparent_black_percent_25 = 2131493844;
+			
+			// aapt resource value: 0x7f0c03d5
+			public const int transparent_black_percent_30 = 2131493845;
+			
+			// aapt resource value: 0x7f0c03d6
+			public const int transparent_black_percent_35 = 2131493846;
+			
+			// aapt resource value: 0x7f0c03d7
+			public const int transparent_black_percent_40 = 2131493847;
+			
+			// aapt resource value: 0x7f0c03d8
+			public const int transparent_black_percent_45 = 2131493848;
+			
+			// aapt resource value: 0x7f0c03d0
+			public const int transparent_black_percent_5 = 2131493840;
+			
+			// aapt resource value: 0x7f0c03d9
+			public const int transparent_black_percent_50 = 2131493849;
+			
+			// aapt resource value: 0x7f0c03da
+			public const int transparent_black_percent_55 = 2131493850;
+			
+			// aapt resource value: 0x7f0c03db
+			public const int transparent_black_percent_60 = 2131493851;
+			
+			// aapt resource value: 0x7f0c03dc
+			public const int transparent_black_percent_65 = 2131493852;
+			
+			// aapt resource value: 0x7f0c03dd
+			public const int transparent_black_percent_70 = 2131493853;
+			
+			// aapt resource value: 0x7f0c03de
+			public const int transparent_black_percent_75 = 2131493854;
+			
+			// aapt resource value: 0x7f0c03df
+			public const int transparent_black_percent_80 = 2131493855;
+			
+			// aapt resource value: 0x7f0c03e0
+			public const int transparent_black_percent_85 = 2131493856;
+			
+			// aapt resource value: 0x7f0c03e1
+			public const int transparent_black_percent_90 = 2131493857;
+			
+			// aapt resource value: 0x7f0c03e2
+			public const int transparent_black_percent_95 = 2131493858;
+			
+			// aapt resource value: 0x7f0c03e3
+			public const int transparent_white_hex_1 = 2131493859;
+			
+			// aapt resource value: 0x7f0c03ec
+			public const int transparent_white_hex_10 = 2131493868;
+			
+			// aapt resource value: 0x7f0c03ed
+			public const int transparent_white_hex_11 = 2131493869;
+			
+			// aapt resource value: 0x7f0c03ee
+			public const int transparent_white_hex_12 = 2131493870;
+			
+			// aapt resource value: 0x7f0c03ef
+			public const int transparent_white_hex_13 = 2131493871;
+			
+			// aapt resource value: 0x7f0c03f0
+			public const int transparent_white_hex_14 = 2131493872;
+			
+			// aapt resource value: 0x7f0c03f1
+			public const int transparent_white_hex_15 = 2131493873;
+			
+			// aapt resource value: 0x7f0c03e4
+			public const int transparent_white_hex_2 = 2131493860;
+			
+			// aapt resource value: 0x7f0c03e5
+			public const int transparent_white_hex_3 = 2131493861;
+			
+			// aapt resource value: 0x7f0c03e6
+			public const int transparent_white_hex_4 = 2131493862;
+			
+			// aapt resource value: 0x7f0c03e7
+			public const int transparent_white_hex_5 = 2131493863;
+			
+			// aapt resource value: 0x7f0c03e8
+			public const int transparent_white_hex_6 = 2131493864;
+			
+			// aapt resource value: 0x7f0c03e9
+			public const int transparent_white_hex_7 = 2131493865;
+			
+			// aapt resource value: 0x7f0c03ea
+			public const int transparent_white_hex_8 = 2131493866;
+			
+			// aapt resource value: 0x7f0c03eb
+			public const int transparent_white_hex_9 = 2131493867;
+			
+			// aapt resource value: 0x7f0c03f3
+			public const int transparent_white_percent_10 = 2131493875;
+			
+			// aapt resource value: 0x7f0c03f4
+			public const int transparent_white_percent_15 = 2131493876;
+			
+			// aapt resource value: 0x7f0c03f5
+			public const int transparent_white_percent_20 = 2131493877;
+			
+			// aapt resource value: 0x7f0c03f6
+			public const int transparent_white_percent_25 = 2131493878;
+			
+			// aapt resource value: 0x7f0c03f7
+			public const int transparent_white_percent_30 = 2131493879;
+			
+			// aapt resource value: 0x7f0c03f8
+			public const int transparent_white_percent_35 = 2131493880;
+			
+			// aapt resource value: 0x7f0c03f9
+			public const int transparent_white_percent_40 = 2131493881;
+			
+			// aapt resource value: 0x7f0c03fa
+			public const int transparent_white_percent_45 = 2131493882;
+			
+			// aapt resource value: 0x7f0c03f2
+			public const int transparent_white_percent_5 = 2131493874;
+			
+			// aapt resource value: 0x7f0c03fb
+			public const int transparent_white_percent_50 = 2131493883;
+			
+			// aapt resource value: 0x7f0c03fc
+			public const int transparent_white_percent_55 = 2131493884;
+			
+			// aapt resource value: 0x7f0c03fd
+			public const int transparent_white_percent_60 = 2131493885;
+			
+			// aapt resource value: 0x7f0c03fe
+			public const int transparent_white_percent_65 = 2131493886;
+			
+			// aapt resource value: 0x7f0c03ff
+			public const int transparent_white_percent_70 = 2131493887;
+			
+			// aapt resource value: 0x7f0c0400
+			public const int transparent_white_percent_75 = 2131493888;
+			
+			// aapt resource value: 0x7f0c0401
+			public const int transparent_white_percent_80 = 2131493889;
+			
+			// aapt resource value: 0x7f0c0402
+			public const int transparent_white_percent_85 = 2131493890;
+			
+			// aapt resource value: 0x7f0c0403
+			public const int transparent_white_percent_90 = 2131493891;
+			
+			// aapt resource value: 0x7f0c0404
+			public const int transparent_white_percent_95 = 2131493892;
+			
+			// aapt resource value: 0x7f0c037a
+			public const int tron_blue = 2131493754;
+			
+			// aapt resource value: 0x7f0c037b
+			public const int tropical_rain_forest = 2131493755;
+			
+			// aapt resource value: 0x7f0c037c
+			public const int true_blue = 2131493756;
+			
+			// aapt resource value: 0x7f0c037d
+			public const int tufts_blue = 2131493757;
+			
+			// aapt resource value: 0x7f0c037e
+			public const int tulip_pink = 2131493758;
+			
+			// aapt resource value: 0x7f0c037f
+			public const int tumbleweed = 2131493759;
+			
+			// aapt resource value: 0x7f0c0380
+			public const int turkish_rose = 2131493760;
+			
+			// aapt resource value: 0x7f0c0381
+			public const int turquoise = 2131493761;
+			
+			// aapt resource value: 0x7f0c0382
+			public const int turquoise_blue = 2131493762;
+			
+			// aapt resource value: 0x7f0c0383
+			public const int turquoise_green = 2131493763;
+			
+			// aapt resource value: 0x7f0c0384
+			public const int tuscan_red = 2131493764;
+			
+			// aapt resource value: 0x7f0c0385
+			public const int twilight_lavender = 2131493765;
+			
+			// aapt resource value: 0x7f0c0386
+			public const int tyrian_purple = 2131493766;
+			
+			// aapt resource value: 0x7f0c0387
+			public const int ua_blue = 2131493767;
+			
+			// aapt resource value: 0x7f0c0388
+			public const int ua_red = 2131493768;
+			
+			// aapt resource value: 0x7f0c0389
+			public const int ube = 2131493769;
+			
+			// aapt resource value: 0x7f0c038a
+			public const int ucla_blue = 2131493770;
+			
+			// aapt resource value: 0x7f0c038b
+			public const int ucla_gold = 2131493771;
+			
+			// aapt resource value: 0x7f0c038c
+			public const int ufo_green = 2131493772;
+			
+			// aapt resource value: 0x7f0c038d
+			public const int ultra_pink = 2131493773;
+			
+			// aapt resource value: 0x7f0c038e
+			public const int ultramarine = 2131493774;
+			
+			// aapt resource value: 0x7f0c038f
+			public const int ultramarine_blue = 2131493775;
+			
+			// aapt resource value: 0x7f0c0390
+			public const int umber = 2131493776;
+			
+			// aapt resource value: 0x7f0c0391
+			public const int united_nations_blue = 2131493777;
+			
+			// aapt resource value: 0x7f0c0392
+			public const int university_of_california_gold = 2131493778;
+			
+			// aapt resource value: 0x7f0c0393
+			public const int unmellow_yellow = 2131493779;
+			
+			// aapt resource value: 0x7f0c0394
+			public const int up_forest_green = 2131493780;
+			
+			// aapt resource value: 0x7f0c0395
+			public const int up_maroon = 2131493781;
+			
+			// aapt resource value: 0x7f0c0396
+			public const int upsdell_red = 2131493782;
+			
+			// aapt resource value: 0x7f0c0397
+			public const int urobilin = 2131493783;
+			
+			// aapt resource value: 0x7f0c0398
+			public const int utah_crimson = 2131493784;
+			
+			// aapt resource value: 0x7f0c0399
+			public const int valentine_red = 2131493785;
+			
+			// aapt resource value: 0x7f0c039a
+			public const int vampire_gray = 2131493786;
+			
+			// aapt resource value: 0x7f0c039b
+			public const int vanilla = 2131493787;
+			
+			// aapt resource value: 0x7f0c039c
+			public const int vegas_gold = 2131493788;
+			
+			// aapt resource value: 0x7f0c039d
+			public const int velvet_maroon = 2131493789;
+			
+			// aapt resource value: 0x7f0c039e
+			public const int venetian_red = 2131493790;
+			
+			// aapt resource value: 0x7f0c039f
+			public const int venom_green = 2131493791;
+			
+			// aapt resource value: 0x7f0c03a0
+			public const int verdigris = 2131493792;
+			
+			// aapt resource value: 0x7f0c03a1
+			public const int veronica = 2131493793;
 			
 			// aapt resource value: 0x7f0c004d
 			public const int view_feedback_item_comments_background = 2131492941;
@@ -1425,8 +4179,101 @@ namespace DonDon
 			// aapt resource value: 0x7f0c004c
 			public const int view_feedback_item_text_color = 2131492940;
 			
+			// aapt resource value: 0x7f0c03a2
+			public const int viola_purple = 2131493794;
+			
+			// aapt resource value: 0x7f0c03a3
+			public const int violet = 2131493795;
+			
+			// aapt resource value: 0x7f0c03a4
+			public const int violet_blue = 2131493796;
+			
+			// aapt resource value: 0x7f0c03a5
+			public const int violet_red = 2131493797;
+			
+			// aapt resource value: 0x7f0c03a6
+			public const int viridian = 2131493798;
+			
+			// aapt resource value: 0x7f0c03a7
+			public const int vivid_auburn = 2131493799;
+			
+			// aapt resource value: 0x7f0c03a8
+			public const int vivid_burgundy = 2131493800;
+			
+			// aapt resource value: 0x7f0c03a9
+			public const int vivid_cerise = 2131493801;
+			
+			// aapt resource value: 0x7f0c03aa
+			public const int vivid_tangerine = 2131493802;
+			
+			// aapt resource value: 0x7f0c03ab
+			public const int vivid_violet = 2131493803;
+			
+			// aapt resource value: 0x7f0c03ac
+			public const int warm_black = 2131493804;
+			
+			// aapt resource value: 0x7f0c03ad
+			public const int water = 2131493805;
+			
+			// aapt resource value: 0x7f0c03ae
+			public const int watermelon_pink = 2131493806;
+			
+			// aapt resource value: 0x7f0c03af
+			public const int wenge = 2131493807;
+			
+			// aapt resource value: 0x7f0c03b0
+			public const int wheat = 2131493808;
+			
 			// aapt resource value: 0x7f0c003b
 			public const int white = 2131492923;
+			
+			// aapt resource value: 0x7f0c03b1
+			public const int white_smoke = 2131493809;
+			
+			// aapt resource value: 0x7f0c03b2
+			public const int wild_blue_yonder = 2131493810;
+			
+			// aapt resource value: 0x7f0c03b3
+			public const int wild_strawberry = 2131493811;
+			
+			// aapt resource value: 0x7f0c03b4
+			public const int wild_watermelon = 2131493812;
+			
+			// aapt resource value: 0x7f0c03b5
+			public const int wine = 2131493813;
+			
+			// aapt resource value: 0x7f0c03b6
+			public const int wiseria_purple = 2131493814;
+			
+			// aapt resource value: 0x7f0c03b7
+			public const int wisteria = 2131493815;
+			
+			// aapt resource value: 0x7f0c03b8
+			public const int wood = 2131493816;
+			
+			// aapt resource value: 0x7f0c03b9
+			public const int xanadu = 2131493817;
+			
+			// aapt resource value: 0x7f0c03ba
+			public const int yale_blue = 2131493818;
+			
+			// aapt resource value: 0x7f0c03bb
+			public const int yellow = 2131493819;
+			
+			// aapt resource value: 0x7f0c03bc
+			public const int yellow_green = 2131493820;
+			
+			// aapt resource value: 0x7f0c03bd
+			public const int yellow_orange = 2131493821;
+			
+			// aapt resource value: 0x7f0c03be
+			public const int zaffre = 2131493822;
+			
+			// aapt resource value: 0x7f0c03bf
+			public const int zinnwaldite_brown = 2131493823;
+			
+			// aapt resource value: 0x7f0c03c0
+			public const int zombie_green = 2131493824;
 			
 			static Color()
 			{
@@ -2139,8 +4986,8 @@ namespace DonDon
 			// aapt resource value: 0x7f070029
 			public const int Year = 2131165225;
 			
-			// aapt resource value: 0x7f0700cc
-			public const int action0 = 2131165388;
+			// aapt resource value: 0x7f0700ce
+			public const int action0 = 2131165390;
 			
 			// aapt resource value: 0x7f07006c
 			public const int action_bar = 2131165292;
@@ -2166,8 +5013,8 @@ namespace DonDon
 			// aapt resource value: 0x7f07006d
 			public const int action_context_bar = 2131165293;
 			
-			// aapt resource value: 0x7f0700d0
-			public const int action_divider = 2131165392;
+			// aapt resource value: 0x7f0700d2
+			public const int action_divider = 2131165394;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -2184,14 +5031,14 @@ namespace DonDon
 			// aapt resource value: 0x7f07004e
 			public const int action_mode_close_button = 2131165262;
 			
+			// aapt resource value: 0x7f0700ed
+			public const int action_refresh = 2131165421;
+			
+			// aapt resource value: 0x7f0700ec
+			public const int action_send = 2131165420;
+			
 			// aapt resource value: 0x7f0700eb
-			public const int action_refresh = 2131165419;
-			
-			// aapt resource value: 0x7f0700ea
-			public const int action_send = 2131165418;
-			
-			// aapt resource value: 0x7f0700e9
-			public const int action_settings = 2131165417;
+			public const int action_settings = 2131165419;
 			
 			// aapt resource value: 0x7f07004f
 			public const int activity_chooser_view_content = 2131165263;
@@ -2214,8 +5061,8 @@ namespace DonDon
 			// aapt resource value: 0x7f070049
 			public const int bottom = 2131165257;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int btLogin = 2131165381;
+			// aapt resource value: 0x7f0700c7
+			public const int btLogin = 2131165383;
 			
 			// aapt resource value: 0x7f070082
 			public const int btnCommentDone = 2131165314;
@@ -2223,26 +5070,26 @@ namespace DonDon
 			// aapt resource value: 0x7f070056
 			public const int buttonPanel = 2131165270;
 			
-			// aapt resource value: 0x7f0700cd
-			public const int cancel_action = 2131165389;
+			// aapt resource value: 0x7f0700cf
+			public const int cancel_action = 2131165391;
 			
-			// aapt resource value: 0x7f0700c4
-			public const int cb_rememberMe = 2131165380;
+			// aapt resource value: 0x7f0700c6
+			public const int cb_rememberMe = 2131165382;
 			
 			// aapt resource value: 0x7f070046
 			public const int center = 2131165254;
 			
-			// aapt resource value: 0x7f0700e8
-			public const int chart_data_point_content_container = 2131165416;
+			// aapt resource value: 0x7f0700ea
+			public const int chart_data_point_content_container = 2131165418;
 			
-			// aapt resource value: 0x7f0700de
-			public const int chart_layout_root = 2131165406;
+			// aapt resource value: 0x7f0700e0
+			public const int chart_layout_root = 2131165408;
 			
 			// aapt resource value: 0x7f0700a6
 			public const int chart_tooltip_category = 2131165350;
 			
-			// aapt resource value: 0x7f0700e7
-			public const int chart_tooltip_pointer = 2131165415;
+			// aapt resource value: 0x7f0700e9
+			public const int chart_tooltip_pointer = 2131165417;
 			
 			// aapt resource value: 0x7f0700a7
 			public const int chart_tooltip_value = 2131165351;
@@ -2256,8 +5103,8 @@ namespace DonDon
 			// aapt resource value: 0x7f070064
 			public const int checkbox = 2131165284;
 			
-			// aapt resource value: 0x7f0700d3
-			public const int chronometer = 2131165395;
+			// aapt resource value: 0x7f0700d5
+			public const int chronometer = 2131165397;
 			
 			// aapt resource value: 0x7f0700aa
 			public const int closeText = 2131165354;
@@ -2367,14 +5214,14 @@ namespace DonDon
 			// aapt resource value: 0x7f07006e
 			public const int edit_query = 2131165294;
 			
-			// aapt resource value: 0x7f0700df
-			public const int emptyContent = 2131165407;
+			// aapt resource value: 0x7f0700e1
+			public const int emptyContent = 2131165409;
 			
 			// aapt resource value: 0x7f07001a
 			public const int end = 2131165210;
 			
-			// aapt resource value: 0x7f0700d8
-			public const int end_padder = 2131165400;
+			// aapt resource value: 0x7f0700da
+			public const int end_padder = 2131165402;
 			
 			// aapt resource value: 0x7f070050
 			public const int expand_activities_button = 2131165264;
@@ -2382,11 +5229,11 @@ namespace DonDon
 			// aapt resource value: 0x7f070063
 			public const int expanded_menu = 2131165283;
 			
-			// aapt resource value: 0x7f0700e6
-			public const int floating_image = 2131165414;
+			// aapt resource value: 0x7f0700e8
+			public const int floating_image = 2131165416;
 			
-			// aapt resource value: 0x7f0700e4
-			public const int groupHeaderText = 2131165412;
+			// aapt resource value: 0x7f0700e6
+			public const int groupHeaderText = 2131165414;
 			
 			// aapt resource value: 0x7f0700a8
 			public const int highText = 2131165352;
@@ -2412,23 +5259,23 @@ namespace DonDon
 			// aapt resource value: 0x7f0700b2
 			public const int imageView = 2131165362;
 			
-			// aapt resource value: 0x7f0700bf
-			public const int imageView_logo = 2131165375;
+			// aapt resource value: 0x7f0700c1
+			public const int imageView_logo = 2131165377;
 			
 			// aapt resource value: 0x7f07007f
 			public const int indicatorContainer = 2131165311;
 			
-			// aapt resource value: 0x7f0700d7
-			public const int info = 2131165399;
+			// aapt resource value: 0x7f0700d9
+			public const int info = 2131165401;
 			
-			// aapt resource value: 0x7f0700ba
-			public const int inline_event_end = 2131165370;
-			
-			// aapt resource value: 0x7f0700b9
-			public const int inline_event_start = 2131165369;
+			// aapt resource value: 0x7f0700bc
+			public const int inline_event_end = 2131165372;
 			
 			// aapt resource value: 0x7f0700bb
-			public const int inline_event_title = 2131165371;
+			public const int inline_event_start = 2131165371;
+			
+			// aapt resource value: 0x7f0700bd
+			public const int inline_event_title = 2131165373;
 			
 			// aapt resource value: 0x7f070088
 			public const int itemImage = 2131165320;
@@ -2439,32 +5286,32 @@ namespace DonDon
 			// aapt resource value: 0x7f070047
 			public const int left = 2131165255;
 			
-			// aapt resource value: 0x7f0700bc
-			public const int legendItemIconView = 2131165372;
+			// aapt resource value: 0x7f0700be
+			public const int legendItemIconView = 2131165374;
 			
-			// aapt resource value: 0x7f0700bd
-			public const int legendItemTitleView = 2131165373;
+			// aapt resource value: 0x7f0700bf
+			public const int legendItemTitleView = 2131165375;
 			
-			// aapt resource value: 0x7f0700e1
-			public const int legendListView = 2131165409;
+			// aapt resource value: 0x7f0700e3
+			public const int legendListView = 2131165411;
 			
-			// aapt resource value: 0x7f0700d1
-			public const int line1 = 2131165393;
+			// aapt resource value: 0x7f0700d3
+			public const int line1 = 2131165395;
 			
-			// aapt resource value: 0x7f0700d5
-			public const int line3 = 2131165397;
+			// aapt resource value: 0x7f0700d7
+			public const int line3 = 2131165399;
 			
-			// aapt resource value: 0x7f0700c0
-			public const int linearLayout1 = 2131165376;
+			// aapt resource value: 0x7f0700c2
+			public const int linearLayout1 = 2131165378;
 			
-			// aapt resource value: 0x7f0700e2
-			public const int linearLayout2 = 2131165410;
+			// aapt resource value: 0x7f0700e4
+			public const int linearLayout2 = 2131165412;
 			
 			// aapt resource value: 0x7f07008a
 			public const int listComments = 2131165322;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int listControls = 2131165382;
+			// aapt resource value: 0x7f0700c8
+			public const int listControls = 2131165384;
 			
 			// aapt resource value: 0x7f0700b8
 			public const int listItems = 2131165368;
@@ -2478,11 +5325,11 @@ namespace DonDon
 			// aapt resource value: 0x7f0700ab
 			public const int lowText = 2131165355;
 			
-			// aapt resource value: 0x7f0700cf
-			public const int media_actions = 2131165391;
+			// aapt resource value: 0x7f0700d1
+			public const int media_actions = 2131165393;
 			
-			// aapt resource value: 0x7f0700c7
-			public const int menuList = 2131165383;
+			// aapt resource value: 0x7f0700c9
+			public const int menuList = 2131165385;
 			
 			// aapt resource value: 0x7f07001b
 			public const int middle = 2131165211;
@@ -2493,11 +5340,11 @@ namespace DonDon
 			// aapt resource value: 0x7f070014
 			public const int multiply = 2131165204;
 			
-			// aapt resource value: 0x7f0700ca
-			public const int navItemsLayout = 2131165386;
+			// aapt resource value: 0x7f0700cc
+			public const int navItemsLayout = 2131165388;
 			
-			// aapt resource value: 0x7f0700cb
-			public const int navigationItemText = 2131165387;
+			// aapt resource value: 0x7f0700cd
+			public const int navigationItemText = 2131165389;
 			
 			// aapt resource value: 0x7f07001f
 			public const int never = 2131165215;
@@ -2508,14 +5355,14 @@ namespace DonDon
 			// aapt resource value: 0x7f07000b
 			public const int normal = 2131165195;
 			
-			// aapt resource value: 0x7f0700d9
-			public const int number_picker_minus = 2131165401;
-			
 			// aapt resource value: 0x7f0700db
-			public const int number_picker_plus = 2131165403;
+			public const int number_picker_minus = 2131165403;
 			
-			// aapt resource value: 0x7f0700da
-			public const int number_picker_view = 2131165402;
+			// aapt resource value: 0x7f0700dd
+			public const int number_picker_plus = 2131165405;
+			
+			// aapt resource value: 0x7f0700dc
+			public const int number_picker_view = 2131165404;
 			
 			// aapt resource value: 0x7f0700a9
 			public const int openText = 2131165353;
@@ -2523,11 +5370,11 @@ namespace DonDon
 			// aapt resource value: 0x7f070058
 			public const int parentPanel = 2131165272;
 			
-			// aapt resource value: 0x7f0700dc
-			public const int popup_event_time = 2131165404;
+			// aapt resource value: 0x7f0700de
+			public const int popup_event_time = 2131165406;
 			
-			// aapt resource value: 0x7f0700dd
-			public const int popup_event_title = 2131165405;
+			// aapt resource value: 0x7f0700df
+			public const int popup_event_title = 2131165407;
 			
 			// aapt resource value: 0x7f070083
 			public const int progressBar = 2131165315;
@@ -2541,8 +5388,11 @@ namespace DonDon
 			// aapt resource value: 0x7f070066
 			public const int radio = 2131165286;
 			
-			// aapt resource value: 0x7f0700e0
-			public const int renderSurface = 2131165408;
+			// aapt resource value: 0x7f0700b9
+			public const int relativeLayout1 = 2131165369;
+			
+			// aapt resource value: 0x7f0700e2
+			public const int renderSurface = 2131165410;
 			
 			// aapt resource value: 0x7f070048
 			public const int right = 2131165256;
@@ -2610,8 +5460,8 @@ namespace DonDon
 			// aapt resource value: 0x7f070057
 			public const int spacer = 2131165271;
 			
-			// aapt resource value: 0x7f0700e3
-			public const int spinner_Restaurant = 2131165411;
+			// aapt resource value: 0x7f0700e5
+			public const int spinner_Restaurant = 2131165413;
 			
 			// aapt resource value: 0x7f070008
 			public const int split_action_bar = 2131165192;
@@ -2625,8 +5475,8 @@ namespace DonDon
 			// aapt resource value: 0x7f070018
 			public const int src_over = 2131165208;
 			
-			// aapt resource value: 0x7f0700ce
-			public const int status_bar_latest_event_content = 2131165390;
+			// aapt resource value: 0x7f0700d0
+			public const int status_bar_latest_event_content = 2131165392;
 			
 			// aapt resource value: 0x7f070077
 			public const int submit_area = 2131165303;
@@ -2634,26 +5484,29 @@ namespace DonDon
 			// aapt resource value: 0x7f07000c
 			public const int tabMode = 2131165196;
 			
-			// aapt resource value: 0x7f0700be
-			public const int tableRow12 = 2131165374;
+			// aapt resource value: 0x7f0700c0
+			public const int tableRow12 = 2131165376;
+			
+			// aapt resource value: 0x7f0700d8
+			public const int text = 2131165400;
+			
+			// aapt resource value: 0x7f0700e7
+			public const int text1 = 2131165415;
 			
 			// aapt resource value: 0x7f0700d6
-			public const int text = 2131165398;
-			
-			// aapt resource value: 0x7f0700e5
-			public const int text1 = 2131165413;
-			
-			// aapt resource value: 0x7f0700d4
-			public const int text2 = 2131165396;
+			public const int text2 = 2131165398;
 			
 			// aapt resource value: 0x7f07005f
 			public const int textSpacerNoButtons = 2131165279;
 			
-			// aapt resource value: 0x7f0700c1
-			public const int textView2 = 2131165377;
+			// aapt resource value: 0x7f0700ba
+			public const int textView1 = 2131165370;
 			
-			// aapt resource value: 0x7f0700d2
-			public const int time = 2131165394;
+			// aapt resource value: 0x7f0700c3
+			public const int textView2 = 2131165379;
+			
+			// aapt resource value: 0x7f0700d4
+			public const int time = 2131165396;
 			
 			// aapt resource value: 0x7f070055
 			public const int title = 2131165269;
@@ -2676,11 +5529,11 @@ namespace DonDon
 			// aapt resource value: 0x7f0700b0
 			public const int trackball_points_list = 2131165360;
 			
-			// aapt resource value: 0x7f0700c3
-			public const int tv_password = 2131165379;
+			// aapt resource value: 0x7f0700c5
+			public const int tv_password = 2131165381;
 			
-			// aapt resource value: 0x7f0700c2
-			public const int tv_username = 2131165378;
+			// aapt resource value: 0x7f0700c4
+			public const int tv_username = 2131165380;
 			
 			// aapt resource value: 0x7f0700b3
 			public const int txtAuthor = 2131165363;
@@ -2700,8 +5553,8 @@ namespace DonDon
 			// aapt resource value: 0x7f070085
 			public const int txtDate = 2131165317;
 			
-			// aapt resource value: 0x7f0700c9
-			public const int txtDescription = 2131165385;
+			// aapt resource value: 0x7f0700cb
+			public const int txtDescription = 2131165387;
 			
 			// aapt resource value: 0x7f070081
 			public const int txtEditComment = 2131165313;
@@ -2718,8 +5571,8 @@ namespace DonDon
 			// aapt resource value: 0x7f0700b5
 			public const int txtText = 2131165365;
 			
-			// aapt resource value: 0x7f0700c8
-			public const int txtTitle = 2131165384;
+			// aapt resource value: 0x7f0700ca
+			public const int txtTitle = 2131165386;
 			
 			// aapt resource value: 0x7f070009
 			public const int up = 2131165193;
@@ -2985,121 +5838,124 @@ namespace DonDon
 			public const int fragment_feedback_items = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int inline_event = 2130903106;
+			public const int Home = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int legend_item_view = 2130903107;
+			public const int inline_event = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int list_progress_indicator = 2130903108;
+			public const int legend_item_view = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public const int Login = 2130903109;
+			public const int list_progress_indicator = 2130903109;
 			
 			// aapt resource value: 0x7f030046
-			public const int Main = 2130903110;
+			public const int Login = 2130903110;
 			
 			// aapt resource value: 0x7f030047
-			public const int main_menu_content = 2130903111;
+			public const int Main = 2130903111;
 			
 			// aapt resource value: 0x7f030048
-			public const int main_menu_list_item = 2130903112;
+			public const int main_menu_content = 2130903112;
 			
 			// aapt resource value: 0x7f030049
-			public const int navigation_drawer_content = 2130903113;
+			public const int main_menu_list_item = 2130903113;
 			
 			// aapt resource value: 0x7f03004a
-			public const int navigation_item_view = 2130903114;
+			public const int navigation_drawer_content = 2130903114;
 			
 			// aapt resource value: 0x7f03004b
-			public const int notification_media_action = 2130903115;
+			public const int navigation_item_view = 2130903115;
 			
 			// aapt resource value: 0x7f03004c
-			public const int notification_media_cancel_action = 2130903116;
+			public const int notification_media_action = 2130903116;
 			
 			// aapt resource value: 0x7f03004d
-			public const int notification_template_big_media = 2130903117;
+			public const int notification_media_cancel_action = 2130903117;
 			
 			// aapt resource value: 0x7f03004e
-			public const int notification_template_big_media_narrow = 2130903118;
+			public const int notification_template_big_media = 2130903118;
 			
 			// aapt resource value: 0x7f03004f
-			public const int notification_template_lines = 2130903119;
+			public const int notification_template_big_media_narrow = 2130903119;
 			
 			// aapt resource value: 0x7f030050
-			public const int notification_template_media = 2130903120;
+			public const int notification_template_lines = 2130903120;
 			
 			// aapt resource value: 0x7f030051
-			public const int notification_template_part_chronometer = 2130903121;
+			public const int notification_template_media = 2130903121;
 			
 			// aapt resource value: 0x7f030052
-			public const int notification_template_part_time = 2130903122;
+			public const int notification_template_part_chronometer = 2130903122;
 			
 			// aapt resource value: 0x7f030053
-			public const int number_picker = 2130903123;
+			public const int notification_template_part_time = 2130903123;
 			
 			// aapt resource value: 0x7f030054
-			public const int ohlc_trackball_item_content = 2130903124;
+			public const int number_picker = 2130903124;
 			
 			// aapt resource value: 0x7f030055
-			public const int on_demand_automatic = 2130903125;
+			public const int ohlc_trackball_item_content = 2130903125;
 			
 			// aapt resource value: 0x7f030056
-			public const int on_demand_manual = 2130903126;
+			public const int on_demand_automatic = 2130903126;
 			
 			// aapt resource value: 0x7f030057
-			public const int popup_edit_details = 2130903127;
+			public const int on_demand_manual = 2130903127;
 			
 			// aapt resource value: 0x7f030058
-			public const int popup_event = 2130903128;
+			public const int popup_edit_details = 2130903128;
 			
 			// aapt resource value: 0x7f030059
-			public const int radchartbase = 2130903129;
+			public const int popup_event = 2130903129;
 			
 			// aapt resource value: 0x7f03005a
-			public const int radlegendcontrol = 2130903130;
+			public const int radchartbase = 2130903130;
 			
 			// aapt resource value: 0x7f03005b
-			public const int range_trackball_item_content = 2130903131;
+			public const int radlegendcontrol = 2130903131;
 			
 			// aapt resource value: 0x7f03005c
-			public const int RestaurantSelect = 2130903132;
+			public const int range_trackball_item_content = 2130903132;
 			
 			// aapt resource value: 0x7f03005d
-			public const int select_dialog_item_material = 2130903133;
+			public const int RestaurantSelect = 2130903133;
 			
 			// aapt resource value: 0x7f03005e
-			public const int select_dialog_multichoice_material = 2130903134;
+			public const int select_dialog_item_material = 2130903134;
 			
 			// aapt resource value: 0x7f03005f
-			public const int select_dialog_singlechoice_material = 2130903135;
+			public const int select_dialog_multichoice_material = 2130903135;
 			
 			// aapt resource value: 0x7f030060
-			public const int simple_empty_content = 2130903136;
+			public const int select_dialog_singlechoice_material = 2130903136;
 			
 			// aapt resource value: 0x7f030061
-			public const int simple_group_header_item = 2130903137;
+			public const int simple_empty_content = 2130903137;
 			
 			// aapt resource value: 0x7f030062
-			public const int simple_list_item = 2130903138;
+			public const int simple_group_header_item = 2130903138;
 			
 			// aapt resource value: 0x7f030063
-			public const int SpinnerItemDropdown = 2130903139;
+			public const int simple_list_item = 2130903139;
 			
 			// aapt resource value: 0x7f030064
-			public const int SplashLayout = 2130903140;
+			public const int SpinnerItemDropdown = 2130903140;
 			
 			// aapt resource value: 0x7f030065
-			public const int support_simple_spinner_dropdown_item = 2130903141;
+			public const int SplashLayout = 2130903141;
 			
 			// aapt resource value: 0x7f030066
-			public const int tooltip_container = 2130903142;
+			public const int support_simple_spinner_dropdown_item = 2130903142;
 			
 			// aapt resource value: 0x7f030067
-			public const int trackball_container = 2130903143;
+			public const int tooltip_container = 2130903143;
 			
 			// aapt resource value: 0x7f030068
-			public const int trial_message = 2130903144;
+			public const int trackball_container = 2130903144;
+			
+			// aapt resource value: 0x7f030069
+			public const int trial_message = 2130903145;
 			
 			static Layout()
 			{
@@ -3839,6 +6695,9 @@ namespace DonDon
 			// aapt resource value: 0x7f0a0138
 			public const int ChartSeriesStyle_CategoricalSeriesStyle_TestBarSeriesStyle = 2131362104;
 			
+			// aapt resource value: 0x7f0a0149
+			public const int CustomAlertDialogStyle = 2131362121;
+			
 			// aapt resource value: 0x7f0a0010
 			public const int Platform_AppCompat = 2131361808;
 			
@@ -3919,6 +6778,9 @@ namespace DonDon
 			
 			// aapt resource value: 0x7f0a002e
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131361838;
+			
+			// aapt resource value: 0x7f0a0148
+			public const int StyledDialog = 2131362120;
 			
 			// aapt resource value: 0x7f0a00a9
 			public const int TextAppearance_AppCompat = 2131361961;

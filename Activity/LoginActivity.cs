@@ -28,6 +28,9 @@ namespace DonDon
 		public EditText password;
 		public CheckBox cb_rememberMe;
 
+		public ProgressDialog progress;
+
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -41,7 +44,7 @@ namespace DonDon
 			username = FindViewById<EditText>(Resource.Id.tv_username);
 			username.SetOnEditorActionListener (this);
 
-			username.RequestFocus ();
+//			username.RequestFocus ();
 
 			password = FindViewById<EditText>(Resource.Id.tv_password);
 			password.SetOnEditorActionListener (this);
@@ -53,7 +56,8 @@ namespace DonDon
 
 			if (RemmemberMe) {
 				cb_rememberMe.Checked = true;
-				username.Text = Settings.Username;
+				var temp = Settings.Username;
+				username.Text = temp;
 				password.Text = Settings.Password;
 			}
 
@@ -93,6 +97,12 @@ namespace DonDon
 
 				imm.HideSoftInputFromWindow (password.WindowToken, HideSoftInputFlags.NotAlways);
 
+				progress = new ProgressDialog (this,Resource.Style.StyledDialog);
+				progress.Indeterminate = true;
+				progress.SetMessage("Please wait...");
+				progress.SetCancelable (true);
+				progress.Show ();
+
 				ThreadPool.QueueUserWorkItem (o => Login ());
 
 			} 
@@ -104,7 +114,7 @@ namespace DonDon
 
 		private void Login(){
 
-			_loginService = new LoginService();
+     		_loginService = new LoginService();
 
 			LoginObject obj = _loginService.Login (username.Text, password.Text);
 
@@ -124,7 +134,6 @@ namespace DonDon
 		private void onSuccessfulLogin(LoginObject obj)
 		{
 			Settings.UserId = obj.UserId;
-			Settings.Token = obj.TokenNumber;
 			Settings.Username = obj.UserName;
 			if (cb_rememberMe.Checked) {
 				Settings.RememberMe = true;
@@ -134,13 +143,19 @@ namespace DonDon
 				Settings.Password = "";
 			}
 
-//			StartActivity (new Intent (this, typeof (HomeActivity)));
+			RunOnUiThread (() => progress.Dismiss ());
+
+			StartActivity(typeof(HomeActivity));
+
 			this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
+
 			this.Finish();
 		}
 
 		private void onFailLogin(LoginObject obj)
 		{
+			RunOnUiThread (() => progress.Dismiss ());
+
 			RunOnUiThread (() => Toast.MakeText (this, obj.ErrorMessage, ToastLength.Short).Show ());
 		}
 

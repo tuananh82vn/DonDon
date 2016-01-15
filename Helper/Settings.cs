@@ -6,17 +6,14 @@ namespace DonDon
 {
 	public static class Settings
 	{
-		private const string RestaurantIdKey = "int_key";
+		private const string RestaurantIdKey = "RestaurantIdKey";
 		private static readonly int RestaurantIdKeyDefault = 0;
 
-		private const string UserIdKey = "int_key";
+		private const string UserIdKey = "UserIdKey";
 		private static readonly int UserIdDefault = 0;
 
 		private const string InstanceURLKey = "InstanceURLKey";
 		private static readonly string InstanceURL_Default = "http://172.28.1.53:49713";
-
-		private const string TokenKey = "TokenKey";
-		private static readonly string TokenKey_Default = string.Empty;
 
 		private const string UserNameKey = "UserNameKey";
 		private static readonly string UserNameKey_Default = string.Empty;
@@ -52,12 +49,6 @@ namespace DonDon
 		{
 			get { return AppSettings.GetValueOrDefault(UserIdKey, UserIdDefault); }
 			set { AppSettings.AddOrUpdateValue(UserIdKey, value); }
-		}
-
-		public static string Token
-		{
-			get { return AppSettings.GetValueOrDefault(TokenKey, TokenKey_Default); }
-			set { AppSettings.AddOrUpdateValue(TokenKey, value); }
 		}
 
 		public static string Username

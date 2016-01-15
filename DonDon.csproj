@@ -111,6 +111,7 @@
     <Compile Include="Controller\RestaurantController.cs" />
     <Compile Include="Models\ApiModel\ApiResultList.cs" />
     <Compile Include="Models\ApiModel\ApiResult.cs" />
+    <Compile Include="Activity\HomeActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -165,6 +166,7 @@
     <AndroidResource Include="Resources\layout\SplashLayout.axml" />
     <AndroidResource Include="Resources\layout\RestaurantSelect.axml" />
     <AndroidResource Include="Resources\layout\SpinnerItemDropdown.axml" />
+    <AndroidResource Include="Resources\layout\Home.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
