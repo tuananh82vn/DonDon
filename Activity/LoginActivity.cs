@@ -127,6 +127,8 @@ namespace DonDon
 			} 
 			else 
 			{
+				RunOnUiThread (() => progress.Dismiss ());
+
 				RunOnUiThread (() => Toast.MakeText (this, "No Connection", ToastLength.Short).Show ());
 			}
 		}

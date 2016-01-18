@@ -112,6 +112,12 @@
     <Compile Include="Models\ApiModel\ApiResultList.cs" />
     <Compile Include="Models\ApiModel\ApiResult.cs" />
     <Compile Include="Activity\HomeActivity.cs" />
+    <Compile Include="Models\ViewModel\OrderList.cs" />
+    <Compile Include="Adapters\OrderListAdapter.cs" />
+    <Compile Include="Helper\ObjectExtensions.cs" />
+    <Compile Include="Helper\JavaHolder.cs" />
+    <Compile Include="Controller\OrderController.cs" />
+    <Compile Include="Activity\OrderActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -167,6 +173,8 @@
     <AndroidResource Include="Resources\layout\RestaurantSelect.axml" />
     <AndroidResource Include="Resources\layout\SpinnerItemDropdown.axml" />
     <AndroidResource Include="Resources\layout\Home.axml" />
+    <AndroidResource Include="Resources\layout\OrderList.axml" />
+    <AndroidResource Include="Resources\layout\Order.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />
