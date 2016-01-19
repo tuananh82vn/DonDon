@@ -36,6 +36,7 @@ namespace DonDon
 
 		public ProgressDialog progress;
 
+		public string results;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -56,6 +57,20 @@ namespace DonDon
 			Button buttonView = FindViewById<Button>(Resource.Id.bt_View);
 			buttonView.Click += btViewClick;  
 
+			Button buttonOrder = FindViewById<Button>(Resource.Id.bt_Order);
+			buttonOrder.Click += btOrderClick;  
+
+			LoadOrderList ();
+		}
+
+		public void LoadOrderList()
+		{
+			var  items = Intent.GetParcelableArrayListExtra("key");
+			if (items != null) {
+
+				items = items.Cast<OrderList1> ().ToArray ();
+
+			}
 		}
 
 		protected override Dialog OnCreateDialog (int id)
@@ -63,7 +78,9 @@ namespace DonDon
 			switch (id) {
 			case Start_DATE_DIALOG_ID:
 				{
-					return new DatePickerDialog (this, OnStartDateSet, StartDate.Year, StartDate.Month - 1, StartDate.Day); 
+					var datePicker = new DatePickerDialog (this, OnStartDateSet, StartDate.Year, StartDate.Month - 1, StartDate.Day); 
+					datePicker.DatePicker.MaxDate = Utility.SetMaxDate (0);
+					return datePicker;
 				}
 			}
 			return null;
@@ -74,6 +91,7 @@ namespace DonDon
 		void OnStartDateSet (object sender, DatePickerDialog.DateSetEventArgs e)
 		{
 			StartDatePicker.Text = e.Date.ToString ("dd'/'MM'/'yyyy");
+			this.StartDate = e.Date;
 		}
 
 
@@ -98,6 +116,11 @@ namespace DonDon
 		public void btViewClick(object sender, EventArgs e)
 		{
 			InitData ();
+		}
+
+		public void btOrderClick(object sender, EventArgs e)
+		{
+			StartActivity(typeof(OrderActivity));
 		}
 	}
 }

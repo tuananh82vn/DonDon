@@ -1,23 +1,24 @@
 ﻿using System;
+using Android.OS;
+using Java.Interop;
 
 namespace DonDon
 {
-	public class OrderList
+	public class OrderList 
 	{
-		public virtual int Id { get; set; }
+		public int Id { get ; set;	}
 
-		public virtual string StockName { get; set; }
+		public string StockName {get ; set;}
 
-		public virtual int ShouldNumber { get; set; }
+		public int ShouldNumber {get ; set;}
 
-		public virtual int StockNumber { get; set; }
+		public int StockNumber {get ; set;}
 
-		public virtual int OrderNumber { get; set; }
+		public int OrderNumber {get ; set;}
 
+		public string Unit { get ; set;}
 
-		public virtual string Unit { get; set; }
-
+		public bool Skip { get ; set;}
 	}
-
 }
 

@@ -93,6 +93,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Android.Export" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -118,6 +119,9 @@
     <Compile Include="Helper\JavaHolder.cs" />
     <Compile Include="Controller\OrderController.cs" />
     <Compile Include="Activity\OrderActivity.cs" />
+    <Compile Include="Adapters\OrderAddListAdapter.cs" />
+    <Compile Include="Models\ViewModel\DataWrapper.cs" />
+    <Compile Include="Models\ViewModel\OrderList1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -175,6 +179,9 @@
     <AndroidResource Include="Resources\layout\Home.axml" />
     <AndroidResource Include="Resources\layout\OrderList.axml" />
     <AndroidResource Include="Resources\layout\Order.axml" />
+    <AndroidResource Include="Resources\layout\OrderAddList.axml" />
+    <AndroidResource Include="Resources\drawable\Checked.png" />
+    <AndroidResource Include="Resources\drawable\CustomSelector.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />

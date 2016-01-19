@@ -28,6 +28,8 @@ namespace DonDon
 		public EditText password;
 		public CheckBox cb_rememberMe;
 
+
+
 		public ProgressDialog progress;
 
 
