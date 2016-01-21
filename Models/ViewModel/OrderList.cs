@@ -6,7 +6,7 @@ namespace DonDon
 {
 	public class OrderList 
 	{
-		public int Id { get ; set;	}
+		public int StockId { get ; set;	}
 
 		public string StockName {get ; set;}
 

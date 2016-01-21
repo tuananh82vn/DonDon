@@ -35,7 +35,7 @@ namespace DonDon
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.SplashLayout);
 
-			RequestedOrientation = ScreenOrientation.SensorLandscape;
+			RequestedOrientation = ScreenOrientation.SensorPortrait;
 
 			imageLogo = FindViewById<ImageView>(Resource.Id.floating_image);
 
@@ -57,6 +57,8 @@ namespace DonDon
 			Task<bool>.Run (() => {
 				Thread.Sleep (2000);
 				if(Settings.RestaurantId != 0 ){
+
+
 					StartActivity(typeof(LoginActivity));
 				}
 				else

@@ -17,7 +17,7 @@ using Android.Graphics;
 namespace DonDon
 {
 	[Activity (Label = "HomeActivity")]			
-	public class HomeActivity : Activity
+	public class HomeActivity : Activity 
 	{
 
 		const int Start_DATE_DIALOG_ID = 0;
@@ -44,6 +44,9 @@ namespace DonDon
 
 			SetContentView (Resource.Layout.Home);
 
+			RequestedOrientation = ScreenOrientation.SensorPortrait;
+
+
 			orderListView = FindViewById<ListView> (Resource.Id.OrderListView);
 
 			StartDatePicker = FindViewById<EditText> (Resource.Id.editText_OrderDate);
@@ -60,6 +63,9 @@ namespace DonDon
 			Button buttonOrder = FindViewById<Button>(Resource.Id.bt_Order);
 			buttonOrder.Click += btOrderClick;  
 
+			Button buttonSend = FindViewById<Button>(Resource.Id.bt_Send);
+			buttonSend.Click += btSendClick;  
+
 			LoadOrderList ();
 		}
 
@@ -67,8 +73,29 @@ namespace DonDon
 		{
 			var  items = Intent.GetParcelableArrayListExtra("key");
 			if (items != null) {
-
+				
 				items = items.Cast<OrderList1> ().ToArray ();
+
+				List<OrderList> orderList = new List<OrderList> ();
+
+				foreach (OrderList1 item in items) {
+					OrderList order = new OrderList ();
+					order.StockId = item.Id;
+					order.StockName = item.StockName;
+					order.Unit = item.Unit;
+
+					order.OrderNumber = item.ShouldNumber - item.StockNumber;
+
+					if (order.OrderNumber < 0) {
+						order.OrderNumber = 0;
+					}
+
+					orderList.Add (order);
+
+				}
+
+				orderListAdapter = new OrderListAdapter (this, orderList);
+				orderListView.Adapter = orderListAdapter;
 
 			}
 		}
@@ -121,6 +148,11 @@ namespace DonDon
 		public void btOrderClick(object sender, EventArgs e)
 		{
 			StartActivity(typeof(OrderActivity));
+		}
+
+		public async void btSendClick(object sender, EventArgs e)
+		{
+			ApiResultSave restult = await OrderController.SendOrderList (orderListAdapter.GetOrderList());
 		}
 	}
 }

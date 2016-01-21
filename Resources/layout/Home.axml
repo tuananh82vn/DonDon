@@ -19,29 +19,35 @@
             p1:layout_height="match_parent"
             p1:id="@+id/textView1"
             p1:gravity="center_vertical"
-            p1:layout_marginLeft="200dp"
-            p1:layout_marginRight="10.0dp" />
+            p1:layout_marginRight="10.0dp"
+            p1:layout_marginLeft="5dp" />
         <EditText
             p1:layout_marginLeft="10dp"
             p1:clickable="true"
             p1:cursorVisible="false"
             p1:focusable="false"
-            p1:layout_width="244.0dp"
+            p1:layout_width="150dp"
             p1:layout_height="match_parent"
             p1:id="@+id/editText_OrderDate"
             p1:textAppearance="?android:attr/textAppearanceLarge" />
         <Button
             p1:text="View"
-            p1:layout_width="116.0dp"
+            p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
             p1:id="@+id/bt_View"
-            p1:layout_marginLeft="41.0dp" />
+            p1:layout_marginLeft="10dp" />
         <Button
             p1:text="Order"
-            p1:layout_width="116.0dp"
+            p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
             p1:id="@+id/bt_Order"
-            p1:layout_marginLeft="41.0dp" />
+            p1:layout_marginLeft="10dp" />
+        <Button
+            p1:text="Send"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/bt_Send"
+            p1:layout_marginLeft="10dp" />
     </LinearLayout>
     <LinearLayout
         p1:orientation="horizontal"
@@ -65,7 +71,7 @@
         <TextView
             p1:text="Unit"
             p1:textAppearance="?android:attr/textAppearanceLarge"
-            p1:layout_width="200dp"
+            p1:layout_width="100dp"
             p1:layout_height="match_parent"
             p1:id="@+id/textView2"
             p1:gravity="center"
@@ -75,31 +81,11 @@
         <TextView
             p1:text="Order"
             p1:textAppearance="?android:attr/textAppearanceLarge"
-            p1:layout_width="300.0dp"
-            p1:layout_height="match_parent"
-            p1:id="@+id/textView2"
-            p1:gravity="center"
-            p1:background="#ffffd16f"
-            p1:textColor="#ffffffff"
-            p1:layout_marginRight="5.0dp" />
-        <TextView
-            p1:text="Should"
-            p1:textAppearance="?android:attr/textAppearanceLarge"
-            p1:layout_width="300.0dp"
-            p1:layout_height="match_parent"
-            p1:id="@+id/textView2"
-            p1:gravity="center"
-            p1:background="#ff1645ff"
-            p1:textColor="#ffffffff"
-            p1:layout_marginRight="5.0dp" />
-        <TextView
-            p1:text="Stock"
-            p1:textAppearance="?android:attr/textAppearanceLarge"
             p1:layout_width="match_parent"
             p1:layout_height="match_parent"
             p1:id="@+id/textView2"
             p1:gravity="center"
-            p1:background="#ffa4c600"
+            p1:background="#ffffd16f"
             p1:textColor="#ffffffff"
             p1:layout_marginRight="5.0dp" />
     </LinearLayout>

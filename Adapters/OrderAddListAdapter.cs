@@ -79,7 +79,7 @@ namespace DonDon
 		}
 
 		public override long GetItemId (int position) {
-			return long.Parse(_OrderList [position].Id.ToString());
+			return long.Parse(_OrderList [position].StockId.ToString());
 		}
 
 		public string GetItemName (int position) {

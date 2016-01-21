@@ -13,6 +13,7 @@ using Android.Widget;
 using Android.Views.InputMethods;
 using Android.Graphics;
 using Com.Telerik.Widget.List;
+using Android.Content.PM;
 
 namespace DonDon
 {
@@ -40,8 +41,6 @@ namespace DonDon
 
 		public Button bt_Back;
 
-		public Button bt_Skip;
-
 		public Button bt_Finish;
 
 
@@ -52,6 +51,9 @@ namespace DonDon
 			base.OnCreate (savedInstanceState);
 
 			SetContentView (Resource.Layout.Order);
+
+			RequestedOrientation = ScreenOrientation.SensorPortrait;
+
 
 			initControl ();
 
@@ -92,9 +94,6 @@ namespace DonDon
 			bt_Back = FindViewById<Button>(Resource.Id.bt_Back);
 			bt_Back.Click += btBackClick;  
 
-			bt_Skip = FindViewById<Button>(Resource.Id.bt_Skip);
-			bt_Skip.Click += btSkipClick;  
-
 			bt_Finish = FindViewById<Button>(Resource.Id.bt_Finish);
 			bt_Finish.Click += btFinalClick;  
 		}
@@ -108,7 +107,7 @@ namespace DonDon
 			List<OrderList1> Items = new List<OrderList1> ();
 
 			foreach (var order in orderList) {
-				OrderList1 item = new OrderList1 (order.Id, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit);
+				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, order.Skip.ToString());
 				Items.Add (item);
 			}
 
@@ -119,128 +118,88 @@ namespace DonDon
 
 		public void btNextClick(object sender, EventArgs e)
 		{
+
+			//Get edittext 
+			if (edit_Stock.Text != "") {
+				try {
+					var stockNumber = Int32.Parse (edit_Stock.Text);
+					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+				} catch (Exception ew) {
+					Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
+					return;
+				}
+			}
+
+			//Move to next item
 			if (this.selectedIndex != this.orderListAdapter.Count - 1) {
 
-				//Get edittext 
-				if(edit_Stock.Text != ""  && edit_Stock.Text != "SKIP" ){
-					try{
-						var stockNumber =  Int32.Parse(edit_Stock.Text);
-						this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
-						this.orderListAdapter.SetSkipAtPosition (selectedIndex, false);
-					}
-					catch(Exception ew){
-						Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
-						return;
-					}
-				}
+
 
 				this.selectedIndex = this.selectedIndex + 1;
-				this.orderListView.SetItemChecked (selectedIndex, true);
-				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
-				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
-
-				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).Skip) {
-					this.edit_Stock.Text = "SKIP";
-				}
-				else if (this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber != 0) {
-					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
-				} else  {
-					this.edit_Stock.Text = "";
-				}
-
-				this.edit_Stock.RequestFocus ();
-				this.edit_Stock.SetSelection(this.edit_Stock.Text.Length);
-
-				InputMethodManager imm = (InputMethodManager) GetSystemService(Context.InputMethodService);
-				imm.ShowSoftInput(this.edit_Stock, ShowFlags.Implicit);
-
-			}
-			else 
-			{
-				InputMethodManager imm = (InputMethodManager)GetSystemService (Context.InputMethodService);
-				imm.HideSoftInputFromWindow (this.edit_Stock.WindowToken, HideSoftInputFlags.NotAlways);
-			}
-		}
-
-		public void btSkipClick(object sender, EventArgs e)
-		{
-			this.orderListAdapter.SetSkipAtPosition (selectedIndex, true);
-
-			if (this.selectedIndex != this.orderListAdapter.Count - 1) {
-
-				this.selectedIndex = this.selectedIndex + 1;
 				this.orderListView.SetItemChecked (selectedIndex, true);
 
 				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
+
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
+
+
 				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber != 0) {
+					
 					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
-				} else if (this.orderListAdapter.GetItemAtPosition (selectedIndex).Skip) {
-					this.edit_Stock.Text = "SKIP";
-				} else {
-					this.edit_Stock.Text = "";
+				} 
+				else 
+				{
+					this.edit_Stock.Text = "0";
 				}
 
 				this.edit_Stock.RequestFocus ();
 				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
 
-				InputMethodManager imm = (InputMethodManager)GetSystemService (Context.InputMethodService);
-				imm.ShowSoftInput (this.edit_Stock, ShowFlags.Implicit);
-			} 
-			else 
-			{
-				InputMethodManager imm = (InputMethodManager)GetSystemService (Context.InputMethodService);
-				imm.HideSoftInputFromWindow (this.edit_Stock.WindowToken, HideSoftInputFlags.NotAlways);
-
-				this.edit_Stock.Text = "SKIP";
-				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
-
 			}
+
+
 		}
+
 
 		public void btBackClick(object sender, EventArgs e)
 		{
+
+			//Get edittext 
+			if(edit_Stock.Text != ""){
+				try{
+					var stockNumber =  Int32.Parse(edit_Stock.Text);
+					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+				}
+				catch(Exception ew){
+					Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
+					return;
+				}
+			}
+
+			//Move to previous item
 			if (this.selectedIndex != 0) {
 
-				//Get edittext 
-				if(edit_Stock.Text != ""  && edit_Stock.Text != "SKIP" ){
-					try{
-						var stockNumber =  Int32.Parse(edit_Stock.Text);
-						this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
-						this.orderListAdapter.SetSkipAtPosition (selectedIndex, false);
-					}
-					catch(Exception ew){
-						Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
-						return;
-					}
-				}
-
 				this.selectedIndex = this.selectedIndex - 1;
+
 				this.orderListView.SetItemChecked (selectedIndex, true);
+
 				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
+
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
-				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).Skip) {
-					this.edit_Stock.Text = "SKIP";
-				}
-				else if (this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber != 0) {
+				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber != 0) {
+					
 					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
-				} else  {
-					this.edit_Stock.Text = "";
+
+				} 
+				else  
+				{
+					this.edit_Stock.Text = "0";
 				}
 
 				this.edit_Stock.RequestFocus ();
 				this.edit_Stock.SetSelection(this.edit_Stock.Text.Length);
-
-				InputMethodManager imm = (InputMethodManager) GetSystemService(Context.InputMethodService);
-				imm.ShowSoftInput(this.edit_Stock, ShowFlags.Implicit);
-
-			}
-			else 
-			{
-				InputMethodManager imm = (InputMethodManager)GetSystemService (Context.InputMethodService);
-				imm.HideSoftInputFromWindow (this.edit_Stock.WindowToken, HideSoftInputFlags.NotAlways);
 			}
 		}
 

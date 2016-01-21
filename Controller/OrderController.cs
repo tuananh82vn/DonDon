@@ -1,10 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace DonDon
 {
 	public static class OrderController
 	{
+
 		public static List<OrderList> GetOrderList(DateTime orderDate){
 
 			string url = Settings.InstanceURL;
@@ -40,6 +49,18 @@ namespace DonDon
 			} else
 				return null;
 		}
+
+		public static async System.Threading.Tasks.Task<ApiResultSave> SendOrderList(List<OrderList> obj)
+		{
+			
+			ApiResultSave apiResultSave = new ApiResultSave();
+
+			apiResultSave = await new WebApiHelper().EditAddObject("/API/SendOrderList",obj);
+
+			return apiResultSave;
+		}
+
+
 	}
 }
 

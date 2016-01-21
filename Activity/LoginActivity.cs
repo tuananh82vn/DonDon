@@ -40,6 +40,8 @@ namespace DonDon
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Login);
 
+
+
 			Button button = FindViewById<Button>(Resource.Id.btLogin);
 			button.Click += btloginClick;  
 
@@ -63,7 +65,13 @@ namespace DonDon
 				password.Text = Settings.Password;
 			}
 
-			RequestedOrientation = ScreenOrientation.SensorLandscape;
+			progress = new ProgressDialog (this,Resource.Style.StyledDialog);
+			progress.Indeterminate = true;
+			progress.SetMessage("Please wait...");
+			progress.SetCancelable (true);
+
+			RequestedOrientation = ScreenOrientation.SensorPortrait;
+
 
 
 		}
@@ -91,6 +99,7 @@ namespace DonDon
 
 		public void btloginClick(object sender, EventArgs e)
 		{
+
 			if (!string.IsNullOrEmpty (username.Text) && !string.IsNullOrEmpty (password.Text)) {
 
 				var imm = (InputMethodManager)GetSystemService (Context.InputMethodService);
@@ -98,12 +107,6 @@ namespace DonDon
 				imm.HideSoftInputFromWindow (username.WindowToken, HideSoftInputFlags.NotAlways);
 
 				imm.HideSoftInputFromWindow (password.WindowToken, HideSoftInputFlags.NotAlways);
-
-				progress = new ProgressDialog (this,Resource.Style.StyledDialog);
-				progress.Indeterminate = true;
-				progress.SetMessage("Please wait...");
-				progress.SetCancelable (true);
-				progress.Show ();
 
 				ThreadPool.QueueUserWorkItem (o => Login ());
 
@@ -115,6 +118,9 @@ namespace DonDon
 		}
 
 		private void Login(){
+
+			RunOnUiThread (() => progress.Show ());
+
 
      		_loginService = new LoginService();
 

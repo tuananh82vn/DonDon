@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Views.InputMethods;
 using System.Threading;
+using Android.Content.PM;
 
 namespace DonDon
 {
@@ -28,6 +29,9 @@ namespace DonDon
 			base.OnCreate (savedInstanceState);
 
 			SetContentView (Resource.Layout.RestaurantSelect);
+
+			RequestedOrientation = ScreenOrientation.SensorPortrait;
+
 
 			spinner_Restaurant = FindViewById<Spinner> (Resource.Id.spinner_Restaurant);
 

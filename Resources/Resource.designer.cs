@@ -4953,8 +4953,8 @@ namespace DonDon
 			// aapt resource value: 0x7f07002f
 			public const int OnTicksPadded = 2131165231;
 			
-			// aapt resource value: 0x7f0700c2
-			public const int OrderListView = 2131165378;
+			// aapt resource value: 0x7f0700c3
+			public const int OrderListView = 2131165379;
 			
 			// aapt resource value: 0x7f070043
 			public const int Quarter = 2131165251;
@@ -5040,14 +5040,14 @@ namespace DonDon
 			// aapt resource value: 0x7f07004e
 			public const int action_mode_close_button = 2131165262;
 			
-			// aapt resource value: 0x7f070102
-			public const int action_refresh = 2131165442;
-			
-			// aapt resource value: 0x7f070101
-			public const int action_send = 2131165441;
-			
 			// aapt resource value: 0x7f070100
-			public const int action_settings = 2131165440;
+			public const int action_refresh = 2131165440;
+			
+			// aapt resource value: 0x7f0700ff
+			public const int action_send = 2131165439;
+			
+			// aapt resource value: 0x7f0700fe
+			public const int action_settings = 2131165438;
 			
 			// aapt resource value: 0x7f07004f
 			public const int activity_chooser_view_content = 2131165263;
@@ -5085,8 +5085,8 @@ namespace DonDon
 			// aapt resource value: 0x7f0700be
 			public const int bt_Order = 2131165374;
 			
-			// aapt resource value: 0x7f0700ef
-			public const int bt_Skip = 2131165423;
+			// aapt resource value: 0x7f0700bf
+			public const int bt_Send = 2131165375;
 			
 			// aapt resource value: 0x7f0700bd
 			public const int bt_View = 2131165373;
@@ -5106,17 +5106,17 @@ namespace DonDon
 			// aapt resource value: 0x7f070046
 			public const int center = 2131165254;
 			
-			// aapt resource value: 0x7f0700ff
-			public const int chart_data_point_content_container = 2131165439;
+			// aapt resource value: 0x7f0700fd
+			public const int chart_data_point_content_container = 2131165437;
 			
-			// aapt resource value: 0x7f0700f6
-			public const int chart_layout_root = 2131165430;
+			// aapt resource value: 0x7f0700f3
+			public const int chart_layout_root = 2131165427;
 			
 			// aapt resource value: 0x7f0700a6
 			public const int chart_tooltip_category = 2131165350;
 			
-			// aapt resource value: 0x7f0700fe
-			public const int chart_tooltip_pointer = 2131165438;
+			// aapt resource value: 0x7f0700fc
+			public const int chart_tooltip_pointer = 2131165436;
 			
 			// aapt resource value: 0x7f0700a7
 			public const int chart_tooltip_value = 2131165351;
@@ -5247,8 +5247,8 @@ namespace DonDon
 			// aapt resource value: 0x7f07006e
 			public const int edit_query = 2131165294;
 			
-			// aapt resource value: 0x7f0700f7
-			public const int emptyContent = 2131165431;
+			// aapt resource value: 0x7f0700f4
+			public const int emptyContent = 2131165428;
 			
 			// aapt resource value: 0x7f07001a
 			public const int end = 2131165210;
@@ -5262,11 +5262,11 @@ namespace DonDon
 			// aapt resource value: 0x7f070063
 			public const int expanded_menu = 2131165283;
 			
-			// aapt resource value: 0x7f0700fd
-			public const int floating_image = 2131165437;
-			
 			// aapt resource value: 0x7f0700fb
-			public const int groupHeaderText = 2131165435;
+			public const int floating_image = 2131165435;
+			
+			// aapt resource value: 0x7f0700f9
+			public const int groupHeaderText = 2131165433;
 			
 			// aapt resource value: 0x7f0700a8
 			public const int highText = 2131165352;
@@ -5292,8 +5292,8 @@ namespace DonDon
 			// aapt resource value: 0x7f0700b2
 			public const int imageView = 2131165362;
 			
-			// aapt resource value: 0x7f0700c9
-			public const int imageView_logo = 2131165385;
+			// aapt resource value: 0x7f0700f7
+			public const int imageView_logo = 2131165431;
 			
 			// aapt resource value: 0x7f07007f
 			public const int indicatorContainer = 2131165311;
@@ -5301,14 +5301,14 @@ namespace DonDon
 			// aapt resource value: 0x7f0700df
 			public const int info = 2131165407;
 			
-			// aapt resource value: 0x7f0700c4
-			public const int inline_event_end = 2131165380;
-			
-			// aapt resource value: 0x7f0700c3
-			public const int inline_event_start = 2131165379;
-			
 			// aapt resource value: 0x7f0700c5
-			public const int inline_event_title = 2131165381;
+			public const int inline_event_end = 2131165381;
+			
+			// aapt resource value: 0x7f0700c4
+			public const int inline_event_start = 2131165380;
+			
+			// aapt resource value: 0x7f0700c6
+			public const int inline_event_title = 2131165382;
 			
 			// aapt resource value: 0x7f070088
 			public const int itemImage = 2131165320;
@@ -5319,14 +5319,14 @@ namespace DonDon
 			// aapt resource value: 0x7f070047
 			public const int left = 2131165255;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int legendItemIconView = 2131165382;
-			
 			// aapt resource value: 0x7f0700c7
-			public const int legendItemTitleView = 2131165383;
+			public const int legendItemIconView = 2131165383;
 			
-			// aapt resource value: 0x7f0700f9
-			public const int legendListView = 2131165433;
+			// aapt resource value: 0x7f0700c8
+			public const int legendItemTitleView = 2131165384;
+			
+			// aapt resource value: 0x7f0700f6
+			public const int legendListView = 2131165430;
 			
 			// aapt resource value: 0x7f0700d9
 			public const int line1 = 2131165401;
@@ -5340,11 +5340,11 @@ namespace DonDon
 			// aapt resource value: 0x7f0700ba
 			public const int linearLayout2 = 2131165370;
 			
-			// aapt resource value: 0x7f0700bf
-			public const int linearLayout3 = 2131165375;
+			// aapt resource value: 0x7f0700c0
+			public const int linearLayout3 = 2131165376;
 			
-			// aapt resource value: 0x7f0700c1
-			public const int linearLayout4 = 2131165377;
+			// aapt resource value: 0x7f0700c2
+			public const int linearLayout4 = 2131165378;
 			
 			// aapt resource value: 0x7f0700e7
 			public const int linearLayout5 = 2131165415;
@@ -5415,11 +5415,11 @@ namespace DonDon
 			// aapt resource value: 0x7f070058
 			public const int parentPanel = 2131165272;
 			
-			// aapt resource value: 0x7f0700f4
-			public const int popup_event_time = 2131165428;
+			// aapt resource value: 0x7f0700f1
+			public const int popup_event_time = 2131165425;
 			
-			// aapt resource value: 0x7f0700f5
-			public const int popup_event_title = 2131165429;
+			// aapt resource value: 0x7f0700f2
+			public const int popup_event_title = 2131165426;
 			
 			// aapt resource value: 0x7f070083
 			public const int progressBar = 2131165315;
@@ -5436,8 +5436,8 @@ namespace DonDon
 			// aapt resource value: 0x7f0700e8
 			public const int relativeLayout1 = 2131165416;
 			
-			// aapt resource value: 0x7f0700f8
-			public const int renderSurface = 2131165432;
+			// aapt resource value: 0x7f0700f5
+			public const int renderSurface = 2131165429;
 			
 			// aapt resource value: 0x7f070048
 			public const int right = 2131165256;
@@ -5505,8 +5505,8 @@ namespace DonDon
 			// aapt resource value: 0x7f070057
 			public const int spacer = 2131165271;
 			
-			// aapt resource value: 0x7f0700fa
-			public const int spinner_Restaurant = 2131165434;
+			// aapt resource value: 0x7f0700f8
+			public const int spinner_Restaurant = 2131165432;
 			
 			// aapt resource value: 0x7f070008
 			public const int split_action_bar = 2131165192;
@@ -5529,17 +5529,17 @@ namespace DonDon
 			// aapt resource value: 0x7f07000c
 			public const int tabMode = 2131165196;
 			
-			// aapt resource value: 0x7f0700f0
-			public const int tableRow1 = 2131165424;
+			// aapt resource value: 0x7f0700ef
+			public const int tableRow1 = 2131165423;
 			
-			// aapt resource value: 0x7f0700c8
-			public const int tableRow12 = 2131165384;
+			// aapt resource value: 0x7f0700c9
+			public const int tableRow12 = 2131165385;
 			
 			// aapt resource value: 0x7f0700de
 			public const int text = 2131165406;
 			
-			// aapt resource value: 0x7f0700fc
-			public const int text1 = 2131165436;
+			// aapt resource value: 0x7f0700fa
+			public const int text1 = 2131165434;
 			
 			// aapt resource value: 0x7f0700dc
 			public const int text2 = 2131165404;
@@ -5550,8 +5550,8 @@ namespace DonDon
 			// aapt resource value: 0x7f0700bb
 			public const int textView1 = 2131165371;
 			
-			// aapt resource value: 0x7f0700c0
-			public const int textView2 = 2131165376;
+			// aapt resource value: 0x7f0700c1
+			public const int textView2 = 2131165377;
 			
 			// aapt resource value: 0x7f0700ea
 			public const int textView4 = 2131165418;
@@ -5583,14 +5583,8 @@ namespace DonDon
 			// aapt resource value: 0x7f0700e4
 			public const int tv_Date = 2131165412;
 			
-			// aapt resource value: 0x7f0700f1
-			public const int tv_Order = 2131165425;
-			
-			// aapt resource value: 0x7f0700f2
-			public const int tv_Should = 2131165426;
-			
-			// aapt resource value: 0x7f0700f3
-			public const int tv_Stock = 2131165427;
+			// aapt resource value: 0x7f0700f0
+			public const int tv_Order = 2131165424;
 			
 			// aapt resource value: 0x7f0700e9
 			public const int tv_StockName = 2131165417;

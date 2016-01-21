@@ -8,31 +8,28 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="79.0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
         <TextView
             android:text="Order date:"
-            android:textAppearance="@android:style/TextAppearance.Material.Display2"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/textView1"
-            android:gravity="center"
-            android:layout_marginLeft="424.0dp" />
+            android:gravity="center" />
         <TextView
             android:text="Date"
-            android:textAppearance="@android:style/TextAppearance.Material.Display2"
-            android:layout_width="359.0dp"
-            android:layout_height="match_parent"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
+            android:layout_width="179.0dp"
+            android:layout_height="wrap_content"
             android:id="@+id/tv_Date"
             android:gravity="center_vertical" />
         <Button
             android:text="Finish"
-            android:layout_width="200.0dp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/bt_Finish"
-            android:layout_marginLeft="50dp"
-            android:textAppearance="@android:style/TextAppearance.Material.Display2"
-            android:layout_marginRight="50dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
             android:gravity="center" />
     </LinearLayout>
     <LinearLayout
@@ -54,12 +51,12 @@
             android:orientation="vertical"
             android:minWidth="25px"
             android:minHeight="25px"
-            android:layout_width="326.0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/linearLayout3">
             <ListView
                 android:id="@+id/OrderListView"
-                android:layout_width="match_parent"
+                android:layout_width="233.0dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
         <LinearLayout
@@ -85,31 +82,30 @@
                 android:id="@+id/relativeLayout1">
                 <TextView
                     android:text="Item"
-                    android:textAppearance="@android:style/TextAppearance.Material.Display2"
-                    android:layout_width="400dp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:layout_width="150.0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_StockName"
-                    android:layout_marginLeft="300.0dp"
+                    android:layout_marginLeft="100.0dp"
                     android:layout_marginTop="106.0dp"
                     android:gravity="center" />
                 <TextView
                     android:text="STOCK"
-                    android:textAppearance="@android:style/TextAppearance.Material.Display2"
-                    android:layout_width="200.0dp"
-                    android:layout_height="70.0dp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/textView4"
                     android:layout_marginTop="180dp"
-                    android:layout_marginLeft="100dp"
                     android:gravity="center_vertical" />
                 <EditText
-                    android:layout_width="400dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/edit_Stock"
-                    android:layout_marginLeft="300dp"
-                    android:layout_marginTop="180dp"
+                    android:layout_marginTop="175dp"
                     android:numeric="integer"
                     android:inputType="number"
-                    android:textAppearance="@android:style/TextAppearance.Material.Display2" />
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:layout_marginLeft="100dp" />
                 <TextView
                     android:text="Unit"
                     android:textAppearance="@android:style/TextAppearance.Material.Display2"
@@ -122,28 +118,19 @@
                     android:gravity="center_vertical" />
                 <Button
                     android:text="BACK"
-                    android:layout_width="200.0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/bt_Back"
-                    android:layout_marginTop="300dp"
-                    android:layout_marginLeft="100dp"
-                    android:textAppearance="@android:style/TextAppearance.Material.Display2" />
+                    android:layout_marginTop="250dp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title" />
                 <Button
                     android:text="NEXT"
-                    android:layout_width="200.0dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/bt_Next"
-                    android:layout_marginTop="300dp"
-                    android:layout_marginLeft="700dp"
-                    android:textAppearance="@android:style/TextAppearance.Material.Display2" />
-                <Button
-                    android:text="SKIP"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bt_Skip"
-                    android:layout_marginTop="400dp"
-                    android:layout_marginLeft="700dp"
-                    android:textAppearance="@android:style/TextAppearance.Material.Display2" />
+                    android:layout_marginTop="250dp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:layout_marginLeft="270dp" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

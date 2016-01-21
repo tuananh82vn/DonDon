@@ -18,6 +18,35 @@ namespace DonDon
 			return (long)(TimeSpan.FromDays(noOfDays).TotalMilliseconds);
 		}
 
+		public static DateTime GetTodayDate()
+		{
+			string url = Settings.InstanceURL;
+
+			url=url+"/api/GetTodayDate";
+
+			var logon = new
+			{
+			};
+
+			try {
+
+				string results= ConnectWebAPI.Request(url,logon);
+
+				//too tired today , sorry about this stupid code :(
+				results = results.Remove(0,1);
+				results = results.Remove(results.Length-1,1);
+
+				return DateTime.Parse(results);
+
+
+			} catch (Exception ex) {
+
+				return DateTime.Today;
+			}
+		}
+
+
+			
 	}
 }
 
