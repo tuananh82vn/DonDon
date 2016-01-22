@@ -44,7 +44,6 @@ namespace DonDon
 
 				string contentstring = GetJsonConentString(jsonString);
 
-
 				var content = new StringContent(contentstring, Encoding.UTF8, "application/x-www-form-urlencoded");
 
 				var response = await httpClient.PostAsync(url, content).ConfigureAwait(false);

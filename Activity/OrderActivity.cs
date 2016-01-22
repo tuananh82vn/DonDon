@@ -57,11 +57,13 @@ namespace DonDon
 
 			initControl ();
 
-			StartDate = DateTime.Today;
+			StartDate = Utility.GetTodayDate();
 
-			tv_Date.Text = DateTime.Today.ToShortDateString ();
+			tv_Date.Text = StartDate.ToShortDateString ();
 
-			InitData ();
+			if (LoadOrderList () == 0) {
+				InitData ();
+			}
 
 			//Set first item selected;
 			selectedIndex = 0;
@@ -72,8 +74,48 @@ namespace DonDon
 
 			this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
+			this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString();
+
 			this.edit_Stock.RequestFocus ();
 
+		}
+
+		public int LoadOrderList()
+		{
+			var  items = Intent.GetParcelableArrayListExtra("key");
+			if (items != null) {
+
+				items = items.Cast<OrderList1> ().ToArray ();
+
+				List<OrderList> orderList = new List<OrderList> ();
+
+				foreach (OrderList1 item in items) {
+					OrderList order = new OrderList ();
+					order.StockId = item.Id;
+					order.StockName = item.StockName;
+					order.Unit = item.Unit;
+
+					order.OrderNumber = item.ShouldNumber - item.StockNumber;
+					order.ShouldNumber = item.ShouldNumber;
+					order.StockNumber = item.StockNumber;
+
+					if (order.OrderNumber < 0) {
+						order.OrderNumber = 0;
+					}
+
+					orderList.Add (order);
+
+				}
+
+				orderListAdapter = new OrderAddListAdapter (this, orderList);
+				orderListView.Adapter = orderListAdapter;
+
+				return 1;
+			} 
+			else 
+			{
+				return 0;
+			}
 		}
 
 		public void initControl(){
@@ -107,7 +149,7 @@ namespace DonDon
 			List<OrderList1> Items = new List<OrderList1> ();
 
 			foreach (var order in orderList) {
-				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, order.Skip.ToString());
+				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit);
 				Items.Add (item);
 			}
 

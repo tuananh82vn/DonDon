@@ -187,6 +187,8 @@
     <AndroidResource Include="Resources\layout\OrderAddList.axml" />
     <AndroidResource Include="Resources\drawable\Checked.png" />
     <AndroidResource Include="Resources\drawable\CustomSelector.xml" />
+    <AndroidResource Include="Resources\layout-w720dp-port\Login.axml" />
+    <AndroidResource Include="Resources\layout-w720dp-port\Home.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />

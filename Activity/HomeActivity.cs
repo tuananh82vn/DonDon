@@ -54,7 +54,7 @@ namespace DonDon
 
 			StartDatePicker.Click += delegate { ShowDialog (Start_DATE_DIALOG_ID); };
 	
-			StartDate = DateTime.Today;
+			StartDate = Utility.GetTodayDate ();
 			StartDatePicker.Text = StartDate.ToString ("dd'/'MM'/'yyyy");
 
 			Button buttonView = FindViewById<Button>(Resource.Id.bt_View);
@@ -85,6 +85,8 @@ namespace DonDon
 					order.Unit = item.Unit;
 
 					order.OrderNumber = item.ShouldNumber - item.StockNumber;
+					order.ShouldNumber = item.ShouldNumber;
+					order.StockNumber = item.StockNumber;
 
 					if (order.OrderNumber < 0) {
 						order.OrderNumber = 0;
@@ -147,12 +149,58 @@ namespace DonDon
 
 		public void btOrderClick(object sender, EventArgs e)
 		{
-			StartActivity(typeof(OrderActivity));
+			Intent Intent = new Intent (this, typeof(OrderActivity));
+
+			var orderList = this.orderListAdapter.GetOrderList();
+
+			List<OrderList1> Items = new List<OrderList1> ();
+
+			foreach (var order in orderList) {
+				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit);
+				Items.Add (item);
+			}
+
+			Intent.PutParcelableArrayListExtra("key", Items.ToArray());
+
+			StartActivity (Intent);
+
 		}
 
-		public async void btSendClick(object sender, EventArgs e)
+		public void btSendClick(object sender, EventArgs e)
 		{
-			ApiResultSave restult = await OrderController.SendOrderList (orderListAdapter.GetOrderList());
+				new AlertDialog.Builder(this)
+				.SetPositiveButton("Yes", async (sender1, args) =>
+				{
+						ApiResultSave result = await OrderController.SendOrderList (orderListAdapter.GetOrderList());
+
+						if (result != null) 
+						{
+							if (result.Success) 
+							{
+									var builder = new AlertDialog.Builder(this);
+									builder.SetMessage("Order sent successfully");
+									builder.SetPositiveButton("Ok", (s, ee) => { });
+									builder.Create().Show();
+							}
+							else{
+								new AlertDialog.Builder(this).SetMessage(result.ErrorMessage)
+									.SetTitle("Done")
+									.Show();
+							}
+						}
+						else{
+							new AlertDialog.Builder(this).SetMessage("Network or Server problem. Try again")
+								.SetTitle("Done")
+								.Show();	
+						}
+				})
+				.SetNegativeButton("No", (sender2, args) =>
+					{
+						// User pressed no 
+					})
+				.SetMessage("Are you sure to send this order ?")
+				.SetTitle("Confirm")
+				.Show();
 		}
 	}
 }
