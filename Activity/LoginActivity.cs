@@ -45,6 +45,9 @@ namespace DonDon
 			Button button = FindViewById<Button>(Resource.Id.btLogin);
 			button.Click += btloginClick;  
 
+			Button buttonForgot = FindViewById<Button>(Resource.Id.btForgot);
+			buttonForgot.Click += btForgotClick; 
+
 			username = FindViewById<EditText>(Resource.Id.tv_username);
 			username.SetOnEditorActionListener (this);
 
@@ -65,10 +68,6 @@ namespace DonDon
 				password.Text = Settings.Password;
 			}
 
-			progress = new ProgressDialog (this,Resource.Style.StyledDialog);
-			progress.Indeterminate = true;
-			progress.SetMessage("Please wait...");
-			progress.SetCancelable (true);
 
 			RequestedOrientation = ScreenOrientation.SensorPortrait;
 
@@ -97,6 +96,13 @@ namespace DonDon
 			base.OnResume();
 		}
 
+		public void btForgotClick(object sender, EventArgs e)
+		{
+			var uri = Android.Net.Uri.Parse ("http://172.28.1.53:49713/user/forgotpassword");
+			var intent = new Intent (Intent.ActionView, uri);
+			StartActivity (intent);
+		}
+
 		public void btloginClick(object sender, EventArgs e)
 		{
 
@@ -119,6 +125,10 @@ namespace DonDon
 
 		private void Login(){
 
+			RunOnUiThread (() => progress = new ProgressDialog (this,Resource.Style.StyledDialog));
+			RunOnUiThread (() => progress.Indeterminate = true);
+			RunOnUiThread (() => progress.SetMessage("Please wait..."));
+			RunOnUiThread (() => progress.SetCancelable (true));
 			RunOnUiThread (() => progress.Show ());
 
 
@@ -174,7 +184,7 @@ namespace DonDon
 			//go edit action will login
 			if (actionId == ImeAction.Go) {
 				if (!string.IsNullOrEmpty (username.Text) && !string.IsNullOrEmpty (password.Text)) {
-					Login ();
+					ThreadPool.QueueUserWorkItem (o => Login ());
 				} else if (string.IsNullOrEmpty (username.Text)) {
 					username.RequestFocus ();
 				} else {

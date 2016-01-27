@@ -135,7 +135,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\values\Styles.xml" />
@@ -187,8 +186,13 @@
     <AndroidResource Include="Resources\layout\OrderAddList.axml" />
     <AndroidResource Include="Resources\drawable\Checked.png" />
     <AndroidResource Include="Resources\drawable\CustomSelector.xml" />
-    <AndroidResource Include="Resources\layout-w720dp-port\Login.axml" />
-    <AndroidResource Include="Resources\layout-w720dp-port\Home.axml" />
+    <AndroidResource Include="Resources\drawable\password.png" />
+    <AndroidResource Include="Resources\drawable\user_email.png" />
+    <AndroidResource Include="Resources\layout-sw720dp-port\Login.axml" />
+    <AndroidResource Include="Resources\drawable\RoundButton.xml" />
+    <AndroidResource Include="Resources\drawable\background.png" />
+    <AndroidResource Include="Resources\layout-sw720dp-port\Home.axml" />
+    <AndroidResource Include="Resources\drawable\top_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />

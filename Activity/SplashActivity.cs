@@ -39,15 +39,18 @@ namespace DonDon
 
 			imageLogo = FindViewById<ImageView>(Resource.Id.floating_image);
 
-			if (NetworkHelper.DetectNetwork()) 
-			{
-				Init ();
-			} 
-			else 
-			{
-				Toast.MakeText (this, "No Connection ...", ToastLength.Short).Show ();
-				KeepChecking ();
-			}
+
+			Init ();
+
+//			if (NetworkHelper.DetectNetwork()) 
+//			{
+//				
+//			} 
+//			else 
+//			{
+//				Toast.MakeText (this, "No Connection ...", ToastLength.Short).Show ();
+//				KeepChecking ();
+//			}
 
 		}
 
