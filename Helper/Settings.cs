@@ -24,6 +24,11 @@ namespace DonDon
 		private const string RememberMeKey = "RememberMeKey";
 		private static readonly bool RememberMeKey_Default = false;
 
+		private const string FullnameKey = "FullnameKey";
+		private static readonly string FullnameKey_Default = string.Empty;
+
+		private const string CKStaffKey = "CKStaffKey";
+		private static readonly bool CKStaffKey_Default = false;
 
 		private static ISettings AppSettings
 		{
@@ -69,8 +74,17 @@ namespace DonDon
 			set { AppSettings.AddOrUpdateValue(RememberMeKey, value); }
 		}
 
+		public static string Fullname
+		{
+			get { return AppSettings.GetValueOrDefault(FullnameKey, FullnameKey_Default); }
+			set { AppSettings.AddOrUpdateValue(FullnameKey, value); }
+		}
 
-
+		public static bool CKStaff
+		{
+			get { return AppSettings.GetValueOrDefault(CKStaffKey, CKStaffKey_Default); }
+			set { AppSettings.AddOrUpdateValue(CKStaffKey, value); }
+		}
 	}
 }
 

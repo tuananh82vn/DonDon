@@ -49,11 +49,39 @@ namespace DonDon
 				return null;
 		}
 
-		public static async System.Threading.Tasks.Task<ApiResultSave> SendOrderList(List<OrderList> obj)
+		public static string GetOrderNotes(DateTime orderDate){
+
+			string url = Settings.InstanceURL;
+
+			url=url+"/Api/GetOrderNotes";
+
+
+			var objsearch = (new
+				{
+					OrderDate = orderDate,
+					RestaurantId = Settings.RestaurantId
+
+				});
+
+			try {
+
+				string results= ConnectWebAPI.Request(url,objsearch);
+
+
+
+				return results;
+
+			} catch (Exception ex) {
+
+				return null;
+			}
+		}
+
+		public static async System.Threading.Tasks.Task<ApiResultSave> SendOrderList(List<OrderList> obj, string notes)
 		{
 			ApiResultSave apiResultSave = new ApiResultSave();
 
-			apiResultSave = await new WebApiHelper().EditAddObject("/API/SendOrderList",obj);
+			apiResultSave = await new WebApiHelper().EditAddObject("/API/SendOrderList",obj, notes);
 
 			return apiResultSave;
 		}

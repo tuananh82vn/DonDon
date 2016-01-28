@@ -22,7 +22,7 @@ namespace DonDon
 	[Activity(Label = "Link-OM", Icon = "@drawable/icon")]
 	public class LoginActivity : Activity, TextView.IOnEditorActionListener
 	{
-		private LoginService _loginService;
+		private LoginController _loginService;
 
 		public EditText username;
 		public EditText password;
@@ -50,8 +50,6 @@ namespace DonDon
 
 			username = FindViewById<EditText>(Resource.Id.tv_username);
 			username.SetOnEditorActionListener (this);
-
-//			username.RequestFocus ();
 
 			password = FindViewById<EditText>(Resource.Id.tv_password);
 			password.SetOnEditorActionListener (this);
@@ -132,7 +130,7 @@ namespace DonDon
 			RunOnUiThread (() => progress.Show ());
 
 
-     		_loginService = new LoginService();
+			_loginService = new LoginController();
 
 			LoginObject obj = _loginService.Login (username.Text, password.Text);
 
@@ -155,6 +153,9 @@ namespace DonDon
 		{
 			Settings.UserId = obj.UserId;
 			Settings.Username = obj.UserName;
+			Settings.Fullname = obj.Fullname;
+			Settings.CKStaff = obj.CKStaff;
+
 			if (cb_rememberMe.Checked) {
 				Settings.RememberMe = true;
 				Settings.Password = password.Text;

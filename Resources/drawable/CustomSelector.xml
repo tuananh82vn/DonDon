@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/office_green" android:state_selected="true"/>
-    <item android:drawable="@color/office_green" android:state_activated="true"/>
-    <item android:drawable="@android:color/transparent"/>
+
+<item android:state_pressed="true" >
+  <shape>
+     <gradient
+      android:startColor="#E77A26"
+        android:endColor="#E77A26"
+        android:angle="270" />
+  </shape>
+</item>
+
+<item android:state_selected="true"
+  android:drawable="@color/bean_red" />
+
+<item android:state_activated="true"
+  android:drawable="@color/bean_red" />
+
+<item android:drawable="@android:color/transparent"/>
+
 </selector>

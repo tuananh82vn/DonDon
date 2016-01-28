@@ -8,6 +8,8 @@ namespace DonDon
 
 		public int RestaurantId { get; set; }
 
+		public string Notes { get; set; }
+
 		public DateTime OrderDate { get; set; }
 
 		public T Item { get; set; }

@@ -16,18 +16,21 @@
             android:text="Stock"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/tv_StockName"
-            android:layout_width="200dp"
+            android:layout_width="400dp"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginRight="5dp" />
+            android:gravity="left|center"
+            android:layout_marginRight="1dp"
+            android:background="#fff5f5f5"
+            android:paddingLeft="5dp" />
         <TextView
             android:text="Unit"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/tv_Unit"
-            android:layout_width="100dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_marginRight="5dp" />
+            android:layout_marginRight="1dp"
+            android:background="#fff5f5f5" />
         <TextView
             android:text="Order"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -35,6 +38,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_marginRight="5dp" />
+            android:background="#fff5f5f5" />
     </TableRow>
 </LinearLayout>

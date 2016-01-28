@@ -55,6 +55,11 @@ namespace DonDon
 			_OrderList[position].StockNumber = StockNumber;
 		}
 
+		public void SetOrderAtPosition(int position, int OrderNumber)
+		{
+			_OrderList[position].OrderNumber = OrderNumber;
+		}
+
 		public void SetSkipAtPosition(int position , bool skip)
 		{
 			_OrderList[position].Skip = skip;

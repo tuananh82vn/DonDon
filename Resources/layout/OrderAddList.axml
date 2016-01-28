@@ -19,6 +19,18 @@
             android:id="@+id/tv_StockName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center" />
+            android:gravity="left|center"
+            android:textColor="#ffffffff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
     </TableRow>
+    <TableRow
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/tableRow2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffbfbfbf" />
 </LinearLayout>

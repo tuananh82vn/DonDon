@@ -17,7 +17,7 @@ using Android.Content.PM;
 
 namespace DonDon
 {
-	[Activity (Label = "OrderActivity")]			
+	[Activity (Label = "OrderActivity", NoHistory = true )]			
 	public class OrderActivity : Activity
 	{
 
@@ -35,6 +35,9 @@ namespace DonDon
 
 		public TextView tv_Unit;
 
+		public TextView tv_Stock;
+
+
 		public EditText edit_Stock;
 
 		public Button bt_Next;
@@ -43,8 +46,8 @@ namespace DonDon
 
 		public Button bt_Finish;
 
-
 		public int selectedIndex;
+
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -53,7 +56,6 @@ namespace DonDon
 			SetContentView (Resource.Layout.Order);
 
 			RequestedOrientation = ScreenOrientation.SensorPortrait;
-
 
 			initControl ();
 
@@ -69,15 +71,21 @@ namespace DonDon
 			selectedIndex = 0;
 
 			this.orderListView.SetItemChecked (selectedIndex, true);
+			this.orderListView.ItemClick += listView_ItemClick;
 
 			this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
-
 			this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
-
 			this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString();
 
-			this.edit_Stock.RequestFocus ();
 
+
+			if (Settings.CKStaff) {
+				this.tv_Stock.Text = "Order";
+				this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString();
+			}
+
+			this.edit_Stock.RequestFocus ();
+			this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
 		}
 
 		public int LoadOrderList()
@@ -95,7 +103,14 @@ namespace DonDon
 					order.StockName = item.StockName;
 					order.Unit = item.Unit;
 
+
 					order.OrderNumber = item.ShouldNumber - item.StockNumber;
+
+					if (Settings.CKStaff) {
+						order.OrderNumber = item.OrderNumber;
+					}
+
+
 					order.ShouldNumber = item.ShouldNumber;
 					order.StockNumber = item.StockNumber;
 
@@ -118,6 +133,31 @@ namespace DonDon
 			}
 		}
 
+		public override void OnBackPressed(){
+
+			Intent Intent = new Intent (this, typeof(HomeActivity));
+
+			var orderList = this.orderListAdapter.GetOrderList();
+
+			List<OrderList1> Items = new List<OrderList1> ();
+
+			foreach (var order in orderList) {
+				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit);
+				Items.Add (item);
+			}
+
+			Intent.PutParcelableArrayListExtra("key", Items.ToArray());
+
+			Intent.SetFlags (ActivityFlags.ClearTask | ActivityFlags.NewTask);
+
+			StartActivity (Intent);
+
+			this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
+
+			this.Finish();
+
+		}
+
 		public void initControl(){
 
 			orderListView = FindViewById<ListView> (Resource.Id.OrderListView);
@@ -129,6 +169,8 @@ namespace DonDon
 			edit_Stock = FindViewById<EditText> (Resource.Id.edit_Stock);
 			tv_StockName = FindViewById<TextView> (Resource.Id.tv_StockName);
 			tv_Unit = FindViewById<TextView> (Resource.Id.tv_Unit);
+
+			tv_Stock = FindViewById<TextView> (Resource.Id.tv_Stock);
 
 			bt_Next = FindViewById<Button>(Resource.Id.bt_Next);
 			bt_Next.Click += btNextClick;  
@@ -155,7 +197,14 @@ namespace DonDon
 
 			Intent.PutParcelableArrayListExtra("key", Items.ToArray());
 
+			Intent.SetFlags (ActivityFlags.ClearTask | ActivityFlags.NewTask);
+
 			StartActivity (Intent);
+
+			this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
+
+			this.Finish();
+
 		}
 
 		public void btNextClick(object sender, EventArgs e)
@@ -165,7 +214,17 @@ namespace DonDon
 			if (edit_Stock.Text != "") {
 				try {
 					var stockNumber = Int32.Parse (edit_Stock.Text);
-					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+
+
+					if (Settings.CKStaff) {
+						this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
+					}
+					else
+					{
+						this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+					}
+
+
 				} catch (Exception ew) {
 					Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
 					return;
@@ -174,8 +233,6 @@ namespace DonDon
 
 			//Move to next item
 			if (this.selectedIndex != this.orderListAdapter.Count - 1) {
-
-
 
 				this.selectedIndex = this.selectedIndex + 1;
 
@@ -186,18 +243,21 @@ namespace DonDon
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
 
-				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber != 0) {
-					
-					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
-				} 
-				else 
-				{
-					this.edit_Stock.Text = "0";
+
+				if (Settings.CKStaff) {
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
 				}
+				else
+				{
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
+				}
+
 
 				this.edit_Stock.RequestFocus ();
 				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
 
+			}else {
+				Toast.MakeText (this, "This is the last item already.", ToastLength.Short).Show ();
 			}
 
 
@@ -211,8 +271,14 @@ namespace DonDon
 			if(edit_Stock.Text != ""){
 				try{
 					var stockNumber =  Int32.Parse(edit_Stock.Text);
-					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
-				}
+
+					if (Settings.CKStaff) {
+						this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
+					}
+					else
+					{
+						this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+					}				}
 				catch(Exception ew){
 					Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
 					return;
@@ -230,18 +296,18 @@ namespace DonDon
 
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
-				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber != 0) {
-					
-					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
-
-				} 
-				else  
+				if (Settings.CKStaff) {
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+				}
+				else
 				{
-					this.edit_Stock.Text = "0";
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
 				}
 
 				this.edit_Stock.RequestFocus ();
-				this.edit_Stock.SetSelection(this.edit_Stock.Text.Length);
+				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
+			} else {
+				Toast.MakeText (this, "This is the first item already.", ToastLength.Short).Show ();
 			}
 		}
 
@@ -260,7 +326,6 @@ namespace DonDon
 
 			orderListView.Adapter = orderListAdapter;
 
-			orderListView.ItemClick += listView_ItemClick;
 
 			RegisterForContextMenu(orderListView);
 

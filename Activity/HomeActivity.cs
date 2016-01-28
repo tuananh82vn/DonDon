@@ -38,6 +38,16 @@ namespace DonDon
 
 		public string results;
 
+		public InputMethodManager inputManager;
+
+		public EditText mNotes;
+
+		public TextView tv_Username;
+
+		public Button buttonOrder;
+
+		public Button buttonSend;
+
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
@@ -45,7 +55,6 @@ namespace DonDon
 			SetContentView (Resource.Layout.Home);
 
 			RequestedOrientation = ScreenOrientation.SensorPortrait;
-
 
 			orderListView = FindViewById<ListView> (Resource.Id.OrderListView);
 
@@ -57,16 +66,49 @@ namespace DonDon
 			StartDate = Utility.GetTodayDate ();
 			StartDatePicker.Text = StartDate.ToString ("dd'/'MM'/'yyyy");
 
-			Button buttonView = FindViewById<Button>(Resource.Id.bt_View);
-			buttonView.Click += btViewClick;  
-
-			Button buttonOrder = FindViewById<Button>(Resource.Id.bt_Order);
+			buttonOrder = FindViewById<Button>(Resource.Id.bt_Order);
 			buttonOrder.Click += btOrderClick;  
 
-			Button buttonSend = FindViewById<Button>(Resource.Id.bt_Send);
+			buttonSend = FindViewById<Button>(Resource.Id.bt_Send);
 			buttonSend.Click += btSendClick;  
 
+			mNotes = FindViewById<EditText>(Resource.Id.editText_Notes);
+
+			tv_Username = FindViewById<TextView>(Resource.Id.textView_Username);
+			tv_Username.Text = Settings.Fullname;
+
+			HideSoftKeyboard1 (this);
+
 			LoadOrderList ();
+
+
+		}
+
+
+		public void HideSoftKeyboard1(Activity activity)
+		{
+			var view = activity.CurrentFocus;
+			if (view != null)
+			{
+				InputMethodManager manager = (InputMethodManager)activity.GetSystemService(Context.InputMethodService);
+				manager.HideSoftInputFromWindow(view.WindowToken, 0);
+			}
+		}
+
+		public override bool DispatchTouchEvent(MotionEvent event1) {
+			if (event1.Action == MotionEventActions.Down) {
+				View v = this.CurrentFocus;
+				if ( v is EditText) {
+					Rect outRect = new Rect();
+					v.GetGlobalVisibleRect(outRect);
+					if (!outRect.Contains((int)event1.GetX(), (int)event1.GetY())) {
+						v.ClearFocus();
+						InputMethodManager imm = (InputMethodManager) GetSystemService(Context.InputMethodService);
+						imm.HideSoftInputFromWindow(v.WindowToken, 0);
+					}
+				}
+			}
+			return base.DispatchTouchEvent( event1 );
 		}
 
 		public void LoadOrderList()
@@ -84,7 +126,13 @@ namespace DonDon
 					order.StockName = item.StockName;
 					order.Unit = item.Unit;
 
+
 					order.OrderNumber = item.ShouldNumber - item.StockNumber;
+
+					if (Settings.CKStaff) {
+						order.OrderNumber = item.OrderNumber;
+					}
+
 					order.ShouldNumber = item.ShouldNumber;
 					order.StockNumber = item.StockNumber;
 
@@ -99,6 +147,12 @@ namespace DonDon
 				orderListAdapter = new OrderListAdapter (this, orderList);
 				orderListView.Adapter = orderListAdapter;
 
+				this.mNotes.Text = OrderController.GetOrderNotes (Utility.GetTodayDate ());
+
+			}
+			else
+			{			
+				InitData ();
 			}
 		}
 
@@ -121,8 +175,28 @@ namespace DonDon
 		{
 			StartDatePicker.Text = e.Date.ToString ("dd'/'MM'/'yyyy");
 			this.StartDate = e.Date;
+			InitData ();
 		}
 
+
+		public override void OnBackPressed(){
+			
+				new AlertDialog.Builder(this)
+					.SetPositiveButton("Yes", (sender1, args) =>
+						{
+							this.Finish();
+							Android.OS.Process.KillProcess (Android.OS.Process.MyPid ());
+						})
+					.SetNegativeButton("No", (sender2, args) =>
+						{
+							// User pressed no 
+						})
+					.SetMessage("Do you want to exit the application ?")
+					.SetTitle("Confirm")
+					.Show();
+			 
+
+		}
 
 		//Loading data
 		public void InitData(){
@@ -134,17 +208,23 @@ namespace DonDon
 			progress.Show ();
 
 			orderListAdapter = new OrderListAdapter (this, OrderController.GetOrderList(StartDate));
-
 			orderListView.Adapter = orderListAdapter;
+
+			this.mNotes.Text = OrderController.GetOrderNotes (StartDate);
+
 
 			RegisterForContextMenu(orderListView);
 
-			progress.Dismiss ();
-		}
 
-		public void btViewClick(object sender, EventArgs e)
-		{
-			InitData ();
+			if (StartDate != Utility.GetTodayDate ()) {
+				this.buttonOrder.Visibility = ViewStates.Invisible;
+				this.buttonSend.Visibility = ViewStates.Invisible;
+			} else {
+				this.buttonOrder.Visibility = ViewStates.Visible;
+				this.buttonSend.Visibility = ViewStates.Visible;
+			}
+
+			progress.Dismiss ();
 		}
 
 		public void btOrderClick(object sender, EventArgs e)
@@ -161,8 +241,10 @@ namespace DonDon
 			}
 
 			Intent.PutParcelableArrayListExtra("key", Items.ToArray());
-
+		
 			StartActivity (Intent);
+
+			this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
 
 		}
 
@@ -171,24 +253,38 @@ namespace DonDon
 				new AlertDialog.Builder(this)
 				.SetPositiveButton("Yes", async (sender1, args) =>
 				{
-						ApiResultSave result = await OrderController.SendOrderList (orderListAdapter.GetOrderList());
+						progress = new ProgressDialog (this,Resource.Style.StyledDialog);
+						progress.Indeterminate = true;
+						progress.SetMessage("Please wait...");
+						progress.SetCancelable (true);
+						progress.Show ();
+
+						ApiResultSave result = await OrderController.SendOrderList (orderListAdapter.GetOrderList(), this.mNotes.Text);
 
 						if (result != null) 
 						{
 							if (result.Success) 
 							{
+									progress.Dismiss ();
+
 									var builder = new AlertDialog.Builder(this);
-									builder.SetMessage("Order sent successfully");
+									builder.SetMessage("Order sent successfully.");
 									builder.SetPositiveButton("Ok", (s, ee) => { });
 									builder.Create().Show();
 							}
 							else{
-								new AlertDialog.Builder(this).SetMessage(result.ErrorMessage)
-									.SetTitle("Done")
-									.Show();
+								
+									progress.Dismiss ();
+
+									new AlertDialog.Builder(this).SetMessage(result.ErrorMessage)
+										.SetTitle("Done")
+										.Show();
 							}
 						}
-						else{
+						else
+						{
+							progress.Dismiss ();
+
 							new AlertDialog.Builder(this).SetMessage("Network or Server problem. Try again")
 								.SetTitle("Done")
 								.Show();	

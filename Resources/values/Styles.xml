@@ -11,10 +11,7 @@
 	    <item name="android:layout_margin" >3dp</item>
 	    <item name="android:textSize" >18dp</item>
 	    <item name="android:textStyle" >normal</item>
-	    <item name="android:shadowColor" >#000000</item>
-	    <item name="android:shadowDx" >1</item>
-	    <item name="android:shadowDy" >1</item>
-	    <item name="android:shadowRadius" >2</item>
+
 	</style>
 
 	<style name="StyledDialog" parent="@android:style/Theme.Panel">
