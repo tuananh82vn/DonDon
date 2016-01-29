@@ -121,23 +121,27 @@ namespace DonDon
 				List<OrderList> orderList = new List<OrderList> ();
 
 				foreach (OrderList1 item in items) {
+					
 					OrderList order = new OrderList ();
 					order.StockId = item.Id;
 					order.StockName = item.StockName;
 					order.Unit = item.Unit;
-
-
-					order.OrderNumber = item.ShouldNumber - item.StockNumber;
-
-					if (Settings.CKStaff) {
-						order.OrderNumber = item.OrderNumber;
-					}
-
 					order.ShouldNumber = item.ShouldNumber;
 					order.StockNumber = item.StockNumber;
 
-					if (order.OrderNumber < 0) {
+					if (item.OrderNumber == -1) {
 						order.OrderNumber = 0;
+					} 
+					else 
+					{
+						order.OrderNumber = item.ShouldNumber - item.StockNumber;
+						if (order.OrderNumber < 0) {
+							order.OrderNumber = 0;
+						}
+					}
+
+					if (Settings.CKStaff) {
+						order.OrderNumber = item.OrderNumber;
 					}
 
 					orderList.Add (order);

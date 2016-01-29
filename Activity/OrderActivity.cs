@@ -46,6 +46,8 @@ namespace DonDon
 
 		public Button bt_Finish;
 
+		public Button bt_Skip;
+
 		public int selectedIndex;
 
 
@@ -180,6 +182,9 @@ namespace DonDon
 
 			bt_Finish = FindViewById<Button>(Resource.Id.bt_Finish);
 			bt_Finish.Click += btFinalClick;  
+
+			bt_Skip = FindViewById<Button>(Resource.Id.bt_Skip);
+			bt_Skip.Click += btSkipClick; 
 		}
 
 		public void btFinalClick(object sender, EventArgs e)
@@ -211,8 +216,10 @@ namespace DonDon
 		{
 
 			//Get edittext 
-			if (edit_Stock.Text != "") {
+			if (edit_Stock.Text != "") 
+			{
 				try {
+					
 					var stockNumber = Int32.Parse (edit_Stock.Text);
 
 
@@ -254,6 +261,42 @@ namespace DonDon
 
 
 				this.edit_Stock.RequestFocus ();
+				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
+
+			}else {
+				Toast.MakeText (this, "This is the last item already.", ToastLength.Short).Show ();
+			}
+
+		}
+
+		public void btSkipClick(object sender, EventArgs e)
+		{
+
+			this.orderListAdapter.SetOrderAtPosition (selectedIndex, -1);
+
+			//Move to next item
+			if (this.selectedIndex != this.orderListAdapter.Count - 1) {
+
+				this.selectedIndex = this.selectedIndex + 1;
+
+				this.orderListView.SetItemChecked (selectedIndex, true);
+
+				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
+
+				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
+
+
+				if (Settings.CKStaff) {
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+				}
+				else
+				{
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockNumber.ToString ();
+				}
+
+
+				this.edit_Stock.RequestFocus ();
+
 				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
 
 			}else {
