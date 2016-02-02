@@ -8,7 +8,6 @@ using Object = Java.Lang.Object;
 using System.Linq;
 using Android.Content;
 using Android.Graphics;
-using Com.Telerik.Widget.List;
 using System.Collections;
 using Android.Support.V7.Widget;
 

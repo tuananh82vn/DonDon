@@ -12,7 +12,7 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="260.0dp"
+        android:layout_height="296.0dp"
         android:id="@+id/linearLayout5"
         android:layout_gravity="center_vertical">
         <LinearLayout
@@ -22,7 +22,7 @@
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="60dp">
             <LinearLayout
                 android:orientation="horizontal"
                 android:minWidth="25px"

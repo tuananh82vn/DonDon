@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +11,6 @@ using Android.Views;
 using Android.Widget;
 using Android.Views.InputMethods;
 using Android.Graphics;
-using Com.Telerik.Widget.List;
 using Android.Content.PM;
 
 namespace DonDon
@@ -83,7 +81,11 @@ namespace DonDon
 
 			if (Settings.CKStaff) {
 				this.tv_Stock.Text = "Order";
-				this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString();
+				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+				} else {
+					this.edit_Stock.Text = "0";
+				}
 			}
 
 			this.edit_Stock.RequestFocus ();
@@ -105,20 +107,9 @@ namespace DonDon
 					order.StockName = item.StockName;
 					order.Unit = item.Unit;
 
-
-					order.OrderNumber = item.ShouldNumber - item.StockNumber;
-
-					if (Settings.CKStaff) {
-						order.OrderNumber = item.OrderNumber;
-					}
-
-
+					order.OrderNumber = item.OrderNumber;
 					order.ShouldNumber = item.ShouldNumber;
 					order.StockNumber = item.StockNumber;
-
-					if (order.OrderNumber < 0) {
-						order.OrderNumber = 0;
-					}
 
 					orderList.Add (order);
 
@@ -222,13 +213,13 @@ namespace DonDon
 					
 					var stockNumber = Int32.Parse (edit_Stock.Text);
 
-
 					if (Settings.CKStaff) {
 						this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
 					}
 					else
 					{
 						this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+						this.orderListAdapter.SetOrderAtPosition (selectedIndex, this.orderListAdapter.GetItemAtPosition (selectedIndex).ShouldNumber - stockNumber);
 					}
 
 
@@ -252,7 +243,12 @@ namespace DonDon
 
 
 				if (Settings.CKStaff) {
-					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+					
+					if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
+						this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+					} else {
+						this.edit_Stock.Text = "0";
+					}
 				}
 				else
 				{
@@ -287,7 +283,11 @@ namespace DonDon
 
 
 				if (Settings.CKStaff) {
-					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+					if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
+						this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+					} else {
+						this.edit_Stock.Text = "0";
+					}
 				}
 				else
 				{
@@ -321,7 +321,10 @@ namespace DonDon
 					else
 					{
 						this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
-					}				}
+						this.orderListAdapter.SetOrderAtPosition (selectedIndex, this.orderListAdapter.GetItemAtPosition (selectedIndex).ShouldNumber - stockNumber);
+
+					}				
+				}
 				catch(Exception ew){
 					Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
 					return;
@@ -340,7 +343,11 @@ namespace DonDon
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
 				if (Settings.CKStaff) {
-					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+					if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
+						this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
+					} else {
+						this.edit_Stock.Text = "0";
+					}
 				}
 				else
 				{
@@ -382,6 +389,11 @@ namespace DonDon
 			this.selectedIndex = e.Position;
 			this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (e.Position).StockName;
 			this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (e.Position).Unit;
+			if (Settings.CKStaff) {
+				this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (e.Position).OrderNumber.ToString();
+			} else {
+				this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (e.Position).StockNumber.ToString();
+			}
 
 		}
 	}

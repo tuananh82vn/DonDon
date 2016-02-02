@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -128,21 +127,8 @@ namespace DonDon
 					order.Unit = item.Unit;
 					order.ShouldNumber = item.ShouldNumber;
 					order.StockNumber = item.StockNumber;
+					order.OrderNumber = item.OrderNumber;
 
-					if (item.OrderNumber == -1) {
-						order.OrderNumber = 0;
-					} 
-					else 
-					{
-						order.OrderNumber = item.ShouldNumber - item.StockNumber;
-						if (order.OrderNumber < 0) {
-							order.OrderNumber = 0;
-						}
-					}
-
-					if (Settings.CKStaff) {
-						order.OrderNumber = item.OrderNumber;
-					}
 
 					orderList.Add (order);
 

@@ -28,9 +28,8 @@ namespace DonDon
 		public EditText password;
 		public CheckBox cb_rememberMe;
 
-
-
 		public ProgressDialog progress;
+		public LinearLayout linearLayout4;
 
 
 		protected override void OnCreate (Bundle bundle)
@@ -69,8 +68,21 @@ namespace DonDon
 
 			RequestedOrientation = ScreenOrientation.SensorPortrait;
 
+			var metrics = Resources.DisplayMetrics;
+			var widthInDp = ConvertPixelsToDp(metrics.WidthPixels);
+			var heightInDp = ConvertPixelsToDp(metrics.HeightPixels);
 
+			if (heightInDp > 1024) {
+				linearLayout4  = FindViewById<LinearLayout>(Resource.Id.linearLayout4);
+				ViewGroup.MarginLayoutParams  ll = (ViewGroup.MarginLayoutParams)linearLayout4.LayoutParameters;
+				ll.TopMargin = 55;
+			}
+		}
 
+		private int ConvertPixelsToDp(float pixelValue)
+		{
+			var dp = (int) ((pixelValue)/Resources.DisplayMetrics.Density);
+			return dp;
 		}
 
 		public override bool DispatchTouchEvent(MotionEvent event1) {
@@ -96,7 +108,7 @@ namespace DonDon
 
 		public void btForgotClick(object sender, EventArgs e)
 		{
-			var uri = Android.Net.Uri.Parse ("http://172.28.1.53:49713/user/forgotpassword");
+			var uri = Android.Net.Uri.Parse ("http://dondon.softwarestaging.com.au/user/forgotpassword");
 			var intent = new Intent (Intent.ActionView, uri);
 			StartActivity (intent);
 		}
