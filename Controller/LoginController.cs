@@ -32,6 +32,8 @@ namespace DonDon
 
 			} catch (Exception ex) {
 
+				Console.WriteLine (ex.StackTrace);
+
 				return null;
 			}
 		}

@@ -10,11 +10,11 @@ namespace DonDon
 
 		public string StockName {get ; set;}
 
-		public int ShouldNumber {get ; set;}
+		public double ShouldNumber {get ; set;}
 
-		public int StockNumber {get ; set;}
+		public double StockNumber {get ; set;}
 
-		public int OrderNumber {get ; set;}
+		public double OrderNumber {get ; set;}
 
 		public string Unit { get ; set;}
 

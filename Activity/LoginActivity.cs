@@ -39,6 +39,7 @@ namespace DonDon
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Login);
 
+			RequestedOrientation = ScreenOrientation.SensorPortrait;
 
 
 			Button button = FindViewById<Button>(Resource.Id.btLogin);
@@ -64,9 +65,6 @@ namespace DonDon
 				username.Text = temp;
 				password.Text = Settings.Password;
 			}
-
-
-			RequestedOrientation = ScreenOrientation.SensorPortrait;
 
 			var metrics = Resources.DisplayMetrics;
 			var widthInDp = ConvertPixelsToDp(metrics.WidthPixels);

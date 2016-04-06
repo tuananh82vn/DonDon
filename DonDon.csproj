@@ -31,7 +31,6 @@
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -40,6 +39,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <DebugType>full</DebugType>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -168,12 +168,12 @@
     <AndroidResource Include="Resources\drawable\CustomSelector.xml" />
     <AndroidResource Include="Resources\drawable\password.png" />
     <AndroidResource Include="Resources\drawable\user_email.png" />
-    <AndroidResource Include="Resources\layout-sw720dp-port\Login.axml" />
     <AndroidResource Include="Resources\drawable\RoundButton.xml" />
     <AndroidResource Include="Resources\drawable\background.png" />
-    <AndroidResource Include="Resources\layout-sw720dp-port\Home.axml" />
     <AndroidResource Include="Resources\drawable\top_logo.png" />
-    <AndroidResource Include="Resources\layout-sw720dp-port\Order.axml" />
+    <AndroidResource Include="Resources\layout-sw720dp\Login.axml" />
+    <AndroidResource Include="Resources\layout-sw720dp\Home.axml" />
+    <AndroidResource Include="Resources\layout-sw720dp\Order.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="lib\" />

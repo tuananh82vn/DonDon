@@ -139,8 +139,8 @@
                         android:paddingLeft="10dp" />
                     <EditText
                         android:id="@+id/edit_Stock"
-                        android:numeric="integer"
-                        android:inputType="number"
+                        android:numeric="decimal"
+                        android:inputType="numberDecimal"
                         android:layout_width="122dp"
                         android:layout_height="match_parent"
                         android:textColor="#ff000000"

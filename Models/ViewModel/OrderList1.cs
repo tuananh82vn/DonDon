@@ -9,7 +9,7 @@ namespace DonDon
 		public OrderList1(){
 		}
 
-		public OrderList1(int id, string stockname , int shouldnumber , int stocknumber, int ordernumber, string unit){
+		public OrderList1(int id, string stockname , double shouldnumber , double stocknumber, double ordernumber, string unit){
 			Id = id;
 			StockName = stockname;
 			ShouldNumber = shouldnumber;
@@ -22,18 +22,18 @@ namespace DonDon
 		{
 			Id = parcel.ReadInt();
 			StockName = parcel.ReadString();
-			ShouldNumber = parcel.ReadInt();
-			StockNumber = parcel.ReadInt();
-			OrderNumber = parcel.ReadInt();
+			ShouldNumber = parcel.ReadDouble();
+			StockNumber = parcel.ReadDouble();
+			OrderNumber = parcel.ReadDouble();
 			Unit = parcel.ReadString();
 		}
 
 
 		public int 		Id { get ; set;	}
 		public string 	StockName {get ; set; }
-		public int 		ShouldNumber {get ; set;}
-		public int 		StockNumber {get ; set;}
-		public int 		OrderNumber {get ; set;}
+		public double 		ShouldNumber {get ; set;}
+		public double 		StockNumber {get ; set;}
+		public double 		OrderNumber {get ; set;}
 		public string 	Unit { get ; set;}
 
 //		public bool Skip { get ; set;}
@@ -49,9 +49,9 @@ namespace DonDon
 		{
 			dest.WriteInt(Id);
 			dest.WriteString(StockName);
-			dest.WriteInt(ShouldNumber);
-			dest.WriteInt(StockNumber);
-			dest.WriteInt(OrderNumber);
+			dest.WriteDouble(ShouldNumber);
+			dest.WriteDouble(StockNumber);
+			dest.WriteDouble(OrderNumber);
 			dest.WriteString(Unit);
 
 		}

@@ -49,12 +49,12 @@ namespace DonDon
 			return _OrderList;
 		}
 
-		public void SetStockAtPosition(int position, int StockNumber)
+		public void SetStockAtPosition(int position, double StockNumber)
 		{
 			_OrderList[position].StockNumber = StockNumber;
 		}
 
-		public void SetOrderAtPosition(int position, int OrderNumber)
+		public void SetOrderAtPosition(int position, double OrderNumber)
 		{
 			_OrderList[position].OrderNumber = OrderNumber;
 		}

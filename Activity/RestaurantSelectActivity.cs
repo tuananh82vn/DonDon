@@ -61,15 +61,24 @@ namespace DonDon
 
 			StartActivity(typeof(LoginActivity));
 
+			this.Finish ();
+
 		}
 
 		private void GetRestaurantList(){
 
-			restaurantList = new RestaurantSpinnerAdapter (this,RestaurantController.GetRestaurantList());
+			if(NetworkHelper.DetectNetwork()){
 
-			spinner_Restaurant.Adapter = restaurantList;
+				restaurantList = new RestaurantSpinnerAdapter (this,RestaurantController.GetRestaurantList());
 
-			spinner_Restaurant.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs> (Restaurant_ItemSelected);
+				spinner_Restaurant.Adapter = restaurantList;
+
+				spinner_Restaurant.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs> (Restaurant_ItemSelected);
+			}
+			else
+			{
+				Toast.MakeText (this, "No internet connection", ToastLength.Short).Show ();
+			}
 
 		}
 

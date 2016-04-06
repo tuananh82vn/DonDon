@@ -113,8 +113,8 @@
                 p1:layout_width="match_parent"
                 p1:layout_height="wrap_content"
                 p1:id="@+id/bt_Send"
-                p1:textColor="#ffffffff"
-                p1:background="#ff000000"
+                p1:textColor="#ff000000"
+                p1:background="#ffff0000"
                 p1:layout_marginRight="10dp"
                 p1:layout_marginTop="5dp"
                 p1:textAppearance="?android:attr/textAppearanceMedium" />

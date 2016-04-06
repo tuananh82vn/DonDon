@@ -146,6 +146,7 @@ namespace DonDon
 			}
 		}
 
+		[Obsolete]
 		protected override Dialog OnCreateDialog (int id)
 		{
 			switch (id) {

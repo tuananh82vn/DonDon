@@ -211,7 +211,7 @@ namespace DonDon
 			{
 				try {
 					
-					var stockNumber = Int32.Parse (edit_Stock.Text);
+					var stockNumber = Double.Parse (edit_Stock.Text);
 
 					if (Settings.CKStaff) {
 						this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
@@ -224,6 +224,9 @@ namespace DonDon
 
 
 				} catch (Exception ew) {
+
+					Console.WriteLine (ew.StackTrace);
+
 					Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
 					return;
 				}
@@ -326,6 +329,9 @@ namespace DonDon
 					}				
 				}
 				catch(Exception ew){
+
+					Console.WriteLine (ew.StackTrace);
+
 					Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
 					return;
 				}

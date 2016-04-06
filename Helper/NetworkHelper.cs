@@ -19,8 +19,8 @@ namespace DonDon
 				return (exitValue == 0);
 
 			} 
-			catch (IOException e)          {  } 
-			catch (InterruptedException e) {  }
+			catch (IOException e)          { Console.WriteLine (e.StackTrace); } 
+			catch (InterruptedException e) { Console.WriteLine (e.StackTrace); }
 
 			return false;
 		}

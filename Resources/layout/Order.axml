@@ -102,8 +102,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/edit_Stock"
                     android:layout_marginTop="175dp"
-                    android:numeric="integer"
-                    android:inputType="number"
+                    android:numeric="decimal"
+                    android:inputType="numberDecimal"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
                     android:layout_marginLeft="100dp" />
                 <TextView
