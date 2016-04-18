@@ -79,11 +79,11 @@ namespace DonDon
 			}
 		}
 
-		public static async System.Threading.Tasks.Task<ApiResultSave> SendOrderList(List<OrderList> obj, string notes)
+		public static async System.Threading.Tasks.Task<ApiResultSave> SendOrderList(List<OrderList> obj, string notes, int orderOption)
 		{
 			ApiResultSave apiResultSave = new ApiResultSave();
 
-			apiResultSave = await new WebApiHelper().EditAddObject("/API/SendOrderList",obj, notes);
+			apiResultSave = await new WebApiHelper().EditAddObject("/API/SendOrderList",obj, notes,orderOption);
 
 			return apiResultSave;
 		}

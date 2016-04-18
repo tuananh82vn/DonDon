@@ -64,7 +64,8 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinner_Restaurant"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                style="@style/spinner_style" />
         </LinearLayout>
     </TableRow>
     <TableRow
@@ -87,7 +88,7 @@
                 style="@style/button_text"
                 android:id="@+id/btLogin"
                 android:gravity="center"
-                android:text="Done"
+                android:text="Next"
                 android:textSize="14dp"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"

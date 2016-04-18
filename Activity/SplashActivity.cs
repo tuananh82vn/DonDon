@@ -57,16 +57,14 @@ namespace DonDon
 		{
 			// Simulate a long loading process on app startup.
 			Task<bool>.Run (() => {
-				Thread.Sleep (2000);
-				if(Settings.RestaurantId != 0 ){
-
-
+				Thread.Sleep (500);
+//				if(Settings.RestaurantId != 0 ){
 					StartActivity(typeof(LoginActivity));
-				}
-				else
-				{
-					StartActivity(typeof(RestaurantSelectActivity));
-				}
+//				}
+//				else
+//				{
+//					StartActivity(typeof(RestaurantSelectActivity));
+//				}
 				this.Finish();
 			}); 
 		}

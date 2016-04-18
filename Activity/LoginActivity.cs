@@ -165,6 +165,7 @@ namespace DonDon
 			Settings.Username = obj.UserName;
 			Settings.Fullname = obj.Fullname;
 			Settings.CKStaff = obj.CKStaff;
+			Settings.RestaurantId = obj.RestaurantId;
 
 			if (cb_rememberMe.Checked) {
 				Settings.RememberMe = true;

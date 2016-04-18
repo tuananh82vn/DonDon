@@ -51,7 +51,7 @@
                     android:imeOptions="actionNext"
                     android:inputType="textWebEmailAddress"
                     android:id="@+id/tv_username"
-                    android:hint="Enter your email"
+                    android:hint="Enter your username"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
                     android:textColor="#ffffffff"

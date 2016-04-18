@@ -35,7 +35,6 @@ namespace DonDon
 
 		public TextView tv_Stock;
 
-
 		public EditText edit_Stock;
 
 		public Button bt_Next;
@@ -47,6 +46,8 @@ namespace DonDon
 		public Button bt_Skip;
 
 		public int selectedIndex;
+
+		public string EditType;
 
 
 		protected override void OnCreate (Bundle savedInstanceState)
@@ -79,8 +80,8 @@ namespace DonDon
 
 
 
-			if (Settings.CKStaff) {
-				this.tv_Stock.Text = "Order";
+			if (Settings.CKStaff || this.EditType == "amend") {
+				this.tv_Stock.Text = "ORDER";
 				if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
 					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
 				} else {
@@ -94,6 +95,8 @@ namespace DonDon
 
 		public int LoadOrderList()
 		{
+			this.EditType =  Intent.GetStringExtra ("type");
+
 			var  items = Intent.GetParcelableArrayListExtra("key");
 			if (items != null) {
 
@@ -106,7 +109,12 @@ namespace DonDon
 					order.StockId = item.Id;
 					order.StockName = item.StockName;
 					order.Unit = item.Unit;
-
+					if (item.IsSkip == 0) {
+						order.IsSkip = false;
+					}
+					else
+						order.IsSkip = true;
+					
 					order.OrderNumber = item.OrderNumber;
 					order.ShouldNumber = item.ShouldNumber;
 					order.StockNumber = item.StockNumber;
@@ -126,6 +134,7 @@ namespace DonDon
 			}
 		}
 
+		//Handle when user click Back on tablet
 		public override void OnBackPressed(){
 
 			Intent Intent = new Intent (this, typeof(HomeActivity));
@@ -135,7 +144,14 @@ namespace DonDon
 			List<OrderList1> Items = new List<OrderList1> ();
 
 			foreach (var order in orderList) {
-				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit);
+
+				var isSkip = 0;
+
+				if (order.IsSkip) {
+					isSkip = 1;
+				}
+
+				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, isSkip);
 				Items.Add (item);
 			}
 
@@ -178,8 +194,37 @@ namespace DonDon
 			bt_Skip.Click += btSkipClick; 
 		}
 
+
+		//Handle when user click LIST button
 		public void btFinalClick(object sender, EventArgs e)
 		{
+
+			//Save the last value
+//			try {
+//
+//				var stockNumber = Double.Parse (edit_Stock.Text);
+//
+//				if (Settings.CKStaff || this.EditType == "amend") {
+//					this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
+//				}
+//				else
+//				{
+//					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+//					this.orderListAdapter.SetOrderAtPosition (selectedIndex, this.orderListAdapter.GetItemAtPosition (selectedIndex).ShouldNumber - stockNumber);
+//				}
+//
+//
+//			} catch (Exception ew) {
+//
+//				Console.WriteLine (ew.StackTrace);
+//
+//				Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
+//				return;
+//			}
+
+
+
+			//Go back to homepage
 			Intent Intent = new Intent (this, typeof(HomeActivity));
 
 			var orderList = this.orderListAdapter.GetOrderList();
@@ -187,7 +232,13 @@ namespace DonDon
 			List<OrderList1> Items = new List<OrderList1> ();
 
 			foreach (var order in orderList) {
-				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit);
+				var isSkip = 0;
+
+				if (order.IsSkip) {
+					isSkip = 1;
+				}
+
+				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, isSkip);
 				Items.Add (item);
 			}
 
@@ -203,24 +254,26 @@ namespace DonDon
 
 		}
 
-		public void btNextClick(object sender, EventArgs e)
-		{
-
-			//Get edittext 
+		public void NextClicked(){
+			
 			if (edit_Stock.Text != "") 
 			{
 				try {
-					
+
 					var stockNumber = Double.Parse (edit_Stock.Text);
 
-					if (Settings.CKStaff) {
+					if (Settings.CKStaff || this.EditType == "amend") {
 						this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
+
 					}
 					else
 					{
 						this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
 						this.orderListAdapter.SetOrderAtPosition (selectedIndex, this.orderListAdapter.GetItemAtPosition (selectedIndex).ShouldNumber - stockNumber);
 					}
+
+					this.orderListAdapter.SetSkipAtPosition (selectedIndex, false);
+
 
 
 				} catch (Exception ew) {
@@ -245,8 +298,8 @@ namespace DonDon
 
 
 
-				if (Settings.CKStaff) {
-					
+				if (Settings.CKStaff || this.EditType == "amend") {
+
 					if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
 						this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
 					} else {
@@ -262,9 +315,37 @@ namespace DonDon
 				this.edit_Stock.RequestFocus ();
 				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
 
-			}else {
+			}
+			else 
+			{
 				Toast.MakeText (this, "This is the last item already.", ToastLength.Short).Show ();
 			}
+		}
+
+		public void btNextClick(object sender, EventArgs e)
+		{
+
+			//Get edittext 
+			if (this.EditType == "amend" && !Settings.CKStaff) {
+				
+				new AlertDialog.Builder (this)
+					.SetPositiveButton ("Yes", async (sender1, args) => {
+
+						NextClicked();
+
+				})
+					.SetNegativeButton ("No", (sender3, args) => {
+					// User pressed no 
+				})
+					.SetTitle ("Are you sure to amend this Order number?")
+					.Show ();
+			} 
+			else 
+			{
+				NextClicked ();
+			}
+
+
 
 		}
 
@@ -272,6 +353,8 @@ namespace DonDon
 		{
 
 			this.orderListAdapter.SetOrderAtPosition (selectedIndex, -1);
+			this.orderListAdapter.SetSkipAtPosition (selectedIndex, true);
+
 
 			//Move to next item
 			if (this.selectedIndex != this.orderListAdapter.Count - 1) {
@@ -285,7 +368,7 @@ namespace DonDon
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
 
-				if (Settings.CKStaff) {
+				if (Settings.CKStaff || this.EditType == "amend") {
 					if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
 						this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
 					} else {
@@ -302,7 +385,9 @@ namespace DonDon
 
 				this.edit_Stock.SetSelection (this.edit_Stock.Text.Length);
 
-			}else {
+			}
+			else 
+			{
 				Toast.MakeText (this, "This is the last item already.", ToastLength.Short).Show ();
 			}
 
@@ -318,7 +403,7 @@ namespace DonDon
 				try{
 					var stockNumber =  Int32.Parse(edit_Stock.Text);
 
-					if (Settings.CKStaff) {
+					if (Settings.CKStaff || this.EditType == "amend") {
 						this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
 					}
 					else
@@ -348,7 +433,7 @@ namespace DonDon
 
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
 
-				if (Settings.CKStaff) {
+				if (Settings.CKStaff || this.EditType == "amend") {
 					if (this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber >= 0) {
 						this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).OrderNumber.ToString ();
 					} else {
@@ -392,10 +477,41 @@ namespace DonDon
 		//handle list item clicked
 		void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
+
+			//Save the last value
+			try {
+
+				var stockNumber = Double.Parse (edit_Stock.Text);
+
+				if (Settings.CKStaff || this.EditType == "amend") {
+					this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
+				}
+				else
+				{
+					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+					this.orderListAdapter.SetOrderAtPosition (selectedIndex, this.orderListAdapter.GetItemAtPosition (selectedIndex).ShouldNumber - stockNumber);
+				}
+
+
+			} catch (Exception ew) {
+
+
+				this.selectedIndex = e.Position;
+				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (e.Position).StockName;
+				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (e.Position).Unit;
+				if (Settings.CKStaff || this.EditType == "amend") {
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (e.Position).OrderNumber.ToString();
+				} else {
+					this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (e.Position).StockNumber.ToString();
+				}
+
+				return;
+			}
+
 			this.selectedIndex = e.Position;
 			this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (e.Position).StockName;
 			this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (e.Position).Unit;
-			if (Settings.CKStaff) {
+			if (Settings.CKStaff || this.EditType == "amend") {
 				this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (e.Position).OrderNumber.ToString();
 			} else {
 				this.edit_Stock.Text = this.orderListAdapter.GetItemAtPosition (e.Position).StockNumber.ToString();

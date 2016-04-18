@@ -9,7 +9,7 @@ namespace DonDon
 		public string Fullname { get; set; }
 		public string Email { get; set; }
 		public bool CKStaff { get; set; }
-
+		public int RestaurantId { get; set; }
 		public bool Success { get; set; }
 		public string ErrorMessage { get; set; }
 

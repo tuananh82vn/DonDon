@@ -24,7 +24,7 @@ namespace DonDon
 			httpClient.Timeout = TimeSpan.FromMinutes(5);
 		}
 
-		public async System.Threading.Tasks.Task<ApiResultSave> EditAddObject(string url,Object objTask, string notes)
+		public async System.Threading.Tasks.Task<ApiResultSave> EditAddObject(string url,Object objTask, string notes, int orderOption)
 		{
 			ApiResultSave apiResult = new ApiResultSave();
 
@@ -39,6 +39,8 @@ namespace DonDon
 				objApiTask.OrderDate = Utility.GetTodayDate();
 
 				objApiTask.Notes = notes;
+
+				objApiTask.OrderOption = orderOption;
 
 				objApiTask.Item = objTask;
 

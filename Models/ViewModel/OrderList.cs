@@ -18,7 +18,7 @@ namespace DonDon
 
 		public string Unit { get ; set;}
 
-		public bool Skip { get ; set;}
+		public bool IsSkip { get ; set;}
 	}
 }
 

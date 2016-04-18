@@ -9,13 +9,14 @@ namespace DonDon
 		public OrderList1(){
 		}
 
-		public OrderList1(int id, string stockname , double shouldnumber , double stocknumber, double ordernumber, string unit){
+		public OrderList1(int id, string stockname , double shouldnumber , double stocknumber, double ordernumber, string unit, int isskip){
 			Id = id;
 			StockName = stockname;
 			ShouldNumber = shouldnumber;
 			StockNumber = stocknumber;
 			OrderNumber = ordernumber;
 			Unit = unit;
+			IsSkip = isskip;
 		}
 
 		private OrderList1(Parcel parcel)
@@ -26,6 +27,8 @@ namespace DonDon
 			StockNumber = parcel.ReadDouble();
 			OrderNumber = parcel.ReadDouble();
 			Unit = parcel.ReadString();
+			IsSkip = parcel.ReadInt();
+
 		}
 
 
@@ -35,8 +38,7 @@ namespace DonDon
 		public double 		StockNumber {get ; set;}
 		public double 		OrderNumber {get ; set;}
 		public string 	Unit { get ; set;}
-
-//		public bool Skip { get ; set;}
+		public int IsSkip { get ; set;}
 
 
 		public int DescribeContents()
@@ -53,7 +55,7 @@ namespace DonDon
 			dest.WriteDouble(StockNumber);
 			dest.WriteDouble(OrderNumber);
 			dest.WriteString(Unit);
-
+			dest.WriteInt(IsSkip);
 		}
 
 		// The creator creates an instance of the specified object

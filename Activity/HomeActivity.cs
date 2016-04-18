@@ -47,6 +47,12 @@ namespace DonDon
 
 		public Button buttonSend;
 
+		public Button buttonAmend;
+
+
+		public int OptionSendSelected = 0;
+
+
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
@@ -71,6 +77,9 @@ namespace DonDon
 			buttonSend = FindViewById<Button>(Resource.Id.bt_Send);
 			buttonSend.Click += btSendClick;  
 
+			buttonAmend = FindViewById<Button>(Resource.Id.bt_Amend);
+			buttonAmend.Click += btAmendClick;  
+
 			mNotes = FindViewById<EditText>(Resource.Id.editText_Notes);
 
 			tv_Username = FindViewById<TextView>(Resource.Id.textView_Username);
@@ -80,6 +89,9 @@ namespace DonDon
 
 			LoadOrderList ();
 
+			if (Settings.CKStaff) {
+				this.buttonAmend.Visibility = ViewStates.Invisible;
+			}
 
 		}
 
@@ -128,8 +140,12 @@ namespace DonDon
 					order.ShouldNumber = item.ShouldNumber;
 					order.StockNumber = item.StockNumber;
 					order.OrderNumber = item.OrderNumber;
-
-
+					if (item.IsSkip == 0) {
+						order.IsSkip = false;
+					}
+					else
+						order.IsSkip = true;
+					
 					orderList.Add (order);
 
 				}
@@ -210,9 +226,13 @@ namespace DonDon
 			if (StartDate != Utility.GetTodayDate ()) {
 				this.buttonOrder.Visibility = ViewStates.Invisible;
 				this.buttonSend.Visibility = ViewStates.Invisible;
+				this.buttonAmend.Visibility = ViewStates.Invisible;
 			} else {
 				this.buttonOrder.Visibility = ViewStates.Visible;
 				this.buttonSend.Visibility = ViewStates.Visible;
+
+				if(!Settings.CKStaff)
+					this.buttonAmend.Visibility = ViewStates.Visible;
 			}
 
 			progress.Dismiss ();
@@ -227,66 +247,146 @@ namespace DonDon
 			List<OrderList1> Items = new List<OrderList1> ();
 
 			foreach (var order in orderList) {
-				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit);
+
+				var isSkip = 0;
+
+				if (order.IsSkip) {
+					isSkip = 1;
+				}
+
+				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, isSkip);
 				Items.Add (item);
 			}
 
+			Intent.PutExtra("type", "order");
+
 			Intent.PutParcelableArrayListExtra("key", Items.ToArray());
-		
+
 			StartActivity (Intent);
 
 			this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
 
 		}
 
-		public void btSendClick(object sender, EventArgs e)
+		public void btAmendClick(object sender, EventArgs e)
 		{
-				new AlertDialog.Builder(this)
+
+			new AlertDialog.Builder(this)
 				.SetPositiveButton("Yes", async (sender1, args) =>
-				{
-						progress = new ProgressDialog (this,Resource.Style.StyledDialog);
-						progress.Indeterminate = true;
-						progress.SetMessage("Please wait...");
-						progress.SetCancelable (true);
-						progress.Show ();
+					{
 
-						ApiResultSave result = await OrderController.SendOrderList (orderListAdapter.GetOrderList(), this.mNotes.Text);
+						Intent Intent = new Intent (this, typeof(OrderActivity));
 
-						if (result != null) 
-						{
-							if (result.Success) 
-							{
-									progress.Dismiss ();
+						var orderList = this.orderListAdapter.GetOrderList();
 
-									var builder = new AlertDialog.Builder(this);
-									builder.SetMessage("Order sent successfully.");
-									builder.SetPositiveButton("Ok", (s, ee) => { });
-									builder.Create().Show();
+						List<OrderList1> Items = new List<OrderList1> ();
+
+						foreach (var order in orderList) {
+
+							var isSkip = 0;
+
+							if (order.IsSkip) {
+								isSkip = 1;
 							}
-							else{
-								
-									progress.Dismiss ();
 
-									new AlertDialog.Builder(this).SetMessage(result.ErrorMessage)
-										.SetTitle("Done")
-										.Show();
-							}
+							OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, isSkip);
+							Items.Add (item);
 						}
-						else
-						{
-							progress.Dismiss ();
 
-							new AlertDialog.Builder(this).SetMessage("Network or Server problem. Try again")
-								.SetTitle("Done")
-								.Show();	
-						}
-				})
-				.SetNegativeButton("No", (sender2, args) =>
+						Intent.PutParcelableArrayListExtra("key", Items.ToArray());
+
+						Intent.PutExtra("type", "amend");
+
+						StartActivity (Intent);
+
+						this.OverridePendingTransition(Resource.Animation.slide_in_top, Resource.Animation.slide_out_bottom);
+
+					})
+				.SetNegativeButton("No", (sender3, args) =>
 					{
 						// User pressed no 
 					})
-				.SetMessage("Are you sure to send this order ?")
-				.SetTitle("Confirm")
+				.SetTitle("This button will allow you to enter or change the order number, Continue ?")
+				.Show();
+		}
+
+		private void ListClicked (object sender, DialogClickEventArgs e)
+		{
+			OptionSendSelected = e.Which;
+		}
+
+		public void btSendClick(object sender, EventArgs e)
+		{
+
+				OptionSendSelected = 0;
+
+				string[] color_options  = new string[] {"Send All","Send to Daiwa","Send to Centre Kitchen"};
+
+
+				new AlertDialog.Builder(this)
+				.SetPositiveButton("Send", async (sender1, args) =>
+				{
+							
+							progress = new ProgressDialog (this,Resource.Style.StyledDialog);
+							progress.Indeterminate = true;
+							progress.SetMessage("Please wait...");
+							progress.SetCancelable (true);
+							progress.Show ();
+
+							ApiResultSave result = await OrderController.SendOrderList (orderListAdapter.GetOrderList(), this.mNotes.Text, OptionSendSelected);
+
+							if (result != null) 
+							{
+								if (result.Success) 
+								{
+										progress.Dismiss ();
+
+										var builder = new AlertDialog.Builder(this);
+										string message = "";
+
+										if(OptionSendSelected == 0){
+											message = "Order sent all successfully.";
+										}
+										else if(OptionSendSelected == 1)
+										{
+											message = "Order sent to Daiwa successfully.";
+										}
+										else if(OptionSendSelected == 2)
+										{
+											message = "Order sent to Centre Kitchen successfully.";
+										}
+
+										builder.SetMessage(message);
+										builder.SetPositiveButton("Ok", (s, ee) => { });
+										builder.Create().Show();
+								}
+								else{
+									
+										progress.Dismiss ();
+
+										new AlertDialog.Builder(this).SetMessage(result.ErrorMessage)
+											.SetTitle("Done")
+											.Show();
+								}
+							}
+							else
+							{
+								progress.Dismiss ();
+
+								new AlertDialog.Builder(this).SetMessage("Network or Server problem. Try again")
+									.SetTitle("Done")
+									.Show();	
+							}
+							
+				})
+				
+				.SetSingleChoiceItems(color_options, 0, ListClicked)
+
+				.SetNegativeButton("Cancel", (sender3, args) =>
+					{
+						// User pressed no 
+					})
+				.SetTitle("Please carefully select which option you want to send order ?")
 				.Show();
 		}
 	}

@@ -18,7 +18,6 @@ namespace DonDon
 				{
 					UserName = username,
 					Password = password,
-					RestaurantId = Settings.RestaurantId
 				}
 			};
 

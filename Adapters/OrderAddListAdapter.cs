@@ -61,7 +61,7 @@ namespace DonDon
 
 		public void SetSkipAtPosition(int position , bool skip)
 		{
-			_OrderList[position].Skip = skip;
+			_OrderList[position].IsSkip = skip;
 		}
 
 		public override int Count 
