@@ -31,6 +31,9 @@ namespace DonDon
 
 			if (results != null) {
 
+				LoginController.Log(Constant.GetOrderDate + ":" + orderDate.ToShortDateString());
+
+
 				ApiResultList<IEnumerable<OrderList>> objResult = Newtonsoft.Json.JsonConvert.DeserializeObject<ApiResultList<IEnumerable<OrderList>>> (results);
 
 				List<OrderList> returnObject = new List<OrderList> ();

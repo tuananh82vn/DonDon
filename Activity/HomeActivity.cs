@@ -189,20 +189,19 @@ namespace DonDon
 		public override void OnBackPressed(){
 			
 				new AlertDialog.Builder(this)
-					.SetPositiveButton("Yes", (sender1, args) =>
-						{
-							this.Finish();
-							Android.OS.Process.KillProcess (Android.OS.Process.MyPid ());
-						})
-					.SetNegativeButton("No", (sender2, args) =>
-						{
-							// User pressed no 
-						})
-					.SetMessage("Do you want to exit the application ?")
-					.SetTitle("Confirm")
-					.Show();
-			 
+				.SetPositiveButton("Yes", (sender1, args) =>
+					{
+						LoginController.Log(Constant.ButtonBackExitClick);
+						this.Finish();
+						Android.OS.Process.KillProcess (Android.OS.Process.MyPid ());
+					})
+				.SetNegativeButton("No", (sender2, args) =>
+					{
 
+					})
+				.SetMessage("Do you want to exit the application?")
+				.SetTitle("Confirm")
+				.Show();
 		}
 
 		//Loading data
@@ -219,9 +218,7 @@ namespace DonDon
 
 			this.mNotes.Text = OrderController.GetOrderNotes (StartDate);
 
-
 			RegisterForContextMenu(orderListView);
-
 
 			if (StartDate != Utility.GetTodayDate ()) {
 				this.buttonOrder.Visibility = ViewStates.Invisible;
@@ -240,22 +237,38 @@ namespace DonDon
 
 		public void btOrderClick(object sender, EventArgs e)
 		{
+			LoginController.Log(Constant.ButtonOrderClick);
+
 			Intent Intent = new Intent (this, typeof(OrderActivity));
 
-			var orderList = this.orderListAdapter.GetOrderList();
+			var CurrentDate = Utility.GetTodayDate();
 
-			List<OrderList1> Items = new List<OrderList1> ();
+			List<OrderList> orderList = new List<OrderList>();
 
-			foreach (var order in orderList) {
+			//get current data
+			if (CurrentDate == this.StartDate)
+			{
+				orderList = this.orderListAdapter.GetOrderList();
+			}
+			//get the newest data
+			else
+			{
+				orderList = OrderController.GetOrderList(CurrentDate);
+			}
 
+			List<OrderList1> Items = new List<OrderList1>();
+
+			foreach (var order in orderList)
+			{
 				var isSkip = 0;
 
-				if (order.IsSkip) {
+				if (order.IsSkip)
+				{
 					isSkip = 1;
 				}
 
-				OrderList1 item = new OrderList1 (order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, isSkip);
-				Items.Add (item);
+				OrderList1 item = new OrderList1(order.StockId, order.StockName, order.ShouldNumber, order.StockNumber, order.OrderNumber, order.Unit, isSkip);
+				Items.Add(item);
 			}
 
 			Intent.PutExtra("type", "order");
@@ -274,6 +287,8 @@ namespace DonDon
 			new AlertDialog.Builder(this)
 				.SetPositiveButton("Yes", async (sender1, args) =>
 					{
+
+						LoginController.Log(Constant.ButtonAmendClick);
 
 						Intent Intent = new Intent (this, typeof(OrderActivity));
 
@@ -326,7 +341,7 @@ namespace DonDon
 				new AlertDialog.Builder(this)
 				.SetPositiveButton("Send", async (sender1, args) =>
 				{
-							
+
 							progress = new ProgressDialog (this,Resource.Style.StyledDialog);
 							progress.Indeterminate = true;
 							progress.SetMessage("Please wait...");
@@ -346,15 +361,21 @@ namespace DonDon
 
 										if(OptionSendSelected == 0){
 											message = "Order sent all successfully.";
-										}
+							LoginController.Log(Constant.ButtonSendAllClick);
+
+							}
 										else if(OptionSendSelected == 1)
 										{
 											message = "Order sent to Daiwa successfully.";
-										}
+							LoginController.Log(Constant.ButtonSendDWClick);
+
+							}
 										else if(OptionSendSelected == 2)
 										{
 											message = "Order sent to Centre Kitchen successfully.";
-										}
+							LoginController.Log(Constant.ButtonSendCKClick);
+
+							}
 
 										builder.SetMessage(message);
 										builder.SetPositiveButton("Ok", (s, ee) => { });

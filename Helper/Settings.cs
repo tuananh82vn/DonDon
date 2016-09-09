@@ -14,7 +14,9 @@ namespace DonDon
 
 		private const string InstanceURLKey = "InstanceURLKey";
 		private static readonly string InstanceURL_Default = "http://osaka-online.com.au";
-	//	private static readonly string InstanceURL_Default = "http://172.28.1.53:49713";
+		//  private static readonly string InstanceURL_Default = "http://172.28.1.70:49713";
+		//	private static readonly string InstanceURL_Default = "http://dondon.softwarestaging.com.au";
+
 
 		private const string UserNameKey = "UserNameKey";
 		private static readonly string UserNameKey_Default = string.Empty;

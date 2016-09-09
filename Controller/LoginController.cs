@@ -36,6 +36,32 @@ namespace DonDon
 				return null;
 			}
 		}
+
+		public static void Log(string action) { 
+
+			string url = Settings.InstanceURL;
+
+			url = url + "/api/Log";
+
+			var objsearch = (new
+			{
+				username = Settings.Username,
+				action = action
+
+			});
+
+			try
+			{
+
+				ConnectWebAPI.Request(url, objsearch);
+
+			}
+			catch (Exception ex)
+			{
+
+				Console.WriteLine(ex.StackTrace);
+			}
+		}
 	}
 }
 

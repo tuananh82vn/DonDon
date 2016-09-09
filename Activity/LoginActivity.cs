@@ -147,7 +147,9 @@ namespace DonDon
 			if (obj != null) 
 			{
 				if (obj.Success)
-					onSuccessfulLogin (obj);
+				{
+					onSuccessfulLogin(obj);
+				}
 				else
 					onFailLogin (obj);
 			} 
@@ -174,6 +176,8 @@ namespace DonDon
 				Settings.RememberMe = false;
 				Settings.Password = "";
 			}
+
+			LoginController.Log(Constant.Login);
 
 			RunOnUiThread (() => progress.Dismiss ());
 

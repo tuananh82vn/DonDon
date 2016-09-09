@@ -200,28 +200,29 @@ namespace DonDon
 		{
 
 			//Save the last value
-//			try {
-//
-//				var stockNumber = Double.Parse (edit_Stock.Text);
-//
-//				if (Settings.CKStaff || this.EditType == "amend") {
-//					this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
-//				}
-//				else
-//				{
-//					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
-//					this.orderListAdapter.SetOrderAtPosition (selectedIndex, this.orderListAdapter.GetItemAtPosition (selectedIndex).ShouldNumber - stockNumber);
-//				}
-//
-//
-//			} catch (Exception ew) {
-//
-//				Console.WriteLine (ew.StackTrace);
-//
-//				Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
-//				return;
-//			}
+			//			try {
+			//
+			//				var stockNumber = Double.Parse (edit_Stock.Text);
+			//
+			//				if (Settings.CKStaff || this.EditType == "amend") {
+			//					this.orderListAdapter.SetOrderAtPosition (selectedIndex, stockNumber);
+			//				}
+			//				else
+			//				{
+			//					this.orderListAdapter.SetStockAtPosition (selectedIndex, stockNumber);
+			//					this.orderListAdapter.SetOrderAtPosition (selectedIndex, this.orderListAdapter.GetItemAtPosition (selectedIndex).ShouldNumber - stockNumber);
+			//				}
+			//
+			//
+			//			} catch (Exception ew) {
+			//
+			//				Console.WriteLine (ew.StackTrace);
+			//
+			//				Toast.MakeText (this, "Input not valid", ToastLength.Short).Show ();
+			//				return;
+			//			}
 
+			LoginController.Log(Constant.ButtonListClick);
 
 
 			//Go back to homepage
@@ -291,12 +292,11 @@ namespace DonDon
 				this.selectedIndex = this.selectedIndex + 1;
 
 				this.orderListView.SetItemChecked (selectedIndex, true);
+				this.orderListView.SmoothScrollToPosition(this.selectedIndex);
 
 				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
 
 				this.tv_Unit.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).Unit;
-
-
 
 				if (Settings.CKStaff || this.EditType == "amend") {
 
@@ -362,6 +362,7 @@ namespace DonDon
 				this.selectedIndex = this.selectedIndex + 1;
 
 				this.orderListView.SetItemChecked (selectedIndex, true);
+				this.orderListView.SmoothScrollToPosition(this.selectedIndex);
 
 				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
 
@@ -428,6 +429,7 @@ namespace DonDon
 				this.selectedIndex = this.selectedIndex - 1;
 
 				this.orderListView.SetItemChecked (selectedIndex, true);
+				this.orderListView.SmoothScrollToPosition(this.selectedIndex);
 
 				this.tv_StockName.Text = this.orderListAdapter.GetItemAtPosition (selectedIndex).StockName;
 
