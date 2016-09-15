@@ -30,6 +30,7 @@ namespace DonDon
 
 		public ProgressDialog progress;
 		public LinearLayout linearLayout4;
+		public string Version = "";
 
 
 		protected override void OnCreate (Bundle bundle)
@@ -75,6 +76,9 @@ namespace DonDon
 				ViewGroup.MarginLayoutParams  ll = (ViewGroup.MarginLayoutParams)linearLayout4.LayoutParameters;
 				ll.TopMargin = 55;
 			}
+
+			Context context = this.ApplicationContext;
+			Version = context.PackageManager.GetPackageInfo(context.PackageName, 0).VersionName;
 		}
 
 		private int ConvertPixelsToDp(float pixelValue)
@@ -106,7 +110,7 @@ namespace DonDon
 
 		public void btForgotClick(object sender, EventArgs e)
 		{
-			var uri = Android.Net.Uri.Parse ("http://dondon.softwarestaging.com.au/user/forgotpassword");
+			var uri = Android.Net.Uri.Parse ("http://osaka-online.com.au//user/forgotpassword");
 			var intent = new Intent (Intent.ActionView, uri);
 			StartActivity (intent);
 		}
@@ -177,7 +181,7 @@ namespace DonDon
 				Settings.Password = "";
 			}
 
-			LoginController.Log(Constant.Login);
+			LoginController.Log(Constant.Login+"_"+this.Version);
 
 			RunOnUiThread (() => progress.Dismiss ());
 

@@ -36,6 +36,8 @@ namespace DonDon
 				results = results.Remove(0,1);
 				results = results.Remove(results.Length-1,1);
 
+				LoginController.Log("Get Today Date :" +results);
+
 				return DateTime.Parse(results);
 
 

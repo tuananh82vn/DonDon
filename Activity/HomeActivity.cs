@@ -52,6 +52,8 @@ namespace DonDon
 
 		public int OptionSendSelected = 0;
 
+		public string Version = "";
+
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -68,8 +70,8 @@ namespace DonDon
 
 			StartDatePicker.Click += delegate { ShowDialog (Start_DATE_DIALOG_ID); };
 	
-			StartDate = Utility.GetTodayDate ();
-			StartDatePicker.Text = StartDate.ToString ("dd'/'MM'/'yyyy");
+			//StartDate = Utility.GetTodayDate();
+			//StartDatePicker.Text = StartDate.ToString ("dd'/'MM'/'yyyy");
 
 			buttonOrder = FindViewById<Button>(Resource.Id.bt_Order);
 			buttonOrder.Click += btOrderClick;  
@@ -92,6 +94,9 @@ namespace DonDon
 			if (Settings.CKStaff) {
 				this.buttonAmend.Visibility = ViewStates.Invisible;
 			}
+
+			Context context = this.ApplicationContext;
+			Version = context.PackageManager.GetPackageInfo(context.PackageName, 0).VersionName;
 
 		}
 
@@ -124,6 +129,10 @@ namespace DonDon
 
 		public void LoadOrderList()
 		{
+
+			StartDate = Utility.GetTodayDate();
+			StartDatePicker.Text = StartDate.ToString("dd'/'MM'/'yyyy");
+
 			var  items = Intent.GetParcelableArrayListExtra("key");
 			if (items != null) {
 				
@@ -248,11 +257,15 @@ namespace DonDon
 			//get current data
 			if (CurrentDate == this.StartDate)
 			{
+				LoginController.Log("CurrentDate == this.StartDate: " + this.StartDate.ToShortDateString());
+
 				orderList = this.orderListAdapter.GetOrderList();
 			}
 			//get the newest data
 			else
 			{
+				LoginController.Log("CurrentDate != this.StartDate: " + CurrentDate.ToShortDateString());
+
 				orderList = OrderController.GetOrderList(CurrentDate);
 			}
 
@@ -361,21 +374,21 @@ namespace DonDon
 
 										if(OptionSendSelected == 0){
 											message = "Order sent all successfully.";
-							LoginController.Log(Constant.ButtonSendAllClick);
+											LoginController.Log(Constant.ButtonSendAllClick+"_"+Version);
 
-							}
+										}
 										else if(OptionSendSelected == 1)
 										{
 											message = "Order sent to Daiwa successfully.";
-							LoginController.Log(Constant.ButtonSendDWClick);
+											LoginController.Log(Constant.ButtonSendDWClick+ "_" + Version);
 
-							}
+										}
 										else if(OptionSendSelected == 2)
 										{
 											message = "Order sent to Centre Kitchen successfully.";
-							LoginController.Log(Constant.ButtonSendCKClick);
+											LoginController.Log(Constant.ButtonSendCKClick+ "_" + Version);
 
-							}
+										}
 
 										builder.SetMessage(message);
 										builder.SetPositiveButton("Ok", (s, ee) => { });
